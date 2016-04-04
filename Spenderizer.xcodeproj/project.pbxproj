@@ -14,6 +14,8 @@
 		B5AC66481CA1E2E00018D7CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AC66471CA1E2E00018D7CB /* Assets.xcassets */; };
 		B5AC664B1CA1E2E00018D7CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AC66491CA1E2E00018D7CB /* LaunchScreen.storyboard */; };
 		B5E7BA5D1CB314F200F4877D /* OFXTransactionQuery in Resources */ = {isa = PBXBuildFile; fileRef = B5E7BA5C1CB314F200F4877D /* OFXTransactionQuery */; };
+		B5E7BA621CB315B000F4877D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E7BA611CB315B000F4877D /* User.m */; };
+		B5E7BA651CB315F500F4877D /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E7BA641CB315F500F4877D /* Bank.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		B5AC664A1CA1E2E00018D7CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5AC664C1CA1E2E00018D7CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5E7BA5C1CB314F200F4877D /* OFXTransactionQuery */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFXTransactionQuery; sourceTree = "<group>"; };
+		B5E7BA601CB315B000F4877D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		B5E7BA611CB315B000F4877D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		B5E7BA631CB315F500F4877D /* Bank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bank.h; sourceTree = "<group>"; };
+		B5E7BA641CB315F500F4877D /* Bank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bank.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 				B5AC66471CA1E2E00018D7CB /* Assets.xcassets */,
 				B5AC66491CA1E2E00018D7CB /* LaunchScreen.storyboard */,
 				B5AC664C1CA1E2E00018D7CB /* Info.plist */,
+				B5E7BA5F1CB3159E00F4877D /* Model */,
 				B5AC663B1CA1E2E00018D7CB /* Supporting Files */,
 			);
 			path = Spenderizer;
@@ -80,6 +87,17 @@
 				B5E7BA5C1CB314F200F4877D /* OFXTransactionQuery */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5E7BA5F1CB3159E00F4877D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5E7BA601CB315B000F4877D /* User.h */,
+				B5E7BA611CB315B000F4877D /* User.m */,
+				B5E7BA631CB315F500F4877D /* Bank.h */,
+				B5E7BA641CB315F500F4877D /* Bank.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +171,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5E7BA651CB315F500F4877D /* Bank.m in Sources */,
+				B5E7BA621CB315B000F4877D /* User.m in Sources */,
 				B5AC66431CA1E2E00018D7CB /* ViewController.m in Sources */,
 				B5AC66401CA1E2E00018D7CB /* AppDelegate.m in Sources */,
 				B5AC663D1CA1E2E00018D7CB /* main.m in Sources */,
