@@ -13,6 +13,7 @@
 		B5AC66461CA1E2E00018D7CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AC66441CA1E2E00018D7CB /* Main.storyboard */; };
 		B5AC66481CA1E2E00018D7CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AC66471CA1E2E00018D7CB /* Assets.xcassets */; };
 		B5AC664B1CA1E2E00018D7CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AC66491CA1E2E00018D7CB /* LaunchScreen.storyboard */; };
+		B5E7BA5D1CB314F200F4877D /* OFXTransactionQuery in Resources */ = {isa = PBXBuildFile; fileRef = B5E7BA5C1CB314F200F4877D /* OFXTransactionQuery */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B5AC66471CA1E2E00018D7CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5AC664A1CA1E2E00018D7CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5AC664C1CA1E2E00018D7CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5E7BA5C1CB314F200F4877D /* OFXTransactionQuery */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFXTransactionQuery; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				B5AC663C1CA1E2E00018D7CB /* main.m */,
+				B5E7BA5C1CB314F200F4877D /* OFXTransactionQuery */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5E7BA5D1CB314F200F4877D /* OFXTransactionQuery in Resources */,
 				B5AC664B1CA1E2E00018D7CB /* LaunchScreen.storyboard in Resources */,
 				B5AC66481CA1E2E00018D7CB /* Assets.xcassets in Resources */,
 				B5AC66461CA1E2E00018D7CB /* Main.storyboard in Resources */,
@@ -300,6 +304,7 @@
 				B5AC66511CA1E2E00018D7CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
