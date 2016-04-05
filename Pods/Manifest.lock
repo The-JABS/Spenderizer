@@ -1,0 +1,10 @@
+PODS:
+  - ABPadLockScreen (3.3.0)
+
+DEPENDENCIES:
+  - ABPadLockScreen (~> 3.3.0)
+
+SPEC CHECKSUMS:
+  ABPadLockScreen: 7172ae3562258008eb920f5085c23446958c1b39
+
+COCOAPODS: 0.39.0

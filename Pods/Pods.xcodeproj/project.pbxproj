@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E039D282ED3559FD6F6DAB27AAE081E /* ABPinSelectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = C20316FCFAB9BF2AE6261670D79CBBE9 /* ABPinSelectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		273C4F511FC76E6DFCEEAAA3A7885FBE /* ABPadLockScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C28B90BE14DEF491AC1667141255196 /* ABPadLockScreenView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4CAD61CE3DA4D2D69AD945C7EAEA8752 /* ABPadButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DBA649CD9F6D1667C73F8D9DCDAEA8 /* ABPadButton.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5B3098573C419C2C46686361F7B52343 /* ABPadLockScreenAbstractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FB17D473E7B3895861DB85E36119A9 /* ABPadLockScreenAbstractViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		68343B6A5EB3D90777C994D939EA16F0 /* ABPadLockScreenSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF16088E006BC4F8B0E75BCA7EC774B /* ABPadLockScreenSetupViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6A38BF68D30111939022DD4A5768BCA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		8C6D2BA67A4F26A4115CC4864C21AECD /* ABPadLockScreen-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0C8DE198FB43F2DA701D00DD25F171 /* ABPadLockScreen-dummy.m */; };
+		8CD8E30E6BE65474447AF25024FC0AB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		A358369AB3484E7993D9ABBFD0BF1B6F /* ABPadLockScreenView.h in Headers */ = {isa = PBXBuildFile; fileRef = 16A8519A15F75D6B04434A1167E0833D /* ABPadLockScreenView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B590A0B7A19C68B6FC4A39432DFF906C /* ABPadLockScreenSetupViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A473AAA6C21F6DC360FA0AA8077E58B7 /* ABPadLockScreenSetupViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CABE9DD2C823A001C8005D00A1B543E8 /* ABPadButton.h in Headers */ = {isa = PBXBuildFile; fileRef = B0C2DDD7AC8F6A256876E5C6397B014A /* ABPadButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCBA5E60861C2CF1C2415675DFFB78FC /* Pods-Spenderizer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF9A703F9EF417DEA72D804D67EED78 /* Pods-Spenderizer-dummy.m */; };
+		DAAE94E4DE8B78AFB9DAE65F5A32BFA7 /* ABPadLockScreenViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FA4ACF46B769C5B63860DCB11D7303CE /* ABPadLockScreenViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB0C9EA4C5E74E127D165B4499FD838A /* ABPadLockScreenAbstractViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EA36CCB6EC32750105F255C75732823 /* ABPadLockScreenAbstractViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F883CA3F3ED4FF739745FC8059B86A8F /* ABPadLockScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22736A806A44C0CDC262601213D58B0A /* ABPadLockScreenViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FD1FC2FF780279C012BBBD9CA10AD2CD /* ABPinSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FBBE770300107D93902348CE7C46F4 /* ABPinSelectionView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF21A1D6A3530BC87E3DAF51785A19DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D49C8C0209CAF71EC4BB7D87CD18E099;
+			remoteInfo = ABPadLockScreen;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06DBA649CD9F6D1667C73F8D9DCDAEA8 /* ABPadButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ABPadButton.m; path = ABPadLockScreen/ABPadButton.m; sourceTree = "<group>"; };
+		08CBB43EA056DF546DEBA938D622B0C2 /* ABPadLockScreen-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ABPadLockScreen-prefix.pch"; sourceTree = "<group>"; };
+		121AA96E36D1542070DD183FAC80D5F0 /* libABPadLockScreen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libABPadLockScreen.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		16A8519A15F75D6B04434A1167E0833D /* ABPadLockScreenView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ABPadLockScreenView.h; path = ABPadLockScreen/ABPadLockScreenView.h; sourceTree = "<group>"; };
+		22736A806A44C0CDC262601213D58B0A /* ABPadLockScreenViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ABPadLockScreenViewController.m; path = ABPadLockScreen/ABPadLockScreenViewController.m; sourceTree = "<group>"; };
+		36547D66A36B232B3A9FEC59B2D36705 /* Pods-Spenderizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Spenderizer.release.xcconfig"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5DC0968E6A169277F76B91D4A90136BB /* ABPadLockScreen.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ABPadLockScreen.xcconfig; sourceTree = "<group>"; };
+		7C28B90BE14DEF491AC1667141255196 /* ABPadLockScreenView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ABPadLockScreenView.m; path = ABPadLockScreen/ABPadLockScreenView.m; sourceTree = "<group>"; };
+		8AAA5CFE85CFC9F84FB38C344B1A72D4 /* Pods-Spenderizer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Spenderizer-frameworks.sh"; sourceTree = "<group>"; };
+		8EA36CCB6EC32750105F255C75732823 /* ABPadLockScreenAbstractViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ABPadLockScreenAbstractViewController.h; path = ABPadLockScreen/ABPadLockScreenAbstractViewController.h; sourceTree = "<group>"; };
+		94EE2C4B772A5514F5B17A37F4BEF4DB /* libPods-Spenderizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Spenderizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F0C8DE198FB43F2DA701D00DD25F171 /* ABPadLockScreen-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ABPadLockScreen-dummy.m"; sourceTree = "<group>"; };
+		A473AAA6C21F6DC360FA0AA8077E58B7 /* ABPadLockScreenSetupViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ABPadLockScreenSetupViewController.h; path = ABPadLockScreen/ABPadLockScreenSetupViewController.h; sourceTree = "<group>"; };
+		A87BCC2D3E4720DBBB6D0DD7CA72D835 /* Pods-Spenderizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Spenderizer.debug.xcconfig"; sourceTree = "<group>"; };
+		AFF16088E006BC4F8B0E75BCA7EC774B /* ABPadLockScreenSetupViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ABPadLockScreenSetupViewController.m; path = ABPadLockScreen/ABPadLockScreenSetupViewController.m; sourceTree = "<group>"; };
+		B0C2DDD7AC8F6A256876E5C6397B014A /* ABPadButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ABPadButton.h; path = ABPadLockScreen/ABPadButton.h; sourceTree = "<group>"; };
+		B4FB17D473E7B3895861DB85E36119A9 /* ABPadLockScreenAbstractViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ABPadLockScreenAbstractViewController.m; path = ABPadLockScreen/ABPadLockScreenAbstractViewController.m; sourceTree = "<group>"; };
+		B9A12C61DFFB997377A32789BCE1E840 /* Pods-Spenderizer-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Spenderizer-resources.sh"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BCF9A703F9EF417DEA72D804D67EED78 /* Pods-Spenderizer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Spenderizer-dummy.m"; sourceTree = "<group>"; };
+		C20316FCFAB9BF2AE6261670D79CBBE9 /* ABPinSelectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ABPinSelectionView.h; path = ABPadLockScreen/ABPinSelectionView.h; sourceTree = "<group>"; };
+		E1259CF78F926F10E3AA79B0D526A8B3 /* Pods-Spenderizer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Spenderizer-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E8FBBE770300107D93902348CE7C46F4 /* ABPinSelectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ABPinSelectionView.m; path = ABPadLockScreen/ABPinSelectionView.m; sourceTree = "<group>"; };
+		FA4ACF46B769C5B63860DCB11D7303CE /* ABPadLockScreenViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ABPadLockScreenViewController.h; path = ABPadLockScreen/ABPadLockScreenViewController.h; sourceTree = "<group>"; };
+		FD5B9D6396CEFB836E3B745719F7E148 /* Pods-Spenderizer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Spenderizer-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45FD5DE0A14EA85E74AD66CD835FD5B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A38BF68D30111939022DD4A5768BCA0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FDF5F2E4E7A02045EF4AF292E01FBE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CD8E30E6BE65474447AF25024FC0AB2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25DA34F63EE216208046C75812887B57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				121AA96E36D1542070DD183FAC80D5F0 /* libABPadLockScreen.a */,
+				94EE2C4B772A5514F5B17A37F4BEF4DB /* libPods-Spenderizer.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7180353A9AD215CA8F030A532C582A47 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5DC0968E6A169277F76B91D4A90136BB /* ABPadLockScreen.xcconfig */,
+				9F0C8DE198FB43F2DA701D00DD25F171 /* ABPadLockScreen-dummy.m */,
+				08CBB43EA056DF546DEBA938D622B0C2 /* ABPadLockScreen-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ABPadLockScreen";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				AF29D3CAFA8B8EDFB65DFD73E1445A49 /* Pods */,
+				25DA34F63EE216208046C75812887B57 /* Products */,
+				D9BF5BA7DFD78D82CC683B68BE692F82 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		AF29D3CAFA8B8EDFB65DFD73E1445A49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F331E7B894217C353C89A5B0F583A3C8 /* ABPadLockScreen */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D0F16D0EC0DF92F93A1D382B7C6D0CDD /* Pods-Spenderizer */ = {
+			isa = PBXGroup;
+			children = (
+				E1259CF78F926F10E3AA79B0D526A8B3 /* Pods-Spenderizer-acknowledgements.markdown */,
+				FD5B9D6396CEFB836E3B745719F7E148 /* Pods-Spenderizer-acknowledgements.plist */,
+				BCF9A703F9EF417DEA72D804D67EED78 /* Pods-Spenderizer-dummy.m */,
+				8AAA5CFE85CFC9F84FB38C344B1A72D4 /* Pods-Spenderizer-frameworks.sh */,
+				B9A12C61DFFB997377A32789BCE1E840 /* Pods-Spenderizer-resources.sh */,
+				A87BCC2D3E4720DBBB6D0DD7CA72D835 /* Pods-Spenderizer.debug.xcconfig */,
+				36547D66A36B232B3A9FEC59B2D36705 /* Pods-Spenderizer.release.xcconfig */,
+			);
+			name = "Pods-Spenderizer";
+			path = "Target Support Files/Pods-Spenderizer";
+			sourceTree = "<group>";
+		};
+		D9BF5BA7DFD78D82CC683B68BE692F82 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0F16D0EC0DF92F93A1D382B7C6D0CDD /* Pods-Spenderizer */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F331E7B894217C353C89A5B0F583A3C8 /* ABPadLockScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B0C2DDD7AC8F6A256876E5C6397B014A /* ABPadButton.h */,
+				06DBA649CD9F6D1667C73F8D9DCDAEA8 /* ABPadButton.m */,
+				8EA36CCB6EC32750105F255C75732823 /* ABPadLockScreenAbstractViewController.h */,
+				B4FB17D473E7B3895861DB85E36119A9 /* ABPadLockScreenAbstractViewController.m */,
+				A473AAA6C21F6DC360FA0AA8077E58B7 /* ABPadLockScreenSetupViewController.h */,
+				AFF16088E006BC4F8B0E75BCA7EC774B /* ABPadLockScreenSetupViewController.m */,
+				16A8519A15F75D6B04434A1167E0833D /* ABPadLockScreenView.h */,
+				7C28B90BE14DEF491AC1667141255196 /* ABPadLockScreenView.m */,
+				FA4ACF46B769C5B63860DCB11D7303CE /* ABPadLockScreenViewController.h */,
+				22736A806A44C0CDC262601213D58B0A /* ABPadLockScreenViewController.m */,
+				C20316FCFAB9BF2AE6261670D79CBBE9 /* ABPinSelectionView.h */,
+				E8FBBE770300107D93902348CE7C46F4 /* ABPinSelectionView.m */,
+				7180353A9AD215CA8F030A532C582A47 /* Support Files */,
+			);
+			path = ABPadLockScreen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F7158407AF662114D9F71AF1CC06F9CD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CABE9DD2C823A001C8005D00A1B543E8 /* ABPadButton.h in Headers */,
+				DB0C9EA4C5E74E127D165B4499FD838A /* ABPadLockScreenAbstractViewController.h in Headers */,
+				B590A0B7A19C68B6FC4A39432DFF906C /* ABPadLockScreenSetupViewController.h in Headers */,
+				A358369AB3484E7993D9ABBFD0BF1B6F /* ABPadLockScreenView.h in Headers */,
+				DAAE94E4DE8B78AFB9DAE65F5A32BFA7 /* ABPadLockScreenViewController.h in Headers */,
+				1E039D282ED3559FD6F6DAB27AAE081E /* ABPinSelectionView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5154634B2674B7F24AEF927ED403D9EA /* Pods-Spenderizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C69F3147DADAF889546DC7BFBA8A822 /* Build configuration list for PBXNativeTarget "Pods-Spenderizer" */;
+			buildPhases = (
+				187260553BAD27F0ADD39D450327CBA7 /* Sources */,
+				45FD5DE0A14EA85E74AD66CD835FD5B0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DB38D0D9A9AEF3B9C750210E0283F04 /* PBXTargetDependency */,
+			);
+			name = "Pods-Spenderizer";
+			productName = "Pods-Spenderizer";
+			productReference = 94EE2C4B772A5514F5B17A37F4BEF4DB /* libPods-Spenderizer.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D49C8C0209CAF71EC4BB7D87CD18E099 /* ABPadLockScreen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A2C4D1B1B938C55E9A29B8F81242766 /* Build configuration list for PBXNativeTarget "ABPadLockScreen" */;
+			buildPhases = (
+				104391001EBD41D440AA3665E80F076F /* Sources */,
+				8FDF5F2E4E7A02045EF4AF292E01FBE5 /* Frameworks */,
+				F7158407AF662114D9F71AF1CC06F9CD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ABPadLockScreen;
+			productName = ABPadLockScreen;
+			productReference = 121AA96E36D1542070DD183FAC80D5F0 /* libABPadLockScreen.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 25DA34F63EE216208046C75812887B57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D49C8C0209CAF71EC4BB7D87CD18E099 /* ABPadLockScreen */,
+				5154634B2674B7F24AEF927ED403D9EA /* Pods-Spenderizer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		104391001EBD41D440AA3665E80F076F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CAD61CE3DA4D2D69AD945C7EAEA8752 /* ABPadButton.m in Sources */,
+				8C6D2BA67A4F26A4115CC4864C21AECD /* ABPadLockScreen-dummy.m in Sources */,
+				5B3098573C419C2C46686361F7B52343 /* ABPadLockScreenAbstractViewController.m in Sources */,
+				68343B6A5EB3D90777C994D939EA16F0 /* ABPadLockScreenSetupViewController.m in Sources */,
+				273C4F511FC76E6DFCEEAAA3A7885FBE /* ABPadLockScreenView.m in Sources */,
+				F883CA3F3ED4FF739745FC8059B86A8F /* ABPadLockScreenViewController.m in Sources */,
+				FD1FC2FF780279C012BBBD9CA10AD2CD /* ABPinSelectionView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		187260553BAD27F0ADD39D450327CBA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCBA5E60861C2CF1C2415675DFFB78FC /* Pods-Spenderizer-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7DB38D0D9A9AEF3B9C750210E0283F04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ABPadLockScreen;
+			target = D49C8C0209CAF71EC4BB7D87CD18E099 /* ABPadLockScreen */;
+			targetProxy = CF21A1D6A3530BC87E3DAF51785A19DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1BC9D7FECCEC1B413AAAC18DA25F37E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DC0968E6A169277F76B91D4A90136BB /* ABPadLockScreen.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ABPadLockScreen/ABPadLockScreen-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		1D8CCD006F1C4989B32AAA7D410F0C28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A87BCC2D3E4720DBBB6D0DD7CA72D835 /* Pods-Spenderizer.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6569F07DC21AD8B72752685013E3D9D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		67605B1BF0F6B3D04FBE79B551F7AD1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36547D66A36B232B3A9FEC59B2D36705 /* Pods-Spenderizer.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9BA0758DCAFD54F48677A13511D67832 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DC0968E6A169277F76B91D4A90136BB /* ABPadLockScreen.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ABPadLockScreen/ABPadLockScreen-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A14E2444F162A20E3776820E0ADFFB52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A2C4D1B1B938C55E9A29B8F81242766 /* Build configuration list for PBXNativeTarget "ABPadLockScreen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BA0758DCAFD54F48677A13511D67832 /* Debug */,
+				1BC9D7FECCEC1B413AAAC18DA25F37E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6569F07DC21AD8B72752685013E3D9D8 /* Debug */,
+				A14E2444F162A20E3776820E0ADFFB52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C69F3147DADAF889546DC7BFBA8A822 /* Build configuration list for PBXNativeTarget "Pods-Spenderizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D8CCD006F1C4989B32AAA7D410F0C28 /* Debug */,
+				67605B1BF0F6B3D04FBE79B551F7AD1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
