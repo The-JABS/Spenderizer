@@ -12,6 +12,9 @@
 		B5AA09421CB45609004EFCA9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09411CB45609004EFCA9 /* User.m */; };
 		B5AA09451CB4570D004EFCA9 /* BankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09441CB4570D004EFCA9 /* BankAccount.m */; };
 		B5AA09481CB45AC9004EFCA9 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09471CB45AC9004EFCA9 /* Bank.m */; };
+		B5AA094C1CB45CE3004EFCA9 /* Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA094B1CB45CE3004EFCA9 /* Loader.m */; };
+		B5AA094F1CB45D0F004EFCA9 /* MetaBankInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA094E1CB45D0F004EFCA9 /* MetaBankInfo.m */; };
+		B5AA09521CB45E04004EFCA9 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09511CB45E04004EFCA9 /* XMLParser.m */; };
 		B5AC663D1CA1E2E00018D7CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AC663C1CA1E2E00018D7CB /* main.m */; };
 		B5AC66401CA1E2E00018D7CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AC663F1CA1E2E00018D7CB /* AppDelegate.m */; };
 		B5AC66431CA1E2E00018D7CB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AC66421CA1E2E00018D7CB /* ViewController.m */; };
@@ -33,6 +36,12 @@
 		B5AA09441CB4570D004EFCA9 /* BankAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccount.m; sourceTree = "<group>"; };
 		B5AA09461CB45AC9004EFCA9 /* Bank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bank.h; sourceTree = "<group>"; };
 		B5AA09471CB45AC9004EFCA9 /* Bank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bank.m; sourceTree = "<group>"; };
+		B5AA094A1CB45CE3004EFCA9 /* Loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Loader.h; sourceTree = "<group>"; };
+		B5AA094B1CB45CE3004EFCA9 /* Loader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Loader.m; sourceTree = "<group>"; };
+		B5AA094D1CB45D0F004EFCA9 /* MetaBankInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetaBankInfo.h; sourceTree = "<group>"; };
+		B5AA094E1CB45D0F004EFCA9 /* MetaBankInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetaBankInfo.m; sourceTree = "<group>"; };
+		B5AA09501CB45E04004EFCA9 /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
+		B5AA09511CB45E04004EFCA9 /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
 		B5AC66381CA1E2E00018D7CB /* Spenderizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spenderizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AC663C1CA1E2E00018D7CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B5AC663E1CA1E2E00018D7CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,6 +79,10 @@
 		B5AA09491CB45C9A004EFCA9 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				B5AA094A1CB45CE3004EFCA9 /* Loader.h */,
+				B5AA094B1CB45CE3004EFCA9 /* Loader.m */,
+				B5AA09501CB45E04004EFCA9 /* XMLParser.h */,
+				B5AA09511CB45E04004EFCA9 /* XMLParser.m */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -130,6 +143,8 @@
 				B5AA09441CB4570D004EFCA9 /* BankAccount.m */,
 				B5AA09461CB45AC9004EFCA9 /* Bank.h */,
 				B5AA09471CB45AC9004EFCA9 /* Bank.m */,
+				B5AA094D1CB45D0F004EFCA9 /* MetaBankInfo.h */,
+				B5AA094E1CB45D0F004EFCA9 /* MetaBankInfo.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -266,10 +281,13 @@
 			files = (
 				B5AA09481CB45AC9004EFCA9 /* Bank.m in Sources */,
 				B5AA09421CB45609004EFCA9 /* User.m in Sources */,
+				B5AA094C1CB45CE3004EFCA9 /* Loader.m in Sources */,
 				B5AA09451CB4570D004EFCA9 /* BankAccount.m in Sources */,
+				B5AA09521CB45E04004EFCA9 /* XMLParser.m in Sources */,
 				B5AA093F1CB45439004EFCA9 /* BankTableVC.m in Sources */,
 				B5AC66431CA1E2E00018D7CB /* ViewController.m in Sources */,
 				B5AC66401CA1E2E00018D7CB /* AppDelegate.m in Sources */,
+				B5AA094F1CB45D0F004EFCA9 /* MetaBankInfo.m in Sources */,
 				B5AC663D1CA1E2E00018D7CB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
