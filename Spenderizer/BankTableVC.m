@@ -16,6 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    banks = [Loader downloadMetaBankInfo];
+    MetaBankInfo *bbt = [self bankWithID:@"475"];
+    [banks removeObject:bbt];
+    [banks insertObject:bbt atIndex:0];
+
+}
+
+- (MetaBankInfo *)bankWithID:(NSString *)ID {
+    MetaBankInfo *result = NULL;
+    for (MetaBankInfo *bank in banks)
+        if ([[bank ID] isEqualToString:ID])
+            result = bank;
+    return result;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,19 +43,28 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [banks count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
     
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    // Set the data for this cell:
+    MetaBankInfo *bank = [banks objectAtIndex:indexPath.row];
+    cell.textLabel.text = [bank name];
+    cell.detailTextLabel.text = @"More text";
+    
+    // set the accessory view:
+    cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MetaBankInfo.h"
+#import "Loader.h"
 
 @interface BankTableVC : UITableViewController {
-    
+    NSMutableArray *banks;
 }
 
 @end
