@@ -2,32 +2,26 @@
 //  User.m
 //  Spenderizer
 //
-//  Created by Benjamin Humphries on 4/4/16.
+//  Created by Benjamin Humphries on 4/5/16.
 //  Copyright © 2016 The JABS. All rights reserved.
 //
 
 #import "User.h"
 
 @implementation User
-@synthesize userID, accountID, routingNumber, password, name;
+@synthesize name, password;
 
-- (id)initWithUserID:(NSString *)_userID accountID:(NSString *)_accountID
-       routingNumber:(NSString *)_routingNumber password:(NSString *)_password {
+- (id)initWithName:(NSString *)_name password:(NSString *)_password {
     if (self = [super init]) {
-        self.userID = _userID;
-        self.accountID = _accountID;
-        self.routingNumber = _routingNumber;
+        self.name = _name;
         self.password = _password;
+        bankAccounts = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
-- (void)clearPassword {
-    self.password = NULL;
-}
-
-- (NSString *)bankID {
-    return self.routingNumber;
+- (void)addBankAccount:(BankAccount *)bankAcct {
+    [bankAccounts addObject:bankAcct];
 }
 
 @end

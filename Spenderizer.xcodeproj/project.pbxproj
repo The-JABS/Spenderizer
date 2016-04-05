@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6214B8C9AA710DA37E201DC9 /* libPods-Spenderizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A46150939BE329B0A00C44C8 /* libPods-Spenderizer.a */; };
 		B5AA093F1CB45439004EFCA9 /* BankTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA093E1CB45439004EFCA9 /* BankTableVC.m */; };
+		B5AA09421CB45609004EFCA9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09411CB45609004EFCA9 /* User.m */; };
+		B5AA09451CB4570D004EFCA9 /* BankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09441CB4570D004EFCA9 /* BankAccount.m */; };
 		B5AC663D1CA1E2E00018D7CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AC663C1CA1E2E00018D7CB /* main.m */; };
 		B5AC66401CA1E2E00018D7CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AC663F1CA1E2E00018D7CB /* AppDelegate.m */; };
 		B5AC66431CA1E2E00018D7CB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AC66421CA1E2E00018D7CB /* ViewController.m */; };
@@ -16,8 +18,6 @@
 		B5AC66481CA1E2E00018D7CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AC66471CA1E2E00018D7CB /* Assets.xcassets */; };
 		B5AC664B1CA1E2E00018D7CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AC66491CA1E2E00018D7CB /* LaunchScreen.storyboard */; };
 		B5E7BA5D1CB314F200F4877D /* OFXTransactionQuery in Resources */ = {isa = PBXBuildFile; fileRef = B5E7BA5C1CB314F200F4877D /* OFXTransactionQuery */; };
-		B5E7BA621CB315B000F4877D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E7BA611CB315B000F4877D /* User.m */; };
-		B5E7BA651CB315F500F4877D /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E7BA641CB315F500F4877D /* Bank.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +26,10 @@
 		A46150939BE329B0A00C44C8 /* libPods-Spenderizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Spenderizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AA093D1CB45439004EFCA9 /* BankTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankTableVC.h; sourceTree = "<group>"; };
 		B5AA093E1CB45439004EFCA9 /* BankTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankTableVC.m; sourceTree = "<group>"; };
+		B5AA09401CB45609004EFCA9 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		B5AA09411CB45609004EFCA9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		B5AA09431CB4570D004EFCA9 /* BankAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccount.h; sourceTree = "<group>"; };
+		B5AA09441CB4570D004EFCA9 /* BankAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccount.m; sourceTree = "<group>"; };
 		B5AC66381CA1E2E00018D7CB /* Spenderizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spenderizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AC663C1CA1E2E00018D7CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B5AC663E1CA1E2E00018D7CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -37,10 +41,6 @@
 		B5AC664A1CA1E2E00018D7CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5AC664C1CA1E2E00018D7CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5E7BA5C1CB314F200F4877D /* OFXTransactionQuery */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFXTransactionQuery; sourceTree = "<group>"; };
-		B5E7BA601CB315B000F4877D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		B5E7BA611CB315B000F4877D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		B5E7BA631CB315F500F4877D /* Bank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bank.h; sourceTree = "<group>"; };
-		B5E7BA641CB315F500F4877D /* Bank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bank.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,10 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				B5E7BA5C1CB314F200F4877D /* OFXTransactionQuery */,
-				B5E7BA601CB315B000F4877D /* User.h */,
-				B5E7BA611CB315B000F4877D /* User.m */,
-				B5E7BA631CB315F500F4877D /* Bank.h */,
-				B5E7BA641CB315F500F4877D /* Bank.m */,
+				B5AA09401CB45609004EFCA9 /* User.h */,
+				B5AA09411CB45609004EFCA9 /* User.m */,
+				B5AA09431CB4570D004EFCA9 /* BankAccount.h */,
+				B5AA09441CB4570D004EFCA9 /* BankAccount.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -251,9 +251,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5E7BA651CB315F500F4877D /* Bank.m in Sources */,
+				B5AA09421CB45609004EFCA9 /* User.m in Sources */,
+				B5AA09451CB4570D004EFCA9 /* BankAccount.m in Sources */,
 				B5AA093F1CB45439004EFCA9 /* BankTableVC.m in Sources */,
-				B5E7BA621CB315B000F4877D /* User.m in Sources */,
 				B5AC66431CA1E2E00018D7CB /* ViewController.m in Sources */,
 				B5AC66401CA1E2E00018D7CB /* AppDelegate.m in Sources */,
 				B5AC663D1CA1E2E00018D7CB /* main.m in Sources */,
