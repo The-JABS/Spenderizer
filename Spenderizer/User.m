@@ -11,6 +11,11 @@
 @implementation User
 @synthesize name, password;
 
+/**
+ * Constructor
+ * @param name - Spenderizer username
+ * @param password - Spenderizer password
+ */
 - (id)initWithName:(NSString *)_name password:(NSString *)_password {
     if (self = [super init]) {
         self.name = _name;
@@ -20,6 +25,9 @@
     return self;
 }
 
+/** Adds a BankAccount object to the usersList of bankAccounts
+ * @param Bank Account
+ */
 - (void)addBankAccount:(BankAccount *)bankAcct {
     [bankAccounts addObject:bankAcct];
 }

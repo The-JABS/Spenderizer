@@ -11,6 +11,7 @@
 		B5AA093F1CB45439004EFCA9 /* BankTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA093E1CB45439004EFCA9 /* BankTableVC.m */; };
 		B5AA09421CB45609004EFCA9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09411CB45609004EFCA9 /* User.m */; };
 		B5AA09451CB4570D004EFCA9 /* BankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09441CB4570D004EFCA9 /* BankAccount.m */; };
+		B5AA09481CB45AC9004EFCA9 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09471CB45AC9004EFCA9 /* Bank.m */; };
 		B5AC663D1CA1E2E00018D7CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AC663C1CA1E2E00018D7CB /* main.m */; };
 		B5AC66401CA1E2E00018D7CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AC663F1CA1E2E00018D7CB /* AppDelegate.m */; };
 		B5AC66431CA1E2E00018D7CB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AC66421CA1E2E00018D7CB /* ViewController.m */; };
@@ -30,6 +31,8 @@
 		B5AA09411CB45609004EFCA9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B5AA09431CB4570D004EFCA9 /* BankAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccount.h; sourceTree = "<group>"; };
 		B5AA09441CB4570D004EFCA9 /* BankAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccount.m; sourceTree = "<group>"; };
+		B5AA09461CB45AC9004EFCA9 /* Bank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bank.h; sourceTree = "<group>"; };
+		B5AA09471CB45AC9004EFCA9 /* Bank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bank.m; sourceTree = "<group>"; };
 		B5AC66381CA1E2E00018D7CB /* Spenderizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spenderizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AC663C1CA1E2E00018D7CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B5AC663E1CA1E2E00018D7CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,6 +67,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B5AA09491CB45C9A004EFCA9 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
 		B5AC662F1CA1E2E00018D7CB = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 				B5AC66471CA1E2E00018D7CB /* Assets.xcassets */,
 				B5AC66491CA1E2E00018D7CB /* LaunchScreen.storyboard */,
 				B5AC664C1CA1E2E00018D7CB /* Info.plist */,
+				B5AA09491CB45C9A004EFCA9 /* Tools */,
 				B5E7BA5F1CB3159E00F4877D /* Model */,
 				B5AC663B1CA1E2E00018D7CB /* Supporting Files */,
 			);
@@ -117,6 +128,8 @@
 				B5AA09411CB45609004EFCA9 /* User.m */,
 				B5AA09431CB4570D004EFCA9 /* BankAccount.h */,
 				B5AA09441CB4570D004EFCA9 /* BankAccount.m */,
+				B5AA09461CB45AC9004EFCA9 /* Bank.h */,
+				B5AA09471CB45AC9004EFCA9 /* Bank.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -251,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5AA09481CB45AC9004EFCA9 /* Bank.m in Sources */,
 				B5AA09421CB45609004EFCA9 /* User.m in Sources */,
 				B5AA09451CB4570D004EFCA9 /* BankAccount.m in Sources */,
 				B5AA093F1CB45439004EFCA9 /* BankTableVC.m in Sources */,

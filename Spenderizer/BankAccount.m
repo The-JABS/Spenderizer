@@ -11,6 +11,12 @@
 @implementation BankAccount
 @synthesize userID, password, accountID, routingNumber;
 
+/** Constructor
+ * @param userID
+ * @param password
+ * @param accountID
+ * @param routingNumber
+ */
 - (id)initWithUserID:(NSString *)userid password:(NSString *)pass accountID:(NSString *)acctID routingNumber:(NSString *)routingNum {
     if (self = [super init]) {
         self.userID = userid;

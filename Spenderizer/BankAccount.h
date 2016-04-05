@@ -12,11 +12,12 @@
     
 }
 
+// Constructor
 - (id)initWithUserID:(NSString *)userid password:(NSString *)pass accountID:(NSString *)acctID routingNumber:(NSString *)routingNum;
 
-@property (nonatomic, retain) NSString *userID;
-@property (nonatomic, retain) NSString *password;
-@property (nonatomic, retain) NSString *accountID;
-@property (nonatomic, retain) NSString *routingNumber;
+@property (nonatomic, retain) NSString *userID;           // Bank account username
+@property (nonatomic, retain) NSString *password;         // Bank account password
+@property (nonatomic, retain) NSString *accountID;        // Bank account ID
+@property (nonatomic, retain) NSString *routingNumber;    // Bank account routing number TODO: store in DB?
 
 @end
