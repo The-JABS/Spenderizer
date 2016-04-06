@@ -52,7 +52,7 @@
         <!--Table View Controller-->
         <scene sceneID="zbQ-x2-pqb">
             <objects>
-                <tableViewController id="OJO-Bw-fts" sceneMemberID="viewController">
+                <tableViewController id="OJO-Bw-fts" customClass="BankTableVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="38N-tw-dWa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
