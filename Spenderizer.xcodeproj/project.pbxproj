@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21085E241CB48FBF00FA1A7A /* flippedSoldier.png in Resources */ = {isa = PBXBuildFile; fileRef = 21085E231CB48FBF00FA1A7A /* flippedSoldier.png */; };
 		21085E271CB5BE8D00FA1A7A /* SetPinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21085E261CB5BE8D00FA1A7A /* SetPinVC.m */; };
 		21085E2A1CB5DE7000FA1A7A /* RegisterLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21085E291CB5DE7000FA1A7A /* RegisterLoginVC.m */; };
 		6214B8C9AA710DA37E201DC9 /* libPods-Spenderizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A46150939BE329B0A00C44C8 /* libPods-Spenderizer.a */; };
@@ -20,7 +19,6 @@
 		B5AA09521CB45E04004EFCA9 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09511CB45E04004EFCA9 /* XMLParser.m */; };
 		B5AC663D1CA1E2E00018D7CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AC663C1CA1E2E00018D7CB /* main.m */; };
 		B5AC66401CA1E2E00018D7CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AC663F1CA1E2E00018D7CB /* AppDelegate.m */; };
-		B5AC66431CA1E2E00018D7CB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AC66421CA1E2E00018D7CB /* ViewController.m */; };
 		B5AC66461CA1E2E00018D7CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AC66441CA1E2E00018D7CB /* Main.storyboard */; };
 		B5AC66481CA1E2E00018D7CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AC66471CA1E2E00018D7CB /* Assets.xcassets */; };
 		B5AC664B1CA1E2E00018D7CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AC66491CA1E2E00018D7CB /* LaunchScreen.storyboard */; };
@@ -29,7 +27,6 @@
 
 /* Begin PBXFileReference section */
 		126F8985ABB4B9F09DBCF367 /* Pods-Spenderizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spenderizer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spenderizer/Pods-Spenderizer.debug.xcconfig"; sourceTree = "<group>"; };
-		21085E231CB48FBF00FA1A7A /* flippedSoldier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flippedSoldier.png; sourceTree = "<group>"; };
 		21085E251CB5BE8D00FA1A7A /* SetPinVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPinVC.h; sourceTree = "<group>"; };
 		21085E261CB5BE8D00FA1A7A /* SetPinVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPinVC.m; sourceTree = "<group>"; };
 		21085E281CB5DE7000FA1A7A /* RegisterLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterLoginVC.h; sourceTree = "<group>"; };
@@ -54,8 +51,6 @@
 		B5AC663C1CA1E2E00018D7CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B5AC663E1CA1E2E00018D7CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B5AC663F1CA1E2E00018D7CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B5AC66411CA1E2E00018D7CB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B5AC66421CA1E2E00018D7CB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B5AC66451CA1E2E00018D7CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5AC66471CA1E2E00018D7CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5AC664A1CA1E2E00018D7CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,14 +70,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		21085E221CB48F9500FA1A7A /* Pictures */ = {
-			isa = PBXGroup;
-			children = (
-				21085E231CB48FBF00FA1A7A /* flippedSoldier.png */,
-			);
-			name = Pictures;
-			sourceTree = "<group>";
-		};
 		B03BD5BD977A0514363DB1D0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +77,19 @@
 				823ECA0E5C571F712B89861B /* Pods-Spenderizer.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B56381FD1CB5F85E00B9B45A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B5AC66441CA1E2E00018D7CB /* Main.storyboard */,
+				B5AC66491CA1E2E00018D7CB /* LaunchScreen.storyboard */,
+				B5AA093D1CB45439004EFCA9 /* BankTableVC.h */,
+				B5AA093E1CB45439004EFCA9 /* BankTableVC.m */,
+				21085E251CB5BE8D00FA1A7A /* SetPinVC.h */,
+				21085E261CB5BE8D00FA1A7A /* SetPinVC.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		B5AA09491CB45C9A004EFCA9 /* Tools */ = {
@@ -106,7 +106,6 @@
 		B5AC662F1CA1E2E00018D7CB = {
 			isa = PBXGroup;
 			children = (
-				21085E221CB48F9500FA1A7A /* Pictures */,
 				B5AC663A1CA1E2E00018D7CB /* Spenderizer */,
 				B5AC66391CA1E2E00018D7CB /* Products */,
 				B03BD5BD977A0514363DB1D0 /* Pods */,
@@ -141,6 +140,8 @@
 				B5AC664C1CA1E2E00018D7CB /* Info.plist */,
 				B5AA09491CB45C9A004EFCA9 /* Tools */,
 				B5E7BA5F1CB3159E00F4877D /* Model */,
+				B56381FD1CB5F85E00B9B45A /* View */,
+				B5AA09491CB45C9A004EFCA9 /* Tools */,
 				B5AC663B1CA1E2E00018D7CB /* Supporting Files */,
 			);
 			path = Spenderizer;
@@ -149,6 +150,8 @@
 		B5AC663B1CA1E2E00018D7CB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B5AC664C1CA1E2E00018D7CB /* Info.plist */,
+				B5AC66471CA1E2E00018D7CB /* Assets.xcassets */,
 				B5AC663C1CA1E2E00018D7CB /* main.m */,
 			);
 			name = "Supporting Files";
@@ -240,7 +243,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5E7BA5D1CB314F200F4877D /* OFXTransactionQuery in Resources */,
-				21085E241CB48FBF00FA1A7A /* flippedSoldier.png in Resources */,
 				B5AC664B1CA1E2E00018D7CB /* LaunchScreen.storyboard in Resources */,
 				B5AC66481CA1E2E00018D7CB /* Assets.xcassets in Resources */,
 				B5AC66461CA1E2E00018D7CB /* Main.storyboard in Resources */,

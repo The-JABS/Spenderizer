@@ -37,6 +37,9 @@
 }
 
 - (void)pinSet:(NSString *)pin padLockScreenSetupViewController:(ABPadLockScreenSetupViewController *)padLockScreenViewController {
+    [padLockScreenViewController dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"user is done");
+    }];
     NSLog(@"The user wants this %@", pin);
     
 }
