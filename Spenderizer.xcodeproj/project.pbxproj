@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		21085E241CB48FBF00FA1A7A /* flippedSoldier.png in Resources */ = {isa = PBXBuildFile; fileRef = 21085E231CB48FBF00FA1A7A /* flippedSoldier.png */; };
 		21085E271CB5BE8D00FA1A7A /* SetPinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21085E261CB5BE8D00FA1A7A /* SetPinVC.m */; };
+		21085E2A1CB5DE7000FA1A7A /* RegisterLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21085E291CB5DE7000FA1A7A /* RegisterLoginVC.m */; };
 		6214B8C9AA710DA37E201DC9 /* libPods-Spenderizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A46150939BE329B0A00C44C8 /* libPods-Spenderizer.a */; };
 		B5AA093F1CB45439004EFCA9 /* BankTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA093E1CB45439004EFCA9 /* BankTableVC.m */; };
 		B5AA09421CB45609004EFCA9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09411CB45609004EFCA9 /* User.m */; };
@@ -31,6 +32,8 @@
 		21085E231CB48FBF00FA1A7A /* flippedSoldier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flippedSoldier.png; sourceTree = "<group>"; };
 		21085E251CB5BE8D00FA1A7A /* SetPinVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPinVC.h; sourceTree = "<group>"; };
 		21085E261CB5BE8D00FA1A7A /* SetPinVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPinVC.m; sourceTree = "<group>"; };
+		21085E281CB5DE7000FA1A7A /* RegisterLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterLoginVC.h; sourceTree = "<group>"; };
+		21085E291CB5DE7000FA1A7A /* RegisterLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterLoginVC.m; sourceTree = "<group>"; };
 		823ECA0E5C571F712B89861B /* Pods-Spenderizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spenderizer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spenderizer/Pods-Spenderizer.release.xcconfig"; sourceTree = "<group>"; };
 		A46150939BE329B0A00C44C8 /* libPods-Spenderizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Spenderizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AA093D1CB45439004EFCA9 /* BankTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankTableVC.h; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				B5AC663F1CA1E2E00018D7CB /* AppDelegate.m */,
 				21085E251CB5BE8D00FA1A7A /* SetPinVC.h */,
 				21085E261CB5BE8D00FA1A7A /* SetPinVC.m */,
+				21085E281CB5DE7000FA1A7A /* RegisterLoginVC.h */,
+				21085E291CB5DE7000FA1A7A /* RegisterLoginVC.m */,
 				B5AC66411CA1E2E00018D7CB /* ViewController.h */,
 				B5AC66421CA1E2E00018D7CB /* ViewController.m */,
 				B5AA093D1CB45439004EFCA9 /* BankTableVC.h */,
@@ -304,6 +309,7 @@
 				B5AA09521CB45E04004EFCA9 /* XMLParser.m in Sources */,
 				B5AA093F1CB45439004EFCA9 /* BankTableVC.m in Sources */,
 				B5AC66431CA1E2E00018D7CB /* ViewController.m in Sources */,
+				21085E2A1CB5DE7000FA1A7A /* RegisterLoginVC.m in Sources */,
 				21085E271CB5BE8D00FA1A7A /* SetPinVC.m in Sources */,
 				B5AC66401CA1E2E00018D7CB /* AppDelegate.m in Sources */,
 				B5AA094F1CB45D0F004EFCA9 /* MetaBankInfo.m in Sources */,
