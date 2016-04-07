@@ -28,10 +28,12 @@
 - (IBAction)setPin:(UIButton *)sender {
     ABPadLockScreenSetupViewController *lockScreen = [[ABPadLockScreenSetupViewController alloc] initWithDelegate:self complexPin:false];
     [lockScreen setErrorVibrateEnabled:true];
+    [lockScreen setCancelButtonText:@"cancel"];
     lockScreen.modalPresentationStyle = UIModalPresentationFullScreen;
     lockScreen.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     
     [self presentViewController:lockScreen animated:YES completion:nil];
+
 }
 
 - (void)pinSet:(NSString *)pin padLockScreenSetupViewController:(ABPadLockScreenSetupViewController *)padLockScreenViewController {
