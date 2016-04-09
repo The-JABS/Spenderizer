@@ -1,9 +1,9 @@
 //
 //  XMLParser.m
-//  Save It
+//  Spenderizer
 //
-//  Created by Benjamin Humphries on 10/7/15.
-//  Copyright (c) 2015 Marz Software. All rights reserved.
+//  Created by Benjamin Humphries on 4/5/16.
+//  Copyright © 2016 The JABS. All rights reserved.
 //
 
 #import "XMLParser.h"
