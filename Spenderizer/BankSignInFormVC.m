@@ -17,17 +17,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Set the title of the nav bar
     [self.navigationItem setTitle:@"Bank Sign In"];
+    
+    
+    // Set the text of the bank label
     [bankNameLb setText:[bankInfo name]];
+    
+    // Listen for next/done button of textfields
     [userIDField setDelegate:self];
     [passwordField setDelegate:self];
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
 
+
+// Called when user pressed next/done on keyboard
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (textField == userIDField) {
         [textField resignFirstResponder];
@@ -36,6 +41,10 @@
         [textField resignFirstResponder];
     }
     return YES;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
 
 #pragma mark - Navigation
