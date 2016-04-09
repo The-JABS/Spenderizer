@@ -96,7 +96,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (resultsSearchController.isActive) {
-        [self performSegueWithIdentifier:@"signIn" sender:[searchResults objectAtIndex:indexPath.row]];
+        MetaBankInfo *sender = [searchResults objectAtIndex:indexPath.row];
+        [resultsSearchController setActive:false];
+        [self performSegueWithIdentifier:@"signIn" sender:sender];
     } else {
         [self performSegueWithIdentifier:@"signIn" sender:[banks objectAtIndex:indexPath.row]];
     }
@@ -119,8 +121,6 @@
     
     [self.tableView reloadData];
 }
-
-
 
 #pragma mark - Navigation
 
