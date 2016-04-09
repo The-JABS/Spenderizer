@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "MetaBankInfo.h"
+#import "BankAccount.h"
+#import "Bank.h"
+#import "OFXget.h"
+#import "Loader.h"
+#import "OFXSignOnQuery.h"
 
-@interface BankSignInFormVC : UIViewController<UITextFieldDelegate> {
-
+@interface BankSignInFormVC : UIViewController<UITextFieldDelegate, OFXGetDelegate> {
+    OFXget *ofxGet;
 }
 @property (weak, nonatomic) IBOutlet UITextField *userIDField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
@@ -18,6 +23,7 @@
 
 @property (nonatomic, retain) MetaBankInfo *bankInfo;
 
+- (IBAction)signIn:(UIButton *)sender;
 - (void)setBankInfo:(MetaBankInfo *)_bankInfo;
 
 @end

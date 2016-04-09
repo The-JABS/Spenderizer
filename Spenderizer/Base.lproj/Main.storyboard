@@ -147,11 +147,16 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="c1c-Bf-GBG"/>
+                                    </mask>
+                                </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="cFN-jK-XUP">
-                                <rect key="frame" x="20" y="113" width="560" height="57"/>
+                                <rect key="frame" x="20" y="63" width="560" height="98"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="fhq-xv-fg0"/>
+                                    <constraint firstAttribute="height" priority="750" constant="50" id="fhq-xv-fg0"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Bank name">
@@ -172,6 +177,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAF-zO-D1o">
+                                <rect key="frame" x="20" y="528" width="560" height="52"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="sbp-0q-zQZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" red="0.35294117650000001" green="0.83921568629999999" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signIn:" destination="f6h-gq-qGy" eventType="touchUpInside" id="D30-d8-dxy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.35294117647058826" green="0.83921568627450982" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.35294117650000001" green="0.83921568629999999" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -179,12 +198,16 @@
                             <constraint firstItem="cFN-jK-XUP" firstAttribute="leading" secondItem="l0M-Yd-wL2" secondAttribute="leadingMargin" id="9gd-I2-Z21"/>
                             <constraint firstItem="cDT-lF-w7B" firstAttribute="leading" secondItem="l0M-Yd-wL2" secondAttribute="leadingMargin" id="Agb-xa-QuH"/>
                             <constraint firstItem="gfi-l1-5TS" firstAttribute="top" secondItem="tIQ-Em-SlJ" secondAttribute="bottom" constant="321" id="Bbo-KF-0hX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HAF-zO-D1o" secondAttribute="trailing" id="Heh-Ib-lE3"/>
+                            <constraint firstItem="HAF-zO-D1o" firstAttribute="leading" secondItem="l0M-Yd-wL2" secondAttribute="leadingMargin" id="Ho6-o3-2AF"/>
                             <constraint firstItem="tIQ-Em-SlJ" firstAttribute="top" secondItem="cDT-lF-w7B" secondAttribute="bottom" constant="8" symbolic="YES" id="NfB-i3-y4u"/>
+                            <constraint firstItem="gfi-l1-5TS" firstAttribute="top" secondItem="HAF-zO-D1o" secondAttribute="bottom" constant="20" id="OPR-ps-WY0"/>
                             <constraint firstItem="tIQ-Em-SlJ" firstAttribute="height" secondItem="cDT-lF-w7B" secondAttribute="height" id="Ppv-5R-N8b"/>
-                            <constraint firstItem="cDT-lF-w7B" firstAttribute="top" secondItem="cFN-jK-XUP" secondAttribute="bottom" constant="1" id="S1N-8X-sCr"/>
+                            <constraint firstItem="cDT-lF-w7B" firstAttribute="top" secondItem="cFN-jK-XUP" secondAttribute="bottom" constant="10" id="S1N-8X-sCr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cFN-jK-XUP" secondAttribute="trailing" id="Uwr-jh-Eky"/>
                             <constraint firstItem="tIQ-Em-SlJ" firstAttribute="leading" secondItem="l0M-Yd-wL2" secondAttribute="leadingMargin" id="ViB-Fj-H7L"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tIQ-Em-SlJ" secondAttribute="trailing" id="WUb-Rx-TFJ"/>
+                            <constraint firstItem="cFN-jK-XUP" firstAttribute="top" secondItem="tag-TB-rQg" secondAttribute="bottom" constant="-1" id="jCG-d0-hu6"/>
                             <constraint firstItem="tIQ-Em-SlJ" firstAttribute="width" secondItem="cDT-lF-w7B" secondAttribute="width" id="kLk-he-4Yh"/>
                             <constraint firstItem="cFN-jK-XUP" firstAttribute="top" secondItem="tag-TB-rQg" secondAttribute="bottom" constant="180" id="t28-Eh-CnI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cDT-lF-w7B" secondAttribute="trailing" constant="-20" id="zgI-dg-14K"/>
@@ -205,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wR5-29-Srv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2347" y="-604"/>
+            <point key="canvasLocation" x="2329" y="-604"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jp2-Ih-0gI">

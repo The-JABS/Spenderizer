@@ -12,8 +12,8 @@
 #import "User.h"
 #import "OFXQuery.h"
 
-@protocol OFXDownloadDelegate <NSObject>
--(void)didFinishDownloading:(NSString *)result;
+@protocol OFXGetDelegate <NSObject>
+- (void)didFinishDownloading:(NSString *)result;
 @end
 
 @interface OFXget : NSObject <NSURLConnectionDelegate> {
