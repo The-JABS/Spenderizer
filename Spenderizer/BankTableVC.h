@@ -9,9 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "MetaBankInfo.h"
 #import "Loader.h"
+#import "BankSignInFormVC.h"
 
-@interface BankTableVC : UITableViewController {
+@interface BankTableVC : UITableViewController<UISearchResultsUpdating> {
     NSMutableArray *banks;
+    NSMutableArray *searchResults;
+    UISearchController *resultsSearchController;
 }
+
+
 
 @end
