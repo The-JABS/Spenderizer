@@ -13,4 +13,6 @@
 
 @interface OFXSignOnQuery : OFXQuery
 
+- (id)initWithBank:(Bank *)_bank user:(BankAccount *)_bankAccount;
+
 @end
