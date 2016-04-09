@@ -1,0 +1,14 @@
+<SIGNONMSGSRQV1>
+    <SONRQ>
+        <DTCLIENT>{DTCLIENT}</DTCLIENT>
+        <USERID>{USERID}</USERID>
+        <USERPASS>{USERPASS}</USERPASS>
+        <LANGUAGE>{LANGUAGE}</LANGUAGE>
+        <FI>
+            <ORG>{ORG}</ORG>
+            <FID>{FID}</FID>
+        </FI>
+        <APPID>{APPID}</APPID>
+        <APPVER>{APPVER}</APPVER>
+    </SONRQ>
+</SIGNONMSGSRQV1>
