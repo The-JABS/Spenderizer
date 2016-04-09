@@ -1,5 +1,6 @@
 //
-//  Loader.h
+//  Loader.h - This is a simple class that contains static methods used
+//             to download data.
 //  Spenderizer
 //
 //  Created by Benjamin Humphries on 4/5/16.

@@ -11,6 +11,12 @@
 		21085E2A1CB5DE7000FA1A7A /* RegisterLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21085E291CB5DE7000FA1A7A /* RegisterLoginVC.m */; };
 		6214B8C9AA710DA37E201DC9 /* libPods-Spenderizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A46150939BE329B0A00C44C8 /* libPods-Spenderizer.a */; };
 		B56382031CB80FC500B9B45A /* BankSignInFormVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B56382021CB80FC500B9B45A /* BankSignInFormVC.m */; };
+		B563820C1CB8B21500B9B45A /* OFXSignOnQueryTemplate in Resources */ = {isa = PBXBuildFile; fileRef = B563820B1CB8B21500B9B45A /* OFXSignOnQueryTemplate */; };
+		B563820E1CB8B23E00B9B45A /* OFXTransactionQueryTemplate in Resources */ = {isa = PBXBuildFile; fileRef = B563820D1CB8B23E00B9B45A /* OFXTransactionQueryTemplate */; };
+		B56382121CB8B28E00B9B45A /* OFXSignOnQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B56382111CB8B28E00B9B45A /* OFXSignOnQuery.m */; };
+		B56382151CB8B2A100B9B45A /* OFXQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B56382141CB8B2A100B9B45A /* OFXQuery.m */; };
+		B563821B1CB8B3AD00B9B45A /* OFXUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B563821A1CB8B3AD00B9B45A /* OFXUtil.m */; };
+		B563821E1CB8B45A00B9B45A /* OFXget.m in Sources */ = {isa = PBXBuildFile; fileRef = B563821D1CB8B45A00B9B45A /* OFXget.m */; };
 		B5AA093F1CB45439004EFCA9 /* BankTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA093E1CB45439004EFCA9 /* BankTableVC.m */; };
 		B5AA09421CB45609004EFCA9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09411CB45609004EFCA9 /* User.m */; };
 		B5AA09451CB4570D004EFCA9 /* BankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09441CB4570D004EFCA9 /* BankAccount.m */; };
@@ -23,7 +29,6 @@
 		B5AC66461CA1E2E00018D7CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AC66441CA1E2E00018D7CB /* Main.storyboard */; };
 		B5AC66481CA1E2E00018D7CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AC66471CA1E2E00018D7CB /* Assets.xcassets */; };
 		B5AC664B1CA1E2E00018D7CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AC66491CA1E2E00018D7CB /* LaunchScreen.storyboard */; };
-		B5E7BA5D1CB314F200F4877D /* OFXTransactionQuery in Resources */ = {isa = PBXBuildFile; fileRef = B5E7BA5C1CB314F200F4877D /* OFXTransactionQuery */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,16 @@
 		A46150939BE329B0A00C44C8 /* libPods-Spenderizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Spenderizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56382011CB80FC500B9B45A /* BankSignInFormVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankSignInFormVC.h; sourceTree = "<group>"; };
 		B56382021CB80FC500B9B45A /* BankSignInFormVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankSignInFormVC.m; sourceTree = "<group>"; };
+		B563820B1CB8B21500B9B45A /* OFXSignOnQueryTemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFXSignOnQueryTemplate; sourceTree = "<group>"; };
+		B563820D1CB8B23E00B9B45A /* OFXTransactionQueryTemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFXTransactionQueryTemplate; sourceTree = "<group>"; };
+		B56382101CB8B28E00B9B45A /* OFXSignOnQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFXSignOnQuery.h; sourceTree = "<group>"; };
+		B56382111CB8B28E00B9B45A /* OFXSignOnQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFXSignOnQuery.m; sourceTree = "<group>"; };
+		B56382131CB8B2A100B9B45A /* OFXQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFXQuery.h; sourceTree = "<group>"; };
+		B56382141CB8B2A100B9B45A /* OFXQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFXQuery.m; sourceTree = "<group>"; };
+		B56382191CB8B3AD00B9B45A /* OFXUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFXUtil.h; sourceTree = "<group>"; };
+		B563821A1CB8B3AD00B9B45A /* OFXUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFXUtil.m; sourceTree = "<group>"; };
+		B563821C1CB8B45A00B9B45A /* OFXget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFXget.h; sourceTree = "<group>"; };
+		B563821D1CB8B45A00B9B45A /* OFXget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFXget.m; sourceTree = "<group>"; };
 		B5AA093D1CB45439004EFCA9 /* BankTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankTableVC.h; sourceTree = "<group>"; };
 		B5AA093E1CB45439004EFCA9 /* BankTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankTableVC.m; sourceTree = "<group>"; };
 		B5AA09401CB45609004EFCA9 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -58,7 +73,6 @@
 		B5AC66471CA1E2E00018D7CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5AC664A1CA1E2E00018D7CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5AC664C1CA1E2E00018D7CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5E7BA5C1CB314F200F4877D /* OFXTransactionQuery */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFXTransactionQuery; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +111,36 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		B563820A1CB8B1EC00B9B45A /* OFXQueries */ = {
+			isa = PBXGroup;
+			children = (
+				B563820F1CB8B27300B9B45A /* templates */,
+				B56382131CB8B2A100B9B45A /* OFXQuery.h */,
+				B56382141CB8B2A100B9B45A /* OFXQuery.m */,
+				B56382101CB8B28E00B9B45A /* OFXSignOnQuery.h */,
+				B56382111CB8B28E00B9B45A /* OFXSignOnQuery.m */,
+			);
+			name = OFXQueries;
+			sourceTree = "<group>";
+		};
+		B563820F1CB8B27300B9B45A /* templates */ = {
+			isa = PBXGroup;
+			children = (
+				B563820D1CB8B23E00B9B45A /* OFXTransactionQueryTemplate */,
+				B563820B1CB8B21500B9B45A /* OFXSignOnQueryTemplate */,
+			);
+			name = templates;
+			sourceTree = "<group>";
+		};
 		B5AA09491CB45C9A004EFCA9 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				B563821C1CB8B45A00B9B45A /* OFXget.h */,
+				B563821D1CB8B45A00B9B45A /* OFXget.m */,
 				B5AA094A1CB45CE3004EFCA9 /* Loader.h */,
 				B5AA094B1CB45CE3004EFCA9 /* Loader.m */,
+				B56382191CB8B3AD00B9B45A /* OFXUtil.h */,
+				B563821A1CB8B3AD00B9B45A /* OFXUtil.m */,
 				B5AA09501CB45E04004EFCA9 /* XMLParser.h */,
 				B5AA09511CB45E04004EFCA9 /* XMLParser.m */,
 			);
@@ -154,7 +193,7 @@
 		B5E7BA5F1CB3159E00F4877D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B5E7BA5C1CB314F200F4877D /* OFXTransactionQuery */,
+				B563820A1CB8B1EC00B9B45A /* OFXQueries */,
 				B5AA09401CB45609004EFCA9 /* User.h */,
 				B5AA09411CB45609004EFCA9 /* User.m */,
 				B5AA09431CB4570D004EFCA9 /* BankAccount.h */,
@@ -236,10 +275,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5E7BA5D1CB314F200F4877D /* OFXTransactionQuery in Resources */,
 				B5AC664B1CA1E2E00018D7CB /* LaunchScreen.storyboard in Resources */,
 				B5AC66481CA1E2E00018D7CB /* Assets.xcassets in Resources */,
 				B5AC66461CA1E2E00018D7CB /* Main.storyboard in Resources */,
+				B563820E1CB8B23E00B9B45A /* OFXTransactionQueryTemplate in Resources */,
+				B563820C1CB8B21500B9B45A /* OFXSignOnQueryTemplate in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +338,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B563821E1CB8B45A00B9B45A /* OFXget.m in Sources */,
+				B563821B1CB8B3AD00B9B45A /* OFXUtil.m in Sources */,
+				B56382151CB8B2A100B9B45A /* OFXQuery.m in Sources */,
 				B5AA09481CB45AC9004EFCA9 /* Bank.m in Sources */,
 				B5AA09421CB45609004EFCA9 /* User.m in Sources */,
 				B56382031CB80FC500B9B45A /* BankSignInFormVC.m in Sources */,
@@ -309,6 +352,7 @@
 				21085E271CB5BE8D00FA1A7A /* SetPinVC.m in Sources */,
 				B5AC66401CA1E2E00018D7CB /* AppDelegate.m in Sources */,
 				B5AA094F1CB45D0F004EFCA9 /* MetaBankInfo.m in Sources */,
+				B56382121CB8B28E00B9B45A /* OFXSignOnQuery.m in Sources */,
 				B5AC663D1CA1E2E00018D7CB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
