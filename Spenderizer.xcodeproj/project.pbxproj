@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210151DF1CBB1B140037E6D3 /* MainMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 210151DE1CBB1B140037E6D3 /* MainMenuVC.m */; };
 		21085E271CB5BE8D00FA1A7A /* SetPinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21085E261CB5BE8D00FA1A7A /* SetPinVC.m */; };
 		21085E2A1CB5DE7000FA1A7A /* RegisterLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21085E291CB5DE7000FA1A7A /* RegisterLoginVC.m */; };
 		6214B8C9AA710DA37E201DC9 /* libPods-Spenderizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A46150939BE329B0A00C44C8 /* libPods-Spenderizer.a */; };
@@ -36,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		126F8985ABB4B9F09DBCF367 /* Pods-Spenderizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spenderizer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spenderizer/Pods-Spenderizer.debug.xcconfig"; sourceTree = "<group>"; };
+		210151DD1CBB1B140037E6D3 /* MainMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuVC.h; sourceTree = "<group>"; };
+		210151DE1CBB1B140037E6D3 /* MainMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuVC.m; sourceTree = "<group>"; };
 		21085E251CB5BE8D00FA1A7A /* SetPinVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPinVC.h; sourceTree = "<group>"; };
 		21085E261CB5BE8D00FA1A7A /* SetPinVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPinVC.m; sourceTree = "<group>"; };
 		21085E281CB5DE7000FA1A7A /* RegisterLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterLoginVC.h; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 				B5AC663F1CA1E2E00018D7CB /* AppDelegate.m */,
 				B5AC66471CA1E2E00018D7CB /* Assets.xcassets */,
 				B50286E71CBAE62D00728973 /* Main.storyboard */,
+				210151DD1CBB1B140037E6D3 /* MainMenuVC.h */,
+				210151DE1CBB1B140037E6D3 /* MainMenuVC.m */,
 				B5AC66491CA1E2E00018D7CB /* LaunchScreen.storyboard */,
 				B5AC664C1CA1E2E00018D7CB /* Info.plist */,
 				B5E7BA5F1CB3159E00F4877D /* Model */,
@@ -356,6 +361,7 @@
 				B563821B1CB8B3AD00B9B45A /* OFXUtil.m in Sources */,
 				B56382151CB8B2A100B9B45A /* OFXQuery.m in Sources */,
 				B56382381CBADCF700B9B45A /* BankAccountsTableVC.m in Sources */,
+				210151DF1CBB1B140037E6D3 /* MainMenuVC.m in Sources */,
 				B5AA09481CB45AC9004EFCA9 /* Bank.m in Sources */,
 				B5AA09421CB45609004EFCA9 /* User.m in Sources */,
 				B56382321CB972AB00B9B45A /* XMLDictionary.m in Sources */,
