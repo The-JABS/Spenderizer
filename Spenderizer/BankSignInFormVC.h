@@ -12,7 +12,9 @@
 #import "Bank.h"
 #import "OFXget.h"
 #import "Loader.h"
+#import "XMLDictionary.h"
 #import "OFXSignOnQuery.h"
+#import "MBProgressHUD.h"
 
 @interface BankSignInFormVC : UIViewController<UITextFieldDelegate, OFXGetDelegate> {
     OFXget *ofxGet;

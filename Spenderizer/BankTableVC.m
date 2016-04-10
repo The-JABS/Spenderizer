@@ -35,9 +35,11 @@
     banks = [Loader downloadMetaBankInfo];
     
     // Move bb&t to the top ;)
-    MetaBankInfo *bbt = [self bankWithID:@"475"];
-    [banks removeObject:bbt];
-    [banks insertObject:bbt atIndex:0];
+    if ([banks count] > 0) {
+        MetaBankInfo *bbt = [self bankWithID:@"475"];
+        [banks removeObject:bbt];
+        [banks insertObject:bbt atIndex:0];
+    }
     
     // create search results for searching
     searchResults = [[NSMutableArray alloc] initWithArray:banks];

@@ -44,12 +44,22 @@
 }
 
 - (IBAction)signIn:(UIButton *)sender {
+    
     if([self isValid]) {
         [self dismissKeyboard];
-        Bank *userBank = [Loader loadBankWithID:bankInfo.ID andRoutingNumber:@""];
+        
+        
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        [hud setSquare:YES];
+        [hud setOpacity:0.7];
+        [hud setDetailsLabelText:@"Signing In..."];
+        [hud setDimBackground:YES];
+        
+        Bank *userBank = [Loader loadBankWithID:bankInfo.ID];
         BankAccount *userBankAcct = [[BankAccount alloc] initWithUserID:userIDField.text password:passwordField.text accountID:@"" routingNumber:@""];
         OFXSignOnQuery *signOnQry = [[OFXSignOnQuery alloc] initWithBank:userBank user:userBankAcct];
         [ofxGet query:signOnQry server:[userBank url]];
+           
     }
 }
 
@@ -73,7 +83,9 @@
     UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {}];
     
     [alert addAction:defaultAction];
-    [self presentViewController:alert animated:YES completion:nil];
+     dispatch_async(dispatch_get_main_queue(), ^{
+         [self presentViewController:alert animated:YES completion:nil];
+     });
 }
 
 // Called when user pressed next/done on keyboard
@@ -94,9 +106,47 @@
 
 #pragma mark - OFXGetDelegate
 - (void)didFinishDownloading:(NSString *)result {
-    NSLog(@"result");
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    });
+
+    
+    NSLog(@"result %@",result);
+    
+    // Parse result for error or success message
+    NSDictionary *dict = [NSDictionary dictionaryWithXMLString:result];
+    NSLog(@"dict %@",dict);
+    NSInteger code = 999;
+    @try {
+         if ([dict valueForKeyPath:@"SIGNONMSGSRSV1.SONRS.STATUS.CODE"]) {
+             code = [[dict valueForKeyPath:@"SIGNONMSGSRSV1.SONRS.STATUS.CODE"] integerValue];
+         }
+    } @catch (NSException *e) {
+        code = 999;
+    }
+    
+    // Success
+    if (code == 0) {
+        NSLog(@"success!");
+        [self success];
+        
+    }
+    // Error
+    else {
+        NSString *msg = [dict valueForKeyPath:@"SIGNONMSGSRSV1.SONRS.STATUS.MESSAGE"];
+        if (!msg) {
+            msg = @"There was an error signing into your bank, please try again.";
+        }
+        [self displayErrorMessage:msg];
+    }
 }
 
+// Called when the user has successfully logged into his or her account!
+- (void)success {
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
