@@ -19,18 +19,17 @@
     // Create an array of MetaBankInfo objects
     NSMutableArray *banks = [[NSMutableArray alloc] init];
     
-    // Parse ALL supported banks from the 'ofx home' site.
-    XMLParser *parser = [[XMLParser alloc] init];
-    NSMutableArray *bankData = [parser parseXMLFileAtURL:[NSString stringWithFormat:@"http://www.ofxhome.com/api.php?all=yes"]];
+    NSString *URL = @"http://www.ofxhome.com/api.php?all=yes";
     
-    // Turn the data into array of MetaBankInfo objects.
-    NSString *name = @"";
-    NSString *ID = @"";
-    for (NSMutableDictionary *dict in bankData) {
-        if ([dict objectForKey:@"name"])
-            name = [dict objectForKey:@"name"];
-        if ([dict objectForKey:@"id"])
-            ID = [dict objectForKey:@"id"];
+    // Grab the data
+    NSData *data = [NSData dataWithContentsOfURL:
+                    [NSURL URLWithString:URL]];
+    
+    NSDictionary *dictionary = [NSDictionary dictionaryWithXMLData:data];
+
+    for (NSDictionary *bank in [dictionary valueForKeyPath:@"institutionid"]) {
+        NSString *name = [bank valueForKeyPath:@"_name"];
+        NSString *ID = [bank valueForKeyPath:@"_id"];
         [banks addObject:[[MetaBankInfo alloc] initWithName:name ID:ID]];
     }
     return banks;
@@ -41,26 +40,25 @@
  * @param _routingNumber the routing number of the bank.
  * @return a Bank object.
  */
-+ (Bank *)loadBankWithID:(NSString *)_ID andRoutingNumber:(NSString *)_routingNumber {
-    // Create a parser
-    XMLParser *parser = [[XMLParser alloc] init];
-    // Parse the responce from OFX HOME. (The site with info about the supported banks NOTE this is not OFX)
-    [parser parseXMLFileAtURL:[NSString stringWithFormat:@"http://www.ofxhome.com/api.php?lookup=%@",_ID]];
-    // Get the Hash map of the responce
-    NSDictionary *items = [parser items];
-    // Create a bank object
-    Bank *result = [[Bank alloc] initWithID:_ID name:[items objectForKey:@"name"] fid:[items objectForKey:@"fid"] org:[items objectForKey:@"org"] url:[items objectForKey:@"url"] brokerID:[items objectForKey:@"brokerID"]];
++ (Bank *)loadBankWithID:(NSString *)_ID {
+    // The url for getting bank data
+    NSString *URL = [NSString stringWithFormat:@"http://www.ofxhome.com/api.php?lookup=%@",_ID];
     
-    // Try to get more info on the bank, based of the routing number
-    NSDictionary *dict = [self loadBankInformationFromRoutingNumder:_routingNumber];
-    if ([dict objectForKey:@"address"])
-        [result setAddress:[dict objectForKey:@"address"]];
-    if ([dict objectForKey:@"city"])
-        [result setCity:[dict objectForKey:@"city"]];
-    if ([dict objectForKey:@"state"])
-        [result setState:[dict objectForKey:@"state"]];
-    if ([dict objectForKey:@"zip"])
-        [result setPostalCode:[dict objectForKey:@"zip"]];
+    // Grab the data
+    NSData *data = [NSData dataWithContentsOfURL:
+                    [NSURL URLWithString:URL]];
+    
+    // Fix any &'s from BB&T ....
+    data = [self fixAmpersands:data];
+    
+    NSDictionary *dictionary = [NSDictionary dictionaryWithXMLData:data];
+    NSLog(@"CHECK THIS %@",dictionary);
+    
+    Bank *result = [[Bank alloc] initWithID:[dictionary valueForKeyPath:@"_id"]
+                                       name:[dictionary valueForKeyPath:@"name"]
+                                        fid:[dictionary valueForKeyPath:@"fid"]
+                                        org:[dictionary valueForKeyPath:@"org"]
+                                        url:[dictionary valueForKeyPath:@"url"]];
     
     return result;
 }
@@ -81,6 +79,29 @@
         NSLog(@"error loading FI Info %@", error);
     
     return result;
+}
+
+/*! Removes Ampersands from NSData (This solves problem for BB&T ....)
+ @param NSData Original data.
+ @return NSData Data with &amp; instead of &
+ */
++ (NSData *)fixAmpersands:(NSData*)data  {
+    NSString *dataString = [[NSString alloc] initWithBytes: [data bytes] length:[data length] encoding:NSUTF8StringEncoding];
+    
+    for (NSUInteger i = 0; i < [dataString length]; i++) {
+        if ([dataString characterAtIndex:i] == '&') {
+            NSString *test =[dataString substringWithRange:NSMakeRange(i, 5)];
+            if ([test isEqualToString:@"&amp;"]) {
+                // NSLog(@"good!");
+            }
+            else {
+                dataString = [NSString stringWithFormat:@"%@&amp;%@",[dataString substringToIndex:i],[dataString substringFromIndex:i+1]];
+                // NSLog(@"new :\n%@",dataString);
+            }
+        }
+    }
+    
+    return [dataString dataUsingEncoding:NSUTF8StringEncoding];
 }
 
 

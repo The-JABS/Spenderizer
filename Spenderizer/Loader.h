@@ -8,13 +8,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XMLParser.h"
 #import "MetaBankInfo.h"
 #import "Bank.h"
+#import "XMLDictionary.h"
 
 @interface Loader : NSObject
 
 + (NSMutableArray *)downloadMetaBankInfo;
-+ (Bank *)loadBankWithID:(NSString *)_ID andRoutingNumber:(NSString *)_routingNumber;
++ (Bank *)loadBankWithID:(NSString *)_ID;
 
 @end

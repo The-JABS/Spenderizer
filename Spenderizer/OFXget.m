@@ -41,10 +41,18 @@
     [request setValue:@"application/x-ofx" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPBody:postData];
     
-    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    NSURLSession *session = [NSURLSession sharedSession];
     
-    if (!theConnection)
-        NSLog(@"error with connection to %@", url);
+    [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"result = %@",result );
+        [delegate didFinishDownloading:result];
+    }] resume];
+    
+//    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+//    
+//    if (!theConnection)
+//        NSLog(@"error with connection to %@", url);
     
     return result;
 }
