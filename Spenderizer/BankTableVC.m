@@ -17,10 +17,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Search bar
+    resultsSearchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    resultsSearchController.searchResultsUpdater = self;
+    resultsSearchController.dimsBackgroundDuringPresentation = NO;
+    [resultsSearchController setHidesNavigationBarDuringPresentation:NO];
+    [resultsSearchController.searchBar sizeToFit];
+    
+    self.tableView.tableHeaderView = resultsSearchController.searchBar;
+    [self.tableView reloadData];
+    
+    // Set the back button
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+
+    
+    // Load banks for table.
     banks = [Loader downloadMetaBankInfo];
-    MetaBankInfo *bbt = [self bankWithID:@"475"];
-    [banks removeObject:bbt];
-    [banks insertObject:bbt atIndex:0];
+    
+    // Move bb&t to the top ;)
+    if ([banks count] > 0) {
+        MetaBankInfo *bbt = [self bankWithID:@"475"];
+        [banks removeObject:bbt];
+        [banks insertObject:bbt atIndex:0];
+    }
+    
+    // create search results for searching
+    searchResults = [[NSMutableArray alloc] initWithArray:banks];
 
 }
 
@@ -43,7 +65,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [banks count];
+    if (resultsSearchController.isActive) {
+        return [searchResults count];
+    } else {
+        return [banks count];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -55,59 +81,61 @@
     }
     
     // Set the data for this cell:
-    MetaBankInfo *bank = [banks objectAtIndex:indexPath.row];
-    cell.textLabel.text = [bank name];
-    cell.detailTextLabel.text = @"More text";
+    MetaBankInfo *bank = nil;
     
-    // set the accessory view:
-    cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
+    // Check if we are searching!
+    if (resultsSearchController.isActive) {
+        bank = [searchResults objectAtIndex:indexPath.row];
+    } else {
+        bank = [banks objectAtIndex:indexPath.row];
+    }
+    
+    cell.textLabel.text = [bank name];
     
     return cell;
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (resultsSearchController.isActive) {
+        MetaBankInfo *sender = [searchResults objectAtIndex:indexPath.row];
+        [resultsSearchController setActive:false];
+        [self performSegueWithIdentifier:@"signIn" sender:sender];
+    } else {
+        [self performSegueWithIdentifier:@"signIn" sender:[banks objectAtIndex:indexPath.row]];
+    }
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"name contains[c] %@", searchText];
+    searchResults = [[NSMutableArray alloc] initWithArray:[banks filteredArrayUsingPredicate:resultPredicate]];
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    
+    // If search bar is empty show all banks.
+    if ([searchController.searchBar.text isEqualToString:@""]) {
+        searchResults = [[NSMutableArray alloc] initWithArray:banks];
+    } else {
+        [self filterContentForSearchText:searchController.searchBar.text scope:nil];
+    }
+    
+    [self.tableView reloadData];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    // check segue id that is in the mainstoryboard file
+    if ([[segue identifier] isEqualToString:@"signIn"]) {
+       
+        MetaBankInfo *bankInfo = (MetaBankInfo *)sender;
+        BankSignInFormVC *signIn = (BankSignInFormVC *)segue.destinationViewController;
+        [signIn setBankInfo:bankInfo];
+    }
 }
-*/
+
 
 @end

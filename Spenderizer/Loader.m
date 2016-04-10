@@ -10,21 +10,99 @@
 
 @implementation Loader
 
+/** This method downloads all of the meta data (name, ID) of the banks
+ *  that support OFX.  This data is used to create a table view of banks
+ *  for the user to choose from.
+ *  @return NSMutableArray of MetaBankInfo Objects. (name, ID)
+ */
 + (NSMutableArray *)downloadMetaBankInfo {
+    // Create an array of MetaBankInfo objects
     NSMutableArray *banks = [[NSMutableArray alloc] init];
-    XMLParser *parser = [[XMLParser alloc] init];
-    NSMutableArray *bankData = [parser parseXMLFileAtURL:[NSString stringWithFormat:@"http://www.ofxhome.com/api.php?all=yes"]];
     
-    NSString *name = @"";
-    NSString *ID = @"";
-    for (NSMutableDictionary *dict in bankData) {
-        if ([dict objectForKey:@"name"])
-            name = [dict objectForKey:@"name"];
-        if ([dict objectForKey:@"id"])
-            ID = [dict objectForKey:@"id"];
+    NSString *URL = @"http://www.ofxhome.com/api.php?all=yes";
+    
+    // Grab the data
+    NSData *data = [NSData dataWithContentsOfURL:
+                    [NSURL URLWithString:URL]];
+    
+    NSDictionary *dictionary = [NSDictionary dictionaryWithXMLData:data];
+
+    for (NSDictionary *bank in [dictionary valueForKeyPath:@"institutionid"]) {
+        NSString *name = [bank valueForKeyPath:@"_name"];
+        NSString *ID = [bank valueForKeyPath:@"_id"];
         [banks addObject:[[MetaBankInfo alloc] initWithName:name ID:ID]];
     }
     return banks;
 }
+
+/** Loads a bank with a given ID from ofxhome, and constructs a Bank object.
+ * @param _ID - the ofxhome ID of the bank
+ * @param _routingNumber the routing number of the bank.
+ * @return a Bank object.
+ */
++ (Bank *)loadBankWithID:(NSString *)_ID {
+    // The url for getting bank data
+    NSString *URL = [NSString stringWithFormat:@"http://www.ofxhome.com/api.php?lookup=%@",_ID];
+    
+    // Grab the data
+    NSData *data = [NSData dataWithContentsOfURL:
+                    [NSURL URLWithString:URL]];
+    
+    // Fix any &'s from BB&T ....
+    data = [self fixAmpersands:data];
+    
+    NSDictionary *dictionary = [NSDictionary dictionaryWithXMLData:data];
+    NSLog(@"CHECK THIS %@",dictionary);
+    
+    Bank *result = [[Bank alloc] initWithID:[dictionary valueForKeyPath:@"_id"]
+                                       name:[dictionary valueForKeyPath:@"name"]
+                                        fid:[dictionary valueForKeyPath:@"fid"]
+                                        org:[dictionary valueForKeyPath:@"org"]
+                                        url:[dictionary valueForKeyPath:@"url"]];
+    
+    return result;
+}
+
+/** Loads extra bank info such as address, city, stat, zip from routingnumbers.info
+ * @param routingNumber of desired bank
+ * @return Dictionary containing extra bank data.
+ */
++ (NSDictionary *)loadBankInformationFromRoutingNumder:(NSString *)routingNumber {
+    // Get the data from the routingNumbers API
+    NSData *data = [NSData dataWithContentsOfURL:
+                    [NSURL URLWithString:[NSString stringWithFormat:@"https://www.routingnumbers.info/api/data.json?rn=%@",routingNumber]]];
+    NSError*error;
+    
+    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    
+    if (error)
+        NSLog(@"error loading FI Info %@", error);
+    
+    return result;
+}
+
+/*! Removes Ampersands from NSData (This solves problem for BB&T ....)
+ @param NSData Original data.
+ @return NSData Data with &amp; instead of &
+ */
++ (NSData *)fixAmpersands:(NSData*)data  {
+    NSString *dataString = [[NSString alloc] initWithBytes: [data bytes] length:[data length] encoding:NSUTF8StringEncoding];
+    
+    for (NSUInteger i = 0; i < [dataString length]; i++) {
+        if ([dataString characterAtIndex:i] == '&') {
+            NSString *test =[dataString substringWithRange:NSMakeRange(i, 5)];
+            if ([test isEqualToString:@"&amp;"]) {
+                // NSLog(@"good!");
+            }
+            else {
+                dataString = [NSString stringWithFormat:@"%@&amp;%@",[dataString substringToIndex:i],[dataString substringFromIndex:i+1]];
+                // NSLog(@"new :\n%@",dataString);
+            }
+        }
+    }
+    
+    return [dataString dataUsingEncoding:NSUTF8StringEncoding];
+}
+
 
 @end

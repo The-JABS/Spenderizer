@@ -13,8 +13,9 @@
     NSMutableArray *bankAccounts;  // Bank accounts that the user has added.
 }
 
-- (id)initWithName:(NSString *)_name password:(NSString *)_password;  // Constructor
-- (void)addBankAccount:(BankAccount *)bankAcct;                       // Ability to add a new bank account
++ (User *)sharedInstance;                         // Singleton method
+
+- (void)addBankAccount:(BankAccount *)bankAcct;   // Ability to add a new bank account
 
 @property (nonatomic, retain) NSString *name;     // Spenderizer username
 @property (nonatomic, retain) NSString *password; // Spenderizer password

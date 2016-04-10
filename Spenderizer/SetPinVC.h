@@ -12,6 +12,7 @@
 @interface SetPinVC : UIViewController<ABPadLockScreenSetupViewControllerDelegate> {
     
 }
+
 - (IBAction)setPin:(UIButton *)sender;
 
 @end

@@ -11,15 +11,29 @@
 @implementation User
 @synthesize name, password;
 
+// Singleton pattern for User.
++ (User *)sharedInstance {
+    static User *instance;
+    
+    @synchronized(self) {
+        if (!instance) {
+            instance = [[User alloc] init];
+        }
+    }
+    
+    return instance;
+}
+
+
 /**
  * Constructor
  * @param name - Spenderizer username
  * @param password - Spenderizer password
  */
-- (id)initWithName:(NSString *)_name password:(NSString *)_password {
+- (id)init {
     if (self = [super init]) {
-        self.name = _name;
-        self.password = _password;
+        self.name = @"";
+        self.password = @"";
         bankAccounts = [[NSMutableArray alloc] init];
     }
     return self;
