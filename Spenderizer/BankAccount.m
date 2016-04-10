@@ -28,4 +28,17 @@
     return self;
 }
 
+- (NSString *)secureID {
+    NSInteger numberOfStars = accountID.length-4;
+    NSMutableString *stars = [NSMutableString string];
+    for (NSInteger i = 0; i <  numberOfStars; i++) {
+        [stars appendString:@"*"];
+    }
+    return [NSString stringWithFormat:@"%@%@", stars, [accountID substringFromIndex:accountID.length-4]];
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat: @"Bank-Account: userID=%@ accountID=%@ routing=%@ type=%@ supportTxDL=%@ supXferSrc=%@ supXferDest=%@", userID, accountID,routingNumber, type, supportTxDl, supportXferSrc, supportXferDest];
+}
+
 @end

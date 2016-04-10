@@ -14,6 +14,10 @@
 
 // Constructor
 - (id)initWithUserID:(NSString *)userid password:(NSString *)pass accountID:(NSString *)acctID routingNumber:(NSString *)routingNum;
+// ******XXXX
+- (NSString *)secureID;
+// to string
+- (NSString *)description;
 
 @property (nonatomic, retain) NSString *userID;           // Bank account username
 @property (nonatomic, retain) NSString *password;         // Bank account password
