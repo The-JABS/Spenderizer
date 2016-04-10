@@ -24,7 +24,7 @@
 
 #pragma mark - Retrieving Data
 
-- (NSString *)query:(OFXQuery *)query server:(NSString *)url {
+- (NSString *)query:(OFXQuery *)query server:(NSString *)url responceID:(NSString *)resID {
     NSString *result = @"";
     NSString *queryString = [query stringValue];
     
@@ -46,37 +46,18 @@
     [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         NSLog(@"result = %@",result );
-        [delegate didFinishDownloading:result];
+        [delegate didFinishDownloading:result withID:resID];
     }] resume];
-    
-//    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-//    
-//    if (!theConnection)
-//        NSLog(@"error with connection to %@", url);
-    
+        
     return result;
 }
 
-#pragma mark - NSURLConnectionDelegate Methods
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    NSLog(@"ERROR with nsURLconnection here -> %@",error);
+- (NSString *)query:(OFXQuery *)query server:(NSString *)url {
+    return [self query:query server:url responceID:@"0"];
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    NSLog(@"\nRESPONCE%@", response);
-}
 
--(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    NSLog(@"Got DATA!");
-   responce = [responce stringByAppendingString:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
-}
 
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    NSLog(@"finished!!");
-    if (delegate)
-        [delegate didFinishDownloading:responce];
-    responce = @"";
-}
+
 
 @end

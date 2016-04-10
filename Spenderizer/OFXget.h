@@ -13,15 +13,18 @@
 #import "OFXQuery.h"
 
 @protocol OFXGetDelegate <NSObject>
-- (void)didFinishDownloading:(NSString *)result;
+- (void)didFinishDownloading:(NSString *)result withID:(NSString *)responceID;
 @end
 
 @interface OFXget : NSObject <NSURLConnectionDelegate> {
     id delegate;
     NSString *responce;
+    NSString *responceID;
 }
 
 - (NSString *)query:(OFXQuery *)query server:(NSString *)url;
+- (NSString *)query:(OFXQuery *)query server:(NSString *)url responceID:(NSString *)resID;
+
 @property (nonatomic, retain) id delegate;
 
 @end
