@@ -17,6 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // set the title of the nav bar
+    self.navigationItem.title = @"Accounts";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,7 +47,7 @@
     // Set the data for this cell:
     BankAccount *account = [accounts objectAtIndex:indexPath.row];
   
-    cell.textLabel.text = [account type];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@   %@", [account type], [account secureID]];
     
     return cell;
 }

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 #import "MetaBankInfo.h"
 #import "BankAccount.h"
 #import "Bank.h"
@@ -14,10 +15,14 @@
 #import "Loader.h"
 #import "XMLDictionary.h"
 #import "OFXSignOnQuery.h"
+#import "OFXAccountsRequestQuery.h"
 #import "MBProgressHUD.h"
+#import "BankAccountsTableVC.h"
 
 @interface BankSignInFormVC : UIViewController<UITextFieldDelegate, OFXGetDelegate> {
     OFXget *ofxGet;
+    Bank *userBank;
+    BankAccount *userAccount;
 }
 @property (weak, nonatomic) IBOutlet UITextField *userIDField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;

@@ -8,6 +8,9 @@
 
 #import "BankSignInFormVC.h"
 
+#define SIGN_ON_KEY @"signOn"
+#define ACCOUNTS_KEY @"accounts"
+
 @interface BankSignInFormVC ()
 
 @end
@@ -19,6 +22,8 @@
     [super viewDidLoad];
     // Set the title of the nav bar
     [self.navigationItem setTitle:@"Bank Sign In"];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     
     // Add submit form button that calls signIn method
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Sign In" style:UIBarButtonItemStylePlain target:self action:@selector(signIn:)];
@@ -48,17 +53,16 @@
     if([self isValid]) {
         [self dismissKeyboard];
         
-        
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         [hud setSquare:YES];
         [hud setOpacity:0.7];
         [hud setDetailsLabelText:@"Signing In..."];
         [hud setDimBackground:YES];
         
-        Bank *userBank = [Loader loadBankWithID:bankInfo.ID];
-        BankAccount *userBankAcct = [[BankAccount alloc] initWithUserID:userIDField.text password:passwordField.text accountID:@"" routingNumber:@""];
-        OFXSignOnQuery *signOnQry = [[OFXSignOnQuery alloc] initWithBank:userBank user:userBankAcct];
-        [ofxGet query:signOnQry server:[userBank url]];
+        userBank = [Loader loadBankWithID:bankInfo.ID];
+        userAccount = [[BankAccount alloc] initWithUserID:userIDField.text password:passwordField.text accountID:@"" routingNumber:@""];
+        OFXSignOnQuery *signOnQry = [[OFXSignOnQuery alloc] initWithBank:userBank user:userAccount];
+        [ofxGet query:signOnQry server:[userBank url] responceID:SIGN_ON_KEY];
            
     }
 }
@@ -105,24 +109,34 @@
 }
 
 #pragma mark - OFXGetDelegate
-- (void)didFinishDownloading:(NSString *)result {
+
+- (void)didFinishDownloading:(NSString *)result withID:(NSString *)responceID {
     
+    if ([responceID isEqualToString:SIGN_ON_KEY]) {
+        [self parseSignOnResult:result];
+    } else if ([responceID isEqualToString:ACCOUNTS_KEY]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self parseAccountsQueryResult:result];
+        });
+    }
+    
+}
+
+- (void)parseSignOnResult:(NSString *)result {
+    // Stop the activity indicator view
     dispatch_async(dispatch_get_main_queue(), ^{
-        
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     });
-
     
-    NSLog(@"result %@",result);
     
     // Parse result for error or success message
     NSDictionary *dict = [NSDictionary dictionaryWithXMLString:result];
-    NSLog(@"dict %@",dict);
+    //NSLog(@"dict %@",dict);
     NSInteger code = 999;
     @try {
-         if ([dict valueForKeyPath:@"SIGNONMSGSRSV1.SONRS.STATUS.CODE"]) {
-             code = [[dict valueForKeyPath:@"SIGNONMSGSRSV1.SONRS.STATUS.CODE"] integerValue];
-         }
+        if ([dict valueForKeyPath:@"SIGNONMSGSRSV1.SONRS.STATUS.CODE"]) {
+            code = [[dict valueForKeyPath:@"SIGNONMSGSRSV1.SONRS.STATUS.CODE"] integerValue];
+        }
     } @catch (NSException *e) {
         code = 999;
     }
@@ -130,8 +144,9 @@
     // Success
     if (code == 0) {
         NSLog(@"success!");
-        [self success];
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+             [self success];
+        });
     }
     // Error
     else {
@@ -141,11 +156,61 @@
         }
         [self displayErrorMessage:msg];
     }
+
 }
 
-// Called when the user has successfully logged into his or her account!
-- (void)success {
+- (void)parseAccountsQueryResult:(NSString *)result {
+    // Stop the activity indicator view
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+   
     
+    // Parse result for error or success message
+    NSDictionary *dict = [NSDictionary dictionaryWithXMLString:result];
+    NSDictionary *acctInfo = [dict valueForKeyPath:@"SIGNUPMSGSRSV1.ACCTINFOTRNRS.ACCTINFORS.ACCTINFO"];
+    
+    NSMutableArray *accounts = [[NSMutableArray alloc] init];
+    for (NSDictionary *bankAccountInfo in acctInfo) {
+        NSString *accountID = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.BANKACCTFROM.ACCTID"];
+        NSString *type      = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.BANKACCTFROM.ACCTTYPE"];
+        NSString *bankID    = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.BANKACCTFROM.BANKID"];
+        NSString *supTxDl   = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.SUPTXDL"];
+        NSString *status    = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.SVCSTATUS"];
+        NSString *xferDest  = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.XFERDEST"];
+        NSString *xferSrc   = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.XFERSRC"];
+        
+        BankAccount *bankAcct = [[BankAccount alloc] initWithUserID:[userAccount userID] password:[userAccount password] accountID:accountID routingNumber:bankID];
+        [bankAcct setType:type];
+        [bankAcct setSupportTxDl:supTxDl];
+        [bankAcct setStatus:status];
+        [bankAcct setSupportXferDest:xferDest];
+        [bankAcct setSupportXferSrc:xferSrc];
+        [[User sharedInstance] addBankAccount:bankAcct];
+        [accounts addObject:bankAcct];
+        NSLog(@"%@", [bankAcct description]);
+    }
+    
+    [self performSegueWithIdentifier:@"showBankAccounts" sender:accounts];
+}
+
+// Called when the user has successfully logged into his or her bank, downloads accounts!
+- (void)success {
+    // Download bank accounts
+    
+    // Remove all old activity indicators
+    for (UIView *view in [MBProgressHUD allHUDsForView:self.view]) {
+        [view removeFromSuperview];
+    }
+    
+    //Add new activity indicator
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [hud setSquare:YES];
+    [hud setOpacity:0.7];
+    [hud setDetailsLabelText:@"Retrieving Accounts..."];
+    [hud setDimBackground:YES];
+    
+    // Create request for accounts
+    OFXAccountsRequestQuery *requestAccounts = [[OFXAccountsRequestQuery alloc] initWithBank:userBank user:userAccount];
+    [ofxGet query:requestAccounts server:[userBank url] responceID:ACCOUNTS_KEY];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -156,7 +221,11 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"this was called");
+    if ([[segue identifier] isEqualToString:@"showBankAccounts"]) {
+        NSArray *accounts = (NSArray *)sender;
+        BankAccountsTableVC *accountsView = (BankAccountsTableVC *)segue.destinationViewController;
+        [accountsView setAccounts:accounts];
+    }
 }
 
 
