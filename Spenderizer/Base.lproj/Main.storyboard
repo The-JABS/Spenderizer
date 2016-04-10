@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OJO-Bw-fts">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Register LoginVC-->
@@ -52,11 +52,12 @@
                         <outlet property="loginButton" destination="lsU-CS-kk6" id="7Qd-Jf-BsN"/>
                         <outlet property="passwordField" destination="ij2-WZ-j2w" id="HDn-JW-hCC"/>
                         <outlet property="registerButton" destination="50f-fF-3ok" id="VrX-L8-qrz"/>
+                        <segue destination="Dvr-QU-dNd" kind="presentation" identifier="login" id="hzh-5p-Av9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="321" y="319"/>
+            <point key="canvasLocation" x="277" y="319"/>
         </scene>
         <!--Set PinVC-->
         <scene sceneID="82g-ss-PTy">
@@ -83,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vnv-0n-khC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1070" y="319"/>
+            <point key="canvasLocation" x="1018" y="319"/>
         </scene>
         <!--Bank TableVC-->
         <scene sceneID="zbQ-x2-pqb">
