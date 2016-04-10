@@ -19,7 +19,6 @@
 		B56382281CB8D3DF00B9B45A /* OFXSignOnTemplate in Resources */ = {isa = PBXBuildFile; fileRef = B56382261CB8D3DF00B9B45A /* OFXSignOnTemplate */; };
 		B56382291CB8D3DF00B9B45A /* OFXTransactionTemplate in Resources */ = {isa = PBXBuildFile; fileRef = B56382271CB8D3DF00B9B45A /* OFXTransactionTemplate */; };
 		B563822C1CB8D41400B9B45A /* OFXAccountsRequestQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B563822B1CB8D41400B9B45A /* OFXAccountsRequestQuery.m */; };
-		B563822F1CB962F100B9B45A /* BankAccountFormVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B563822E1CB962F100B9B45A /* BankAccountFormVC.m */; };
 		B56382321CB972AB00B9B45A /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = B56382311CB972AB00B9B45A /* XMLDictionary.m */; };
 		B5AA093F1CB45439004EFCA9 /* BankTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA093E1CB45439004EFCA9 /* BankTableVC.m */; };
 		B5AA09421CB45609004EFCA9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09411CB45609004EFCA9 /* User.m */; };
@@ -57,8 +56,6 @@
 		B56382271CB8D3DF00B9B45A /* OFXTransactionTemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFXTransactionTemplate; sourceTree = "<group>"; };
 		B563822A1CB8D41400B9B45A /* OFXAccountsRequestQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFXAccountsRequestQuery.h; sourceTree = "<group>"; };
 		B563822B1CB8D41400B9B45A /* OFXAccountsRequestQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFXAccountsRequestQuery.m; sourceTree = "<group>"; };
-		B563822D1CB962F100B9B45A /* BankAccountFormVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccountFormVC.h; sourceTree = "<group>"; };
-		B563822E1CB962F100B9B45A /* BankAccountFormVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountFormVC.m; sourceTree = "<group>"; };
 		B56382301CB972AB00B9B45A /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
 		B56382311CB972AB00B9B45A /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
 		B5AA093D1CB45439004EFCA9 /* BankTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankTableVC.h; sourceTree = "<group>"; };
@@ -115,8 +112,6 @@
 				B5AA093E1CB45439004EFCA9 /* BankTableVC.m */,
 				B56382011CB80FC500B9B45A /* BankSignInFormVC.h */,
 				B56382021CB80FC500B9B45A /* BankSignInFormVC.m */,
-				B563822D1CB962F100B9B45A /* BankAccountFormVC.h */,
-				B563822E1CB962F100B9B45A /* BankAccountFormVC.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -362,7 +357,6 @@
 				B5AA094C1CB45CE3004EFCA9 /* Loader.m in Sources */,
 				B5AA09451CB4570D004EFCA9 /* BankAccount.m in Sources */,
 				B5AA093F1CB45439004EFCA9 /* BankTableVC.m in Sources */,
-				B563822F1CB962F100B9B45A /* BankAccountFormVC.m in Sources */,
 				21085E2A1CB5DE7000FA1A7A /* RegisterLoginVC.m in Sources */,
 				21085E271CB5BE8D00FA1A7A /* SetPinVC.m in Sources */,
 				B5AC66401CA1E2E00018D7CB /* AppDelegate.m in Sources */,
