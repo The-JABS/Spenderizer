@@ -1,10 +1,13 @@
 PODS:
   - ABPadLockScreen (3.3.0)
+  - MBProgressHUD (0.9.2)
 
 DEPENDENCIES:
   - ABPadLockScreen (~> 3.3.0)
+  - MBProgressHUD (~> 0.9.2)
 
 SPEC CHECKSUMS:
   ABPadLockScreen: 7172ae3562258008eb920f5085c23446958c1b39
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
 
 COCOAPODS: 0.39.0
