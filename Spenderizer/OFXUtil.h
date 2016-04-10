@@ -11,5 +11,5 @@
 @interface OFXUtil : NSObject
 + (NSString *)getDate;
 + (NSString *)loadQueryFromFile:(NSString *)fileName;
-
++ (NSString *)getOldDate;
 @end
