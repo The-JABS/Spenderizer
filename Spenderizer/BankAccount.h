@@ -19,5 +19,11 @@
 @property (nonatomic, retain) NSString *password;         // Bank account password
 @property (nonatomic, retain) NSString *accountID;        // Bank account ID
 @property (nonatomic, retain) NSString *routingNumber;    // Bank account routing number TODO: store in DB?
+@property (nonatomic, retain) NSString *status;           // Active or not
+@property (nonatomic, retain) NSString *type;             // SAVINGS / CHECKING
+@property (nonatomic, retain) NSString *supportTxDl;      // Supports transaction download Y or N
+@property (nonatomic, retain) NSString *supportXferDest;  // Supports incoming wire transfers Y or N;
+@property (nonatomic, retain) NSString *supportXferSrc;   // Supports out going wire transfers Y or N;
+
 
 @end

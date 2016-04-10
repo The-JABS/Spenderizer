@@ -9,7 +9,8 @@
 #import "BankAccount.h"
 
 @implementation BankAccount
-@synthesize userID, password, accountID, routingNumber;
+@synthesize userID, password, accountID, routingNumber, type;
+@synthesize supportTxDl, supportXferSrc, supportXferDest;
 
 /** Constructor
  * @param userID
