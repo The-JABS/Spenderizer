@@ -12,14 +12,13 @@
     
 }
 - (id)initWithID:(NSString *)_ID name:(NSString *)_name fid:(NSString *)_fid
-             org:(NSString *)_org url:(NSString *)_url brokerID:(NSString *)_brokerID;
+             org:(NSString *)_org url:(NSString *)_url;
 
 @property (nonatomic, retain) NSString *ID;         // Bank's OFX ID
 @property (nonatomic, retain) NSString *name;       // Banks name
 @property (nonatomic, retain) NSString *fid;        // Finacial institution ID
 @property (nonatomic, retain) NSString *org;
 @property (nonatomic, retain) NSString *url;        // url of bank's OFX Server
-@property (nonatomic, retain) NSString *brokerID;   // Not sure if this is needed
 
 // Extra info may be needed for round up savings.
 @property (nonatomic, retain) NSString *address;
