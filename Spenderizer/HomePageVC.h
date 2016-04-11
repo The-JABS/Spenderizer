@@ -6,7 +6,7 @@
 //  Copyright © 2016 The JABS. All rights reserved.
 //
 
-#import "UIKIT/UIKIT.h";
+#import <UIKIT/UIKIT.h>
 
 @interface HomePageVC : UIViewController
 

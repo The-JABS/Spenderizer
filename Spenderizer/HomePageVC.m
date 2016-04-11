@@ -7,7 +7,7 @@
 //
 
 #import "HomePageVC.h"
-#import "SWRevealViewController.h";
+#import "SWRevealViewController.h"
 
 @interface HomePageVC ()
 
@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     _barButton.target = self.revealViewController;
     _barButton.action = @selector(revealToggle:);
     
