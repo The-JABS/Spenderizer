@@ -22,6 +22,7 @@
         [self replace:@"{FID}" with:[_bank fid]];
         [self replace:@"{APPID}" with:@"QWIN"];
         [self replace:@"{APPVER}" with:@"2200"];
+        [self replace:@"{CLIENTUID}" with:[OFXUtil getClientID]];
     }
     return self;
 }

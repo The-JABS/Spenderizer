@@ -10,6 +10,7 @@
         </FI>
         <APPID>{APPID}</APPID>
         <APPVER>{APPVER}</APPVER>
+        <CLIENTUID>{CLIENTUID}</CLIENTUID>
     </SONRQ>
 </SIGNONMSGSRQV1>
 

@@ -12,4 +12,5 @@
 + (NSString *)getDate;
 + (NSString *)loadQueryFromFile:(NSString *)fileName;
 + (NSString *)getOldDate;
++ (NSString *)getClientID;
 @end

@@ -31,4 +31,24 @@
     return content;
 }
 
++ (NSString *)getClientID {
+    NSString *clientId = [[NSUserDefaults standardUserDefaults] objectForKey:@"clientID"];
+    if (!clientId) {
+        clientId = [self randomStringWithLength:60];
+        [[NSUserDefaults standardUserDefaults] setObject:clientId forKey:@"clientID"];
+    }
+    return clientId;
+}
+
++ (NSString *) randomStringWithLength: (int) len {
+    NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    NSMutableString *randomString = [NSMutableString stringWithCapacity: len];
+    
+    for (int i=0; i<len; i++) {
+        [randomString appendFormat: @"%C", [letters characterAtIndex: arc4random_uniform([letters length])]];
+    }
+    
+    return randomString;
+}
+
 @end
