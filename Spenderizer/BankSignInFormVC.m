@@ -8,8 +8,10 @@
 
 #import "BankSignInFormVC.h"
 
+// Query keys
 #define SIGN_ON_KEY @"signOn"
 #define ACCOUNTS_KEY @"accounts"
+#define PROFILE_KEY @"profile"
 
 @interface BankSignInFormVC ()
 
@@ -30,6 +32,7 @@
     
     // Set the text of the bank label
     [bankNameLb setText:[bankInfo name]];
+    NSLog(@"id - %@", [bankInfo ID]);
     
     // Listen for next/done button of textfields
     [userIDField setDelegate:self];
@@ -61,9 +64,16 @@
         
         userBank = [Loader loadBankWithID:bankInfo.ID];
         userAccount = [[BankAccount alloc] initWithUserID:userIDField.text password:passwordField.text accountID:@"" routingNumber:@""];
+//        OFXQuery *q = [[OFXQuery alloc] init];
+//        [ofxGet query:q server:[userBank url] responceID:PROFILE_KEY];
+//        OFXBankProfileQuery *infoQuery = [[OFXBankProfileQuery alloc] initWithBank:userBank user:userAccount];
+//        [ofxGet query:infoQuery server:[userBank url] responceID:PROFILE_KEY];
         OFXSignOnQuery *signOnQry = [[OFXSignOnQuery alloc] initWithBank:userBank user:userAccount];
         [ofxGet query:signOnQry server:[userBank url] responceID:SIGN_ON_KEY];
-           
+//        OFXAccountsRequestQuery *requestAccounts = [[OFXAccountsRequestQuery alloc] initWithBank:userBank user:userAccount];
+//        [ofxGet query:requestAccounts server:[userBank url] responceID:ACCOUNTS_KEY];
+
+        
     }
 }
 
@@ -82,13 +92,13 @@
 
 // Display alert with error msg
 - (void)displayErrorMessage:(NSString *)msg {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:msg preferredStyle:UIAlertControllerStyleAlert];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:msg preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {}];
+        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {}];
     
-    [alert addAction:defaultAction];
-     dispatch_async(dispatch_get_main_queue(), ^{
-         [self presentViewController:alert animated:YES completion:nil];
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
      });
 }
 
@@ -118,8 +128,16 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [self parseAccountsQueryResult:result];
         });
+    } else if ([responceID isEqualToString:PROFILE_KEY]) {
+        [self parseProfileInfo:result];
     }
     
+}
+
+- (void)parseProfileInfo:(NSString *)result {
+    NSDictionary *dict = [NSDictionary dictionaryWithXMLString:result];
+    NSLog(@"dict %@",dict);
+
 }
 
 - (void)parseSignOnResult:(NSString *)result {
@@ -191,6 +209,7 @@
     
     [self performSegueWithIdentifier:@"showBankAccounts" sender:accounts];
 }
+
 
 // Called when the user has successfully logged into his or her bank, downloads accounts!
 - (void)success {

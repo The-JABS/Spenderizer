@@ -16,6 +16,7 @@
 #import "XMLDictionary.h"
 #import "OFXSignOnQuery.h"
 #import "OFXAccountsRequestQuery.h"
+#import "OFXBankProfileQuery.h"
 #import "MBProgressHUD.h"
 #import "BankAccountsTableVC.h"
 

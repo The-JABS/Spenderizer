@@ -12,6 +12,8 @@
 		6214B8C9AA710DA37E201DC9 /* libPods-Spenderizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A46150939BE329B0A00C44C8 /* libPods-Spenderizer.a */; };
 		B50286E81CBAE62D00728973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B50286E71CBAE62D00728973 /* Main.storyboard */; };
 		B50286EA1CBAE88900728973 /* OFXAccountsRequestTemplate in Resources */ = {isa = PBXBuildFile; fileRef = B50286E91CBAE88900728973 /* OFXAccountsRequestTemplate */; };
+		B50286EC1CBB385300728973 /* OFXBankProfileTemplate in Resources */ = {isa = PBXBuildFile; fileRef = B50286EB1CBB385300728973 /* OFXBankProfileTemplate */; };
+		B50286EF1CBB5BED00728973 /* OFXBankProfileQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B50286EE1CBB5BED00728973 /* OFXBankProfileQuery.m */; };
 		B56382031CB80FC500B9B45A /* BankSignInFormVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B56382021CB80FC500B9B45A /* BankSignInFormVC.m */; };
 		B56382121CB8B28E00B9B45A /* OFXSignOnQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B56382111CB8B28E00B9B45A /* OFXSignOnQuery.m */; };
 		B56382151CB8B2A100B9B45A /* OFXQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B56382141CB8B2A100B9B45A /* OFXQuery.m */; };
@@ -44,6 +46,9 @@
 		A46150939BE329B0A00C44C8 /* libPods-Spenderizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Spenderizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B50286E71CBAE62D00728973 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B50286E91CBAE88900728973 /* OFXAccountsRequestTemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFXAccountsRequestTemplate; sourceTree = "<group>"; };
+		B50286EB1CBB385300728973 /* OFXBankProfileTemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFXBankProfileTemplate; sourceTree = "<group>"; };
+		B50286ED1CBB5BED00728973 /* OFXBankProfileQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFXBankProfileQuery.h; sourceTree = "<group>"; };
+		B50286EE1CBB5BED00728973 /* OFXBankProfileQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFXBankProfileQuery.m; sourceTree = "<group>"; };
 		B56382011CB80FC500B9B45A /* BankSignInFormVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankSignInFormVC.h; sourceTree = "<group>"; };
 		B56382021CB80FC500B9B45A /* BankSignInFormVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankSignInFormVC.m; sourceTree = "<group>"; };
 		B56382101CB8B28E00B9B45A /* OFXSignOnQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFXSignOnQuery.h; sourceTree = "<group>"; };
@@ -131,6 +136,8 @@
 				B56382111CB8B28E00B9B45A /* OFXSignOnQuery.m */,
 				B563822A1CB8D41400B9B45A /* OFXAccountsRequestQuery.h */,
 				B563822B1CB8D41400B9B45A /* OFXAccountsRequestQuery.m */,
+				B50286ED1CBB5BED00728973 /* OFXBankProfileQuery.h */,
+				B50286EE1CBB5BED00728973 /* OFXBankProfileQuery.m */,
 			);
 			name = OFXQueries;
 			sourceTree = "<group>";
@@ -141,6 +148,7 @@
 				B56382261CB8D3DF00B9B45A /* OFXSignOnTemplate */,
 				B56382271CB8D3DF00B9B45A /* OFXTransactionTemplate */,
 				B50286E91CBAE88900728973 /* OFXAccountsRequestTemplate */,
+				B50286EB1CBB385300728973 /* OFXBankProfileTemplate */,
 			);
 			name = templates;
 			sourceTree = "<group>";
@@ -294,6 +302,7 @@
 				B5AC66481CA1E2E00018D7CB /* Assets.xcassets in Resources */,
 				B50286E81CBAE62D00728973 /* Main.storyboard in Resources */,
 				B56382281CB8D3DF00B9B45A /* OFXSignOnTemplate in Resources */,
+				B50286EC1CBB385300728973 /* OFXBankProfileTemplate in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +378,7 @@
 				B5AA094F1CB45D0F004EFCA9 /* MetaBankInfo.m in Sources */,
 				B56382121CB8B28E00B9B45A /* OFXSignOnQuery.m in Sources */,
 				B5AC663D1CA1E2E00018D7CB /* main.m in Sources */,
+				B50286EF1CBB5BED00728973 /* OFXBankProfileQuery.m in Sources */,
 				B563822C1CB8D41400B9B45A /* OFXAccountsRequestQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
