@@ -8,7 +8,7 @@
 
 #import "OFXQuery.h"
 
-#define HEADER @"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<?OFX OFXHEADER=\"200\" VERSION=\"211\" SECURITY=\"NONE\" OLDFILEUID=\"NONE\" NEWFILEUID=\"NONE\"?>\n\n<OFX>\n"
+#define HEADER @"<?xml version=\"1.0\"?>\n\n<?OFX OFXHEADER=\"200\" VERSION=\"211\" SECURITY=\"NONE\" OLDFILEUID=\"NONE\" NEWFILEUID=\"NONE\"?>\n\n<OFX>\n"
 
 #define FOOTER @"</OFX>"
 

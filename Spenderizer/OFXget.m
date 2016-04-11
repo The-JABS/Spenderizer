@@ -28,24 +28,31 @@
     NSString *result = @"";
     NSString *queryString = [query stringValue];
     
-    NSLog(@"\nHERE IS YOUR QUERY to %@:\n%@ \nEND OF THE QUERY",url, queryString);
-    
-    NSData *postData = [queryString dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+    NSData *postData = [queryString dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
     
     NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     
     [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",url]]];
     [request setHTTPMethod:@"POST"];
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"application/x-ofx" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+
     [request setHTTPBody:postData];
     
-    NSURLSession *session = [NSURLSession sharedSession];
+     NSLog(@"\nHERE IS YOUR QUERY to %@ \n%@ \nEND OF THE QUERY",url, [[NSString alloc] initWithData:postData encoding:NSUTF8StringEncoding]);
     
+    NSURLSession *session = [NSURLSession sharedSession];
+
     [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSLog(@"responce = %@", response);
         NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"result = %@",result );
+    
+        if (error) {
+            NSLog(@"%@", error.description);
+        } else {
+            NSLog(@"result = %@",result );
+        }
         [delegate didFinishDownloading:result withID:resID];
     }] resume];
         
@@ -55,9 +62,6 @@
 - (NSString *)query:(OFXQuery *)query server:(NSString *)url {
     return [self query:query server:url responceID:@"0"];
 }
-
-
-
 
 
 @end
