@@ -75,16 +75,21 @@
 
 -(void)registerNewUser {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:_emailAddress forKey:@"username"];
-    [defaults setObject:_passwordField forKey:@"password"];
+    
+    [defaults setObject:_emailAddress.text forKey:@"username"];
+    [defaults setObject:_passwordField.text forKey:@"password"];
     [defaults setBool:YES forKey:@"registered"];
     
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Success:" message:@"You have created a Spenderizer account" preferredStyle:UIAlertControllerStyleAlert];
+    //[defaults synchronize];
     
-    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {}];
+//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Success:" message:@"You have created a Spenderizer account" preferredStyle:UIAlertControllerStyleAlert];
+//    
+//    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {}];
+//    
+//    [alert addAction:defaultAction];
+//    [self presentViewController:alert animated:YES completion:nil];
     
-    [alert addAction:defaultAction];
-    [self presentViewController:alert animated:YES completion:nil];
+    [self performSegueWithIdentifier:@"login" sender:self];
     
 }
 

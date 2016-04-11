@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210151DF1CBB1B140037E6D3 /* MainMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 210151DE1CBB1B140037E6D3 /* MainMenuVC.m */; };
+		210151E81CBB2C8A0037E6D3 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 210151E71CBB2C8A0037E6D3 /* HomePageVC.m */; };
+		210151ED1CBB388C0037E6D3 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210151EC1CBB388C0037E6D3 /* SWRevealViewController.m */; };
+		210151F01CBB42020037E6D3 /* NavigationTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 210151EF1CBB42020037E6D3 /* NavigationTVC.m */; };
+		210151F21CBB47430037E6D3 /* 336-Bars_drawer_hamburger_menu_navigation_side_slide-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 210151F11CBB47430037E6D3 /* 336-Bars_drawer_hamburger_menu_navigation_side_slide-128.png */; };
 		21085E271CB5BE8D00FA1A7A /* SetPinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21085E261CB5BE8D00FA1A7A /* SetPinVC.m */; };
 		21085E2A1CB5DE7000FA1A7A /* RegisterLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21085E291CB5DE7000FA1A7A /* RegisterLoginVC.m */; };
 		6214B8C9AA710DA37E201DC9 /* libPods-Spenderizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A46150939BE329B0A00C44C8 /* libPods-Spenderizer.a */; };
@@ -38,6 +43,15 @@
 
 /* Begin PBXFileReference section */
 		126F8985ABB4B9F09DBCF367 /* Pods-Spenderizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spenderizer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spenderizer/Pods-Spenderizer.debug.xcconfig"; sourceTree = "<group>"; };
+		210151DD1CBB1B140037E6D3 /* MainMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuVC.h; sourceTree = "<group>"; };
+		210151DE1CBB1B140037E6D3 /* MainMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuVC.m; sourceTree = "<group>"; };
+		210151E61CBB2C8A0037E6D3 /* HomePageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageVC.h; sourceTree = "<group>"; };
+		210151E71CBB2C8A0037E6D3 /* HomePageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageVC.m; sourceTree = "<group>"; };
+		210151EB1CBB388C0037E6D3 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		210151EC1CBB388C0037E6D3 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		210151EE1CBB42020037E6D3 /* NavigationTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationTVC.h; sourceTree = "<group>"; };
+		210151EF1CBB42020037E6D3 /* NavigationTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationTVC.m; sourceTree = "<group>"; };
+		210151F11CBB47430037E6D3 /* 336-Bars_drawer_hamburger_menu_navigation_side_slide-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "336-Bars_drawer_hamburger_menu_navigation_side_slide-128.png"; sourceTree = "<group>"; };
 		21085E251CB5BE8D00FA1A7A /* SetPinVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPinVC.h; sourceTree = "<group>"; };
 		21085E261CB5BE8D00FA1A7A /* SetPinVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPinVC.m; sourceTree = "<group>"; };
 		21085E281CB5DE7000FA1A7A /* RegisterLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterLoginVC.h; sourceTree = "<group>"; };
@@ -100,6 +114,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		210151E91CBB388C0037E6D3 /* SlideOutMenu-Beginning 2 */ = {
+			isa = PBXGroup;
+			children = (
+				210151EA1CBB388C0037E6D3 /* SlideOutMenuFiles */,
+			);
+			path = "SlideOutMenu-Beginning 2";
+			sourceTree = "<group>";
+		};
+		210151EA1CBB388C0037E6D3 /* SlideOutMenuFiles */ = {
+			isa = PBXGroup;
+			children = (
+				210151EB1CBB388C0037E6D3 /* SWRevealViewController.h */,
+				210151EC1CBB388C0037E6D3 /* SWRevealViewController.m */,
+			);
+			path = SlideOutMenuFiles;
+			sourceTree = "<group>";
+		};
 		B03BD5BD977A0514363DB1D0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,10 +220,17 @@
 		B5AC663A1CA1E2E00018D7CB /* Spenderizer */ = {
 			isa = PBXGroup;
 			children = (
+				210151F11CBB47430037E6D3 /* 336-Bars_drawer_hamburger_menu_navigation_side_slide-128.png */,
 				B5AC663E1CA1E2E00018D7CB /* AppDelegate.h */,
 				B5AC663F1CA1E2E00018D7CB /* AppDelegate.m */,
+				210151E61CBB2C8A0037E6D3 /* HomePageVC.h */,
+				210151E71CBB2C8A0037E6D3 /* HomePageVC.m */,
 				B5AC66471CA1E2E00018D7CB /* Assets.xcassets */,
 				B50286E71CBAE62D00728973 /* Main.storyboard */,
+				210151EE1CBB42020037E6D3 /* NavigationTVC.h */,
+				210151EF1CBB42020037E6D3 /* NavigationTVC.m */,
+				210151DD1CBB1B140037E6D3 /* MainMenuVC.h */,
+				210151DE1CBB1B140037E6D3 /* MainMenuVC.m */,
 				B5AC66491CA1E2E00018D7CB /* LaunchScreen.storyboard */,
 				B5AC664C1CA1E2E00018D7CB /* Info.plist */,
 				B5E7BA5F1CB3159E00F4877D /* Model */,
@@ -206,6 +244,7 @@
 		B5AC663B1CA1E2E00018D7CB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				210151E91CBB388C0037E6D3 /* SlideOutMenu-Beginning 2 */,
 				B5AC663C1CA1E2E00018D7CB /* main.m */,
 			);
 			name = "Supporting Files";
@@ -301,6 +340,7 @@
 				B56382291CB8D3DF00B9B45A /* OFXTransactionTemplate in Resources */,
 				B5AC66481CA1E2E00018D7CB /* Assets.xcassets in Resources */,
 				B50286E81CBAE62D00728973 /* Main.storyboard in Resources */,
+				210151F21CBB47430037E6D3 /* 336-Bars_drawer_hamburger_menu_navigation_side_slide-128.png in Resources */,
 				B56382281CB8D3DF00B9B45A /* OFXSignOnTemplate in Resources */,
 				B50286EC1CBB385300728973 /* OFXBankProfileTemplate in Resources */,
 			);
@@ -365,18 +405,22 @@
 				B563821B1CB8B3AD00B9B45A /* OFXUtil.m in Sources */,
 				B56382151CB8B2A100B9B45A /* OFXQuery.m in Sources */,
 				B56382381CBADCF700B9B45A /* BankAccountsTableVC.m in Sources */,
+				210151DF1CBB1B140037E6D3 /* MainMenuVC.m in Sources */,
 				B5AA09481CB45AC9004EFCA9 /* Bank.m in Sources */,
 				B5AA09421CB45609004EFCA9 /* User.m in Sources */,
 				B56382321CB972AB00B9B45A /* XMLDictionary.m in Sources */,
 				B56382031CB80FC500B9B45A /* BankSignInFormVC.m in Sources */,
+				210151F01CBB42020037E6D3 /* NavigationTVC.m in Sources */,
 				B5AA094C1CB45CE3004EFCA9 /* Loader.m in Sources */,
 				B5AA09451CB4570D004EFCA9 /* BankAccount.m in Sources */,
+				210151E81CBB2C8A0037E6D3 /* HomePageVC.m in Sources */,
 				B5AA093F1CB45439004EFCA9 /* BankTableVC.m in Sources */,
 				21085E2A1CB5DE7000FA1A7A /* RegisterLoginVC.m in Sources */,
 				21085E271CB5BE8D00FA1A7A /* SetPinVC.m in Sources */,
 				B5AC66401CA1E2E00018D7CB /* AppDelegate.m in Sources */,
 				B5AA094F1CB45D0F004EFCA9 /* MetaBankInfo.m in Sources */,
 				B56382121CB8B28E00B9B45A /* OFXSignOnQuery.m in Sources */,
+				210151ED1CBB388C0037E6D3 /* SWRevealViewController.m in Sources */,
 				B5AC663D1CA1E2E00018D7CB /* main.m in Sources */,
 				B50286EF1CBB5BED00728973 /* OFXBankProfileQuery.m in Sources */,
 				B563822C1CB8D41400B9B45A /* OFXAccountsRequestQuery.m in Sources */,
