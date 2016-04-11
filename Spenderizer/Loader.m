@@ -30,9 +30,22 @@
     for (NSDictionary *bank in [dictionary valueForKeyPath:@"institutionid"]) {
         NSString *name = [bank valueForKeyPath:@"_name"];
         NSString *ID = [bank valueForKeyPath:@"_id"];
-        [banks addObject:[[MetaBankInfo alloc] initWithName:name ID:ID]];
+        if ([self supported:ID])
+            [banks addObject:[[MetaBankInfo alloc] initWithName:name ID:ID]];
     }
     return banks;
+}
+
++ (BOOL)supported:(NSString *)ID {
+    NSArray *unsupported = @[@"666", @"774", @"553"];
+    BOOL supported = true;
+    for (NSString *i in unsupported) {
+        if ([i isEqualToString:ID]) {
+            supported = false;
+            break;
+        }
+    }
+    return supported;
 }
 
 /** Loads a bank with a given ID from ofxhome, and constructs a Bank object.
