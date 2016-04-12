@@ -19,6 +19,8 @@
 #import "OFXBankProfileQuery.h"
 #import "MBProgressHUD.h"
 #import "BankAccountsTableVC.h"
+#import "OFXUtil.h"
+#import "SGMLParser.h"
 
 @interface BankSignInFormVC : UIViewController<UITextFieldDelegate, OFXGetDelegate> {
     OFXget *ofxGet;

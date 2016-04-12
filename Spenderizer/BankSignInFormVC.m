@@ -149,12 +149,16 @@
     
     // Parse result for error or success message
     NSDictionary *dict = [NSDictionary dictionaryWithXMLString:result];
-    //NSLog(@"dict %@",dict);
+    
+    
+    SGMLParser *parser = [[SGMLParser alloc] init];
+    dict = [parser parseXMLString:result];
+    
+    NSLog(@"dict %@",dict);
+    
     NSInteger code = 999;
     @try {
-        if ([dict valueForKeyPath:@"SIGNONMSGSRSV1.SONRS.STATUS.CODE"]) {
-            code = [[dict valueForKeyPath:@"SIGNONMSGSRSV1.SONRS.STATUS.CODE"] integerValue];
-        }
+        code = [[dict valueForKeyPath:@"OFX.SIGNONMSGSRSV1.SONRS.STATUS.CODE"] integerValue];
     } @catch (NSException *e) {
         code = 999;
     }
@@ -168,7 +172,7 @@
     }
     // Error
     else {
-        NSString *msg = [dict valueForKeyPath:@"SIGNONMSGSRSV1.SONRS.STATUS.MESSAGE"];
+        NSString *msg = [dict valueForKeyPath:@"OFX.SIGNONMSGSRSV1.SONRS.STATUS.MESSAGE"];
         if (!msg) {
             msg = @"There was an error signing into your bank, please try again.";
         }
@@ -183,11 +187,17 @@
    
     
     // Parse result for error or success message
-    NSDictionary *dict = [NSDictionary dictionaryWithXMLString:result];
-    NSDictionary *acctInfo = [dict valueForKeyPath:@"SIGNUPMSGSRSV1.ACCTINFOTRNRS.ACCTINFORS.ACCTINFO"];
+    NSDictionary *dict;// = [NSDictionary dictionaryWithXMLString:result];
+    SGMLParser *parser = [[SGMLParser alloc] init];
+    dict = [parser parseXMLString:result];
     
+    NSLog(@"check this %@", dict);
+    NSDictionary *acctInfo = [dict valueForKeyPath:@"OFX.SIGNUPMSGSRSV1.ACCTINFOTRNRS.ACCTINFORS.ACCTINFO"];
+     NSLog(@"check this 2 %@", acctInfo);
     NSMutableArray *accounts = [[NSMutableArray alloc] init];
     for (NSDictionary *bankAccountInfo in acctInfo) {
+        NSLog(@"check this 3 %@", bankAccountInfo);
+        @try {
         NSString *accountID = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.BANKACCTFROM.ACCTID"];
         NSString *type      = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.BANKACCTFROM.ACCTTYPE"];
         NSString *bankID    = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.BANKACCTFROM.BANKID"];
@@ -205,7 +215,31 @@
         [[User sharedInstance] addBankAccount:bankAcct];
         [accounts addObject:bankAcct];
         NSLog(@"%@", [bankAcct description]);
+        } @catch (NSException *e) {
+            
+        }
     }
+    
+    if ([accounts count] <= 0) {
+        NSString *accountID = [acctInfo valueForKeyPath:@"BANKACCTINFO.BANKACCTFROM.ACCTID"];
+        NSString *type      = [acctInfo valueForKeyPath:@"BANKACCTINFO.BANKACCTFROM.ACCTTYPE"];
+        NSString *bankID    = [acctInfo valueForKeyPath:@"BANKACCTINFO.BANKACCTFROM.BANKID"];
+        NSString *supTxDl   = [acctInfo valueForKeyPath:@"BANKACCTINFO.SUPTXDL"];
+        NSString *status    = [acctInfo valueForKeyPath:@"BANKACCTINFO.SVCSTATUS"];
+        NSString *xferDest  = [acctInfo valueForKeyPath:@"BANKACCTINFO.XFERDEST"];
+        NSString *xferSrc   = [acctInfo valueForKeyPath:@"BANKACCTINFO.XFERSRC"];
+        
+        BankAccount *bankAcct = [[BankAccount alloc] initWithUserID:[userAccount userID] password:[userAccount password] accountID:accountID routingNumber:bankID];
+        [bankAcct setType:type];
+        [bankAcct setSupportTxDl:supTxDl];
+        [bankAcct setStatus:status];
+        [bankAcct setSupportXferDest:xferDest];
+        [bankAcct setSupportXferSrc:xferSrc];
+        [[User sharedInstance] addBankAccount:bankAcct];
+        [accounts addObject:bankAcct];
+
+    }
+    
     
     [self performSegueWithIdentifier:@"showBankAccounts" sender:accounts];
 }

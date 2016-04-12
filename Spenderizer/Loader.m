@@ -62,7 +62,7 @@
                     [NSURL URLWithString:URL]];
     
     // Fix any &'s from BB&T ....
-    data = [self fixAmpersands:data];
+    data = [OFXUtil fixAmpersands:data];
     
     NSDictionary *dictionary = [NSDictionary dictionaryWithXMLData:data];
     NSLog(@"CHECK THIS %@",dictionary);
@@ -94,28 +94,6 @@
     return result;
 }
 
-/*! Removes Ampersands from NSData (This solves problem for BB&T ....)
- @param NSData Original data.
- @return NSData Data with &amp; instead of &
- */
-+ (NSData *)fixAmpersands:(NSData*)data  {
-    NSString *dataString = [[NSString alloc] initWithBytes: [data bytes] length:[data length] encoding:NSUTF8StringEncoding];
-    
-    for (NSUInteger i = 0; i < [dataString length]; i++) {
-        if ([dataString characterAtIndex:i] == '&') {
-            NSString *test =[dataString substringWithRange:NSMakeRange(i, 5)];
-            if ([test isEqualToString:@"&amp;"]) {
-                // NSLog(@"good!");
-            }
-            else {
-                dataString = [NSString stringWithFormat:@"%@&amp;%@",[dataString substringToIndex:i],[dataString substringFromIndex:i+1]];
-                // NSLog(@"new :\n%@",dataString);
-            }
-        }
-    }
-    
-    return [dataString dataUsingEncoding:NSUTF8StringEncoding];
-}
 
 
 @end
