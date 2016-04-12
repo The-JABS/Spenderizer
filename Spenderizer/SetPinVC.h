@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ABPadLockScreenSetupViewController.h"
 
-@interface SetPinVC : UIViewController<ABPadLockScreenSetupViewControllerDelegate> {
+@interface SetPinVC : UITableViewController<ABPadLockScreenSetupViewControllerDelegate> {
     
 }
 
