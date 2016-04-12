@@ -37,6 +37,7 @@
     [request setHTTPMethod:@"POST"];
     [request setValue:@"application/x-ofx" forHTTPHeaderField:@"Content-Type"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    //[request setValue:@"100" forHTTPHeaderField:@"OFXHEADER"];
 
     [request setHTTPBody:postData];
     

@@ -8,6 +8,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OFXUtil.h"
 #import "MetaBankInfo.h"
 #import "Bank.h"
 #import "XMLDictionary.h"

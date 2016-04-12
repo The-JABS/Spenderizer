@@ -8,7 +8,7 @@
 
 #import "OFXQuery.h"
 
-#define HEADER @"<?xml version=\"1.0\"?>\n\n<?OFX OFXHEADER=\"200\" VERSION=\"211\" SECURITY=\"NONE\" OLDFILEUID=\"NONE\" NEWFILEUID=\"NONE\"?>\n\n<OFX>\n"
+//#define HEADER @"OFXHEADER:100\nDATA:OFXSGML\nVERSION:102 <?xml version=\"1.0\"?>\n<?OFX OFXHEADER=\"100\" VERSION=\"102\" SECURITY=\"NONE\" OLDFILEUID=\"NONE\" NEWFILEUID=\"NONE\"?>\n\n<OFX>\n"
 
 #define FOOTER @"</OFX>"
 
@@ -23,7 +23,11 @@
 }
 
 - (NSString *)stringValue {
-    return [[NSString stringWithFormat:@"%@%@%@", HEADER, self.body, FOOTER] stringByReplacingOccurrencesOfString:@"\n" withString:@"\r\n"];
+    return [[NSString stringWithFormat:@"%@%@%@", [self header], self.body, FOOTER] stringByReplacingOccurrencesOfString:@"\n" withString:@"\r\n"];
+}
+
+- (NSString *)header {
+    return [OFXUtil loadQueryFromFile:@"OFXHeader"];
 }
 
 - (void)replace:(NSString *)toReplace with:(NSString *)newString {

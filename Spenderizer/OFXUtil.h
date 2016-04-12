@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "XMLDictionary.h"
 
 @interface OFXUtil : NSObject
 + (NSString *)getDate;
 + (NSString *)loadQueryFromFile:(NSString *)fileName;
 + (NSString *)getOldDate;
 + (NSString *)getClientID;
++ (id)safeValueForPath:(NSString *)path inDictionary:(NSDictionary *)dict;
++ (NSData *)fixAmpersands:(NSData*)data;
 @end
