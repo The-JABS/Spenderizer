@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9AA5DA9ED4E14931A5E38475'
-               BlueprintName = 'Pods-Spenderizer'
+               BlueprintIdentifier = 'F7238D5D0A299BB6DB0DDC46'
+               BlueprintName = 'JVFloatLabeledTextField'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods_Spenderizer.framework'>
+               BuildableName = 'JVFloatLabeledTextField.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
