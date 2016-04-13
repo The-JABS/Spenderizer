@@ -11,7 +11,8 @@
 		210151DF1CBB1B140037E6D3 /* MainMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 210151DE1CBB1B140037E6D3 /* MainMenuVC.m */; };
 		210151E81CBB2C8A0037E6D3 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 210151E71CBB2C8A0037E6D3 /* HomePageVC.m */; };
 		210151F01CBB42020037E6D3 /* NavigationTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 210151EF1CBB42020037E6D3 /* NavigationTVC.m */; };
-		210151F21CBB47430037E6D3 /* 336-Bars_drawer_hamburger_menu_navigation_side_slide-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 210151F11CBB47430037E6D3 /* 336-Bars_drawer_hamburger_menu_navigation_side_slide-128.png */; };
+		210151F51CBD82630037E6D3 /* SettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 210151F41CBD82630037E6D3 /* SettingsVC.m */; };
+		210151F91CBD961C0037E6D3 /* MENU BUTTON 40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 210151F81CBD961C0037E6D3 /* MENU BUTTON 40x40.png */; };
 		21085E271CB5BE8D00FA1A7A /* SetPinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21085E261CB5BE8D00FA1A7A /* SetPinVC.m */; };
 		21085E2A1CB5DE7000FA1A7A /* RegisterLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21085E291CB5DE7000FA1A7A /* RegisterLoginVC.m */; };
 		B50286E81CBAE62D00728973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B50286E71CBAE62D00728973 /* Main.storyboard */; };
@@ -62,7 +63,9 @@
 		210151E71CBB2C8A0037E6D3 /* HomePageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageVC.m; sourceTree = "<group>"; };
 		210151EE1CBB42020037E6D3 /* NavigationTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationTVC.h; sourceTree = "<group>"; };
 		210151EF1CBB42020037E6D3 /* NavigationTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationTVC.m; sourceTree = "<group>"; };
-		210151F11CBB47430037E6D3 /* 336-Bars_drawer_hamburger_menu_navigation_side_slide-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "336-Bars_drawer_hamburger_menu_navigation_side_slide-128.png"; sourceTree = "<group>"; };
+		210151F31CBD82630037E6D3 /* SettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsVC.h; sourceTree = "<group>"; };
+		210151F41CBD82630037E6D3 /* SettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsVC.m; sourceTree = "<group>"; };
+		210151F81CBD961C0037E6D3 /* MENU BUTTON 40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MENU BUTTON 40x40.png"; sourceTree = "<group>"; };
 		21085E251CB5BE8D00FA1A7A /* SetPinVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPinVC.h; sourceTree = "<group>"; };
 		21085E261CB5BE8D00FA1A7A /* SetPinVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPinVC.m; sourceTree = "<group>"; };
 		21085E281CB5DE7000FA1A7A /* RegisterLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterLoginVC.h; sourceTree = "<group>"; };
@@ -180,22 +183,8 @@
 				B56382021CB80FC500B9B45A /* BankSignInFormVC.m */,
 				B56382361CBADCF700B9B45A /* BankAccountsTableVC.h */,
 				B56382371CBADCF700B9B45A /* BankAccountsTableVC.m */,
-				B53CAD4E1CBDF2ED00C9E482 /* BankAccountCell.xib */,
-				B53CAD501CBDF37200C9E482 /* BankAccountTableViewCell.h */,
-				B53CAD511CBDF37200C9E482 /* BankAccountTableViewCell.m */,
-			);
-			name = BankSignIn;
-			sourceTree = "<group>";
-		};
-		B56381FD1CB5F85E00B9B45A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				21085E251CB5BE8D00FA1A7A /* SetPinVC.h */,
-				21085E261CB5BE8D00FA1A7A /* SetPinVC.m */,
-				21085E281CB5DE7000FA1A7A /* RegisterLoginVC.h */,
-				21085E291CB5DE7000FA1A7A /* RegisterLoginVC.m */,
-				B53CAD4D1CBDF2C700C9E482 /* BankSignIn */,
-				B53CAD4C1CBDF2B200C9E482 /* Transactions */,
+				210151F31CBD82630037E6D3 /* SettingsVC.h */,
+				210151F41CBD82630037E6D3 /* SettingsVC.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -268,7 +257,7 @@
 		B5AC663A1CA1E2E00018D7CB /* Spenderizer */ = {
 			isa = PBXGroup;
 			children = (
-				210151F11CBB47430037E6D3 /* 336-Bars_drawer_hamburger_menu_navigation_side_slide-128.png */,
+				210151F81CBD961C0037E6D3 /* MENU BUTTON 40x40.png */,
 				B5AC663E1CA1E2E00018D7CB /* AppDelegate.h */,
 				B53592CA1CBBEAD0005CF4D5 /* AppDelegate.m */,
 				210151E61CBB2C8A0037E6D3 /* HomePageVC.h */,
@@ -394,15 +383,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B50286EA1CBAE88900728973 /* OFXAccountsRequestTemplate in Resources */,
-				B53CAD4F1CBDF2ED00C9E482 /* BankAccountCell.xib in Resources */,
+				210151F91CBD961C0037E6D3 /* MENU BUTTON 40x40.png in Resources */,
 				B5AC664B1CA1E2E00018D7CB /* LaunchScreen.storyboard in Resources */,
 				B56382291CB8D3DF00B9B45A /* OFXTransactionTemplate in Resources */,
 				B53592F91CBCB580005CF4D5 /* OFXHeader in Resources */,
 				B5AC66481CA1E2E00018D7CB /* Assets.xcassets in Resources */,
 				B50286E81CBAE62D00728973 /* Main.storyboard in Resources */,
-				B560F0131CBDABB6000B3447 /* Notes in Resources */,
-				B53CAD3D1CBDE52300C9E482 /* TransactionCell.xib in Resources */,
-				210151F21CBB47430037E6D3 /* 336-Bars_drawer_hamburger_menu_navigation_side_slide-128.png in Resources */,
 				B56382281CB8D3DF00B9B45A /* OFXSignOnTemplate in Resources */,
 				B50286EC1CBB385300728973 /* OFXBankProfileTemplate in Resources */,
 			);
@@ -487,6 +473,7 @@
 				B560F00E1CBD7AF3000B3447 /* SGMLParser.m in Sources */,
 				21085E2A1CB5DE7000FA1A7A /* RegisterLoginVC.m in Sources */,
 				21085E271CB5BE8D00FA1A7A /* SetPinVC.m in Sources */,
+				210151F51CBD82630037E6D3 /* SettingsVC.m in Sources */,
 				B5AA094F1CB45D0F004EFCA9 /* MetaBankInfo.m in Sources */,
 				B56382121CB8B28E00B9B45A /* OFXSignOnQuery.m in Sources */,
 				B5AC663D1CA1E2E00018D7CB /* main.m in Sources */,

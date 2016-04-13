@@ -7,6 +7,7 @@
 //
 
 #import "BankTableVC.h"
+#import "SWRevealViewController.h"
 
 @interface BankTableVC ()
 
@@ -16,6 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Add main menu button
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStylePlain target:self.revealViewController action:@selector(revealToggle:)];
+    
+    
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
     
     // Search bar
     resultsSearchController = [[UISearchController alloc] initWithSearchResultsController:nil];
