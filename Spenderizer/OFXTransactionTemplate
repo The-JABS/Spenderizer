@@ -1,26 +1,26 @@
 <SIGNONMSGSRQV1>
     <SONRQ>
-        <DTCLIENT>{DTCLIENT}</DTCLIENT>
-        <USERID>{USERID}</USERID>
-        <USERPASS>{USERPASS}</USERPASS>
-        <LANGUAGE>{LANGUAGE}</LANGUAGE>
+        <DTCLIENT>{DTCLIENT}
+        <USERID>{USERID}
+        <USERPASS>{USERPASS}
+        <LANGUAGE>{LANGUAGE}
         <FI>
-            <ORG>{ORG}</ORG>
-            <FID>{FID}</FID>
+            <ORG>{ORG}
+            <FID>{FID}
         </FI>
-        <APPID>{APPID}</APPID>
-        <APPVER>{APPVER}</APPVER>
+        <APPID>{APPID}
+        <APPVER>{APPVER}
     </SONRQ>
 </SIGNONMSGSRQV1>
 
 <BANKMSGSRQV1>
     <STMTTRNRQ>
-        <TRNUID>{TRNUID}</TRNUID>
+        <TRNUID>{TRNUID}
         <STMTRQ>
             <BANKACCTFROM>
-                <BANKID>{BANKID}</BANKID>
-                <ACCTID>{ACCTID}</ACCTID>
-                <ACCTTYPE>{ACCTTYPE}</ACCTTYPE>
+                <BANKID>{BANKID}
+                <ACCTID>{ACCTID}
+                <ACCTTYPE>{ACCTTYPE}
             </BANKACCTFROM>
             <INCTRAN>
                 <INCLUDE>Y</INCLUDE>

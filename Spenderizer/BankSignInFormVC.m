@@ -212,7 +212,6 @@
         [bankAcct setStatus:status];
         [bankAcct setSupportXferDest:xferDest];
         [bankAcct setSupportXferSrc:xferSrc];
-        [[User sharedInstance] addBankAccount:bankAcct];
         [accounts addObject:bankAcct];
         NSLog(@"%@", [bankAcct description]);
         } @catch (NSException *e) {
@@ -235,7 +234,6 @@
         [bankAcct setStatus:status];
         [bankAcct setSupportXferDest:xferDest];
         [bankAcct setSupportXferSrc:xferSrc];
-        [[User sharedInstance] addBankAccount:bankAcct];
         [accounts addObject:bankAcct];
 
     }

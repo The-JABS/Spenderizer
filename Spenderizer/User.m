@@ -44,6 +44,22 @@
  */
 - (void)addBankAccount:(BankAccount *)bankAcct {
     [bankAccounts addObject:bankAcct];
+    NSLog(@"%lu", (unsigned long)[bankAccounts count]);
+}
+
+- (void)removeBankAccount:(BankAccount *)bankAcct {
+    BankAccount *toRemove = bankAcct;
+    for (BankAccount *account in bankAccounts) {
+        if ([account isEqual:bankAcct]) {
+            toRemove = account;
+        }
+    }
+    [bankAccounts removeObject:toRemove];
+    NSLog(@"%lu", (unsigned long)[bankAccounts count]);
+}
+
+- (void)saveAccounts {
+   
 }
 
 @end

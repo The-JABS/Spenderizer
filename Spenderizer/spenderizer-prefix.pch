@@ -1,0 +1,14 @@
+//
+//  spenderizer-prefix.pch
+//  Spenderizer
+//
+//  Created by Benjamin Humphries on 4/12/16.
+//  Copyright © 2016 The JABS. All rights reserved.
+//
+
+#ifndef spenderizer_prefix_pch
+#define spenderizer_prefix_pch
+
+#import "Constants.h"
+
+#endif /* spenderizer_prefix_pch */

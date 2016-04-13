@@ -10,11 +10,8 @@
 #import "OFXUtil.h"
 #import "Stack.h"
 
-@interface SGMLParser : NSObject<NSXMLParserDelegate> {
-    BOOL errorParsing;
-}
+@interface SGMLParser : NSObject
 
 - (NSDictionary *)parseXMLString:(NSString *)xmlString;
-- (NSDictionary *)parseXMLFileAtURL:(NSString *)URL;
 
 @end

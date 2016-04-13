@@ -37,6 +37,10 @@
     return [NSString stringWithFormat:@"%@%@", stars, [accountID substringFromIndex:accountID.length-4]];
 }
 
+- (BOOL)isEqual:(BankAccount *)object {
+    return self.accountID == object.accountID && self.routingNumber == object.routingNumber;
+}
+
 - (NSString *)description {
     return [NSString stringWithFormat: @"Bank-Account: userID=%@ accountID=%@ routing=%@ type=%@ supportTxDL=%@ supXferSrc=%@ supXferDest=%@", userID, accountID,routingNumber, type, supportTxDl, supportXferSrc, supportXferDest];
 }

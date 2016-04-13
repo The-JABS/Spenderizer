@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BankAccount.h"
+#import "KeychainWrapper.h"
 
 @interface User : NSObject {
     NSMutableArray *bankAccounts;  // Bank accounts that the user has added.
@@ -16,6 +17,7 @@
 + (User *)sharedInstance;                         // Singleton method
 
 - (void)addBankAccount:(BankAccount *)bankAcct;   // Ability to add a new bank account
+- (void)removeBankAccount:(BankAccount *)bankAcct;
 
 @property (nonatomic, retain) NSString *name;     // Spenderizer username
 @property (nonatomic, retain) NSString *password; // Spenderizer password

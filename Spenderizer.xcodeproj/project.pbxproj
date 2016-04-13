@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0013D711A67472DB8B9FAC13 /* Pods_Spenderizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A382A6974C5D5C1DDB4C334D /* Pods_Spenderizer.framework */; };
 		210151DF1CBB1B140037E6D3 /* MainMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 210151DE1CBB1B140037E6D3 /* MainMenuVC.m */; };
 		210151E81CBB2C8A0037E6D3 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 210151E71CBB2C8A0037E6D3 /* HomePageVC.m */; };
 		210151F01CBB42020037E6D3 /* NavigationTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 210151EF1CBB42020037E6D3 /* NavigationTVC.m */; };
@@ -14,7 +15,6 @@
 		210151F91CBD961C0037E6D3 /* MENU BUTTON 40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 210151F81CBD961C0037E6D3 /* MENU BUTTON 40x40.png */; };
 		21085E271CB5BE8D00FA1A7A /* SetPinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21085E261CB5BE8D00FA1A7A /* SetPinVC.m */; };
 		21085E2A1CB5DE7000FA1A7A /* RegisterLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21085E291CB5DE7000FA1A7A /* RegisterLoginVC.m */; };
-		6214B8C9AA710DA37E201DC9 /* libPods-Spenderizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A46150939BE329B0A00C44C8 /* libPods-Spenderizer.a */; };
 		B50286E81CBAE62D00728973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B50286E71CBAE62D00728973 /* Main.storyboard */; };
 		B50286EA1CBAE88900728973 /* OFXAccountsRequestTemplate in Resources */ = {isa = PBXBuildFile; fileRef = B50286E91CBAE88900728973 /* OFXAccountsRequestTemplate */; };
 		B50286EC1CBB385300728973 /* OFXBankProfileTemplate in Resources */ = {isa = PBXBuildFile; fileRef = B50286EB1CBB385300728973 /* OFXBankProfileTemplate */; };
@@ -22,6 +22,15 @@
 		B53592C81CBBE8D4005CF4D5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53592C71CBBE8D4005CF4D5 /* SWRevealViewController.m */; };
 		B53592CB1CBBEAD0005CF4D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B53592CA1CBBEAD0005CF4D5 /* AppDelegate.m */; };
 		B53592F91CBCB580005CF4D5 /* OFXHeader in Resources */ = {isa = PBXBuildFile; fileRef = B53592F81CBCB580005CF4D5 /* OFXHeader */; };
+		B53CAD3D1CBDE52300C9E482 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B53CAD3C1CBDE52300C9E482 /* TransactionCell.xib */; };
+		B53CAD401CBDEE2D00C9E482 /* TransactionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B53CAD3F1CBDEE2D00C9E482 /* TransactionTableViewCell.m */; };
+		B53CAD431CBDEEFE00C9E482 /* TransactionTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B53CAD421CBDEEFE00C9E482 /* TransactionTableVC.m */; };
+		B53CAD461CBDEF1300C9E482 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = B53CAD451CBDEF1300C9E482 /* Transaction.m */; };
+		B53CAD491CBDF06A00C9E482 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B53CAD481CBDF06A00C9E482 /* KeychainWrapper.m */; };
+		B53CAD4B1CBDF08100C9E482 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53CAD4A1CBDF08100C9E482 /* Security.framework */; };
+		B53CAD4F1CBDF2ED00C9E482 /* BankAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B53CAD4E1CBDF2ED00C9E482 /* BankAccountCell.xib */; };
+		B53CAD521CBDF37200C9E482 /* BankAccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B53CAD511CBDF37200C9E482 /* BankAccountTableViewCell.m */; };
+		B53CAD561CBDFA5D00C9E482 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B53CAD551CBDFA5D00C9E482 /* Constants.m */; };
 		B560F00E1CBD7AF3000B3447 /* SGMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B560F00D1CBD7AF3000B3447 /* SGMLParser.m */; };
 		B560F0111CBD81E5000B3447 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = B560F0101CBD81E5000B3447 /* Stack.m */; };
 		B560F0131CBDABB6000B3447 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = B560F0121CBDABB6000B3447 /* Notes */; };
@@ -62,7 +71,7 @@
 		21085E281CB5DE7000FA1A7A /* RegisterLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterLoginVC.h; sourceTree = "<group>"; };
 		21085E291CB5DE7000FA1A7A /* RegisterLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterLoginVC.m; sourceTree = "<group>"; };
 		823ECA0E5C571F712B89861B /* Pods-Spenderizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spenderizer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spenderizer/Pods-Spenderizer.release.xcconfig"; sourceTree = "<group>"; };
-		A46150939BE329B0A00C44C8 /* libPods-Spenderizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Spenderizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A382A6974C5D5C1DDB4C334D /* Pods_Spenderizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spenderizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B50286E71CBAE62D00728973 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B50286E91CBAE88900728973 /* OFXAccountsRequestTemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFXAccountsRequestTemplate; sourceTree = "<group>"; };
 		B50286EB1CBB385300728973 /* OFXBankProfileTemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFXBankProfileTemplate; sourceTree = "<group>"; };
@@ -72,6 +81,22 @@
 		B53592C71CBBE8D4005CF4D5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		B53592CA1CBBEAD0005CF4D5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B53592F81CBCB580005CF4D5 /* OFXHeader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFXHeader; sourceTree = "<group>"; };
+		B53CAD3C1CBDE52300C9E482 /* TransactionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
+		B53CAD3E1CBDEE2D00C9E482 /* TransactionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionTableViewCell.h; sourceTree = "<group>"; };
+		B53CAD3F1CBDEE2D00C9E482 /* TransactionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionTableViewCell.m; sourceTree = "<group>"; };
+		B53CAD411CBDEEFE00C9E482 /* TransactionTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionTableVC.h; sourceTree = "<group>"; };
+		B53CAD421CBDEEFE00C9E482 /* TransactionTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionTableVC.m; sourceTree = "<group>"; };
+		B53CAD441CBDEF1300C9E482 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		B53CAD451CBDEF1300C9E482 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
+		B53CAD471CBDF06A00C9E482 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		B53CAD481CBDF06A00C9E482 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
+		B53CAD4A1CBDF08100C9E482 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B53CAD4E1CBDF2ED00C9E482 /* BankAccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankAccountCell.xib; sourceTree = "<group>"; };
+		B53CAD501CBDF37200C9E482 /* BankAccountTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccountTableViewCell.h; sourceTree = "<group>"; };
+		B53CAD511CBDF37200C9E482 /* BankAccountTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountTableViewCell.m; sourceTree = "<group>"; };
+		B53CAD551CBDFA5D00C9E482 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		B53CAD571CBDFA6800C9E482 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		B53CAD581CBDFB9C00C9E482 /* spenderizer-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "spenderizer-prefix.pch"; sourceTree = "<group>"; };
 		B560F00C1CBD7AF3000B3447 /* SGMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMLParser.h; sourceTree = "<group>"; };
 		B560F00D1CBD7AF3000B3447 /* SGMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGMLParser.m; sourceTree = "<group>"; };
 		B560F00F1CBD81E5000B3447 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
@@ -120,7 +145,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6214B8C9AA710DA37E201DC9 /* libPods-Spenderizer.a in Frameworks */,
+				B53CAD4B1CBDF08100C9E482 /* Security.framework in Frameworks */,
+				0013D711A67472DB8B9FAC13 /* Pods_Spenderizer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,13 +162,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B56381FD1CB5F85E00B9B45A /* View */ = {
+		B53CAD4C1CBDF2B200C9E482 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
-				21085E251CB5BE8D00FA1A7A /* SetPinVC.h */,
-				21085E261CB5BE8D00FA1A7A /* SetPinVC.m */,
-				21085E281CB5DE7000FA1A7A /* RegisterLoginVC.h */,
-				21085E291CB5DE7000FA1A7A /* RegisterLoginVC.m */,
+				B53CAD3C1CBDE52300C9E482 /* TransactionCell.xib */,
+				B53CAD3E1CBDEE2D00C9E482 /* TransactionTableViewCell.h */,
+				B53CAD3F1CBDEE2D00C9E482 /* TransactionTableViewCell.m */,
+				B53CAD411CBDEEFE00C9E482 /* TransactionTableVC.h */,
+				B53CAD421CBDEEFE00C9E482 /* TransactionTableVC.m */,
+			);
+			name = Transactions;
+			sourceTree = "<group>";
+		};
+		B53CAD4D1CBDF2C700C9E482 /* BankSignIn */ = {
+			isa = PBXGroup;
+			children = (
 				B5AA093D1CB45439004EFCA9 /* BankTableVC.h */,
 				B5AA093E1CB45439004EFCA9 /* BankTableVC.m */,
 				B56382011CB80FC500B9B45A /* BankSignInFormVC.h */,
@@ -247,10 +281,15 @@
 		B5AC663B1CA1E2E00018D7CB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B53CAD471CBDF06A00C9E482 /* KeychainWrapper.h */,
+				B53CAD481CBDF06A00C9E482 /* KeychainWrapper.m */,
 				B53592C61CBBE8D4005CF4D5 /* SWRevealViewController.h */,
 				B53592C71CBBE8D4005CF4D5 /* SWRevealViewController.m */,
 				B5AC663C1CA1E2E00018D7CB /* main.m */,
 				B560F0121CBDABB6000B3447 /* Notes */,
+				B53CAD571CBDFA6800C9E482 /* Constants.h */,
+				B53CAD551CBDFA5D00C9E482 /* Constants.m */,
+				B53CAD581CBDFB9C00C9E482 /* spenderizer-prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -267,6 +306,8 @@
 				B5AA09471CB45AC9004EFCA9 /* Bank.m */,
 				B5AA094D1CB45D0F004EFCA9 /* MetaBankInfo.h */,
 				B5AA094E1CB45D0F004EFCA9 /* MetaBankInfo.m */,
+				B53CAD441CBDEF1300C9E482 /* Transaction.h */,
+				B53CAD451CBDEF1300C9E482 /* Transaction.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -274,7 +315,8 @@
 		E558874928F74C9ACC39B766 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A46150939BE329B0A00C44C8 /* libPods-Spenderizer.a */,
+				B53CAD4A1CBDF08100C9E482 /* Security.framework */,
+				A382A6974C5D5C1DDB4C334D /* Pods_Spenderizer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -411,14 +453,20 @@
 				B563821E1CB8B45A00B9B45A /* OFXget.m in Sources */,
 				B563821B1CB8B3AD00B9B45A /* OFXUtil.m in Sources */,
 				B56382151CB8B2A100B9B45A /* OFXQuery.m in Sources */,
+				B53CAD561CBDFA5D00C9E482 /* Constants.m in Sources */,
 				B56382381CBADCF700B9B45A /* BankAccountsTableVC.m in Sources */,
 				210151DF1CBB1B140037E6D3 /* MainMenuVC.m in Sources */,
 				B5AA09481CB45AC9004EFCA9 /* Bank.m in Sources */,
+				B53CAD521CBDF37200C9E482 /* BankAccountTableViewCell.m in Sources */,
 				B5AA09421CB45609004EFCA9 /* User.m in Sources */,
+				B53CAD491CBDF06A00C9E482 /* KeychainWrapper.m in Sources */,
+				B53CAD461CBDEF1300C9E482 /* Transaction.m in Sources */,
 				B56382321CB972AB00B9B45A /* XMLDictionary.m in Sources */,
+				B53CAD431CBDEEFE00C9E482 /* TransactionTableVC.m in Sources */,
 				B56382031CB80FC500B9B45A /* BankSignInFormVC.m in Sources */,
 				210151F01CBB42020037E6D3 /* NavigationTVC.m in Sources */,
 				B5AA094C1CB45CE3004EFCA9 /* Loader.m in Sources */,
+				B53CAD401CBDEE2D00C9E482 /* TransactionTableViewCell.m in Sources */,
 				B5AA09451CB4570D004EFCA9 /* BankAccount.m in Sources */,
 				210151E81CBB2C8A0037E6D3 /* HomePageVC.m in Sources */,
 				B5AA093F1CB45439004EFCA9 /* BankTableVC.m in Sources */,
@@ -539,6 +587,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Spenderizer/spenderizer-prefix.pch";
 				INFOPLIST_FILE = Spenderizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thejabs.Spenderizer;
@@ -554,6 +604,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Spenderizer/spenderizer-prefix.pch";
 				INFOPLIST_FILE = Spenderizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thejabs.Spenderizer;
