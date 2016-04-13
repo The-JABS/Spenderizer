@@ -7,6 +7,7 @@
 //
 
 #import "BankAccountsTableVC.h"
+#import "BankAccountTableViewCell.h"
 
 @interface BankAccountsTableVC ()
 
@@ -37,21 +38,31 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"BankAccountCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    BankAccountTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        NSArray* topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"BankAccountCell" owner:self options:nil];
+        for (id currentObject in topLevelObjects) {
+            if ([currentObject isKindOfClass:[UITableViewCell class]]) {
+                cell = (BankAccountTableViewCell *)currentObject;
+                break;
+            }
+        }
     }
     
     // Set the data for this cell:
     BankAccount *account = [accounts objectAtIndex:indexPath.row];
-  
-    cell.textLabel.text = [NSString stringWithFormat:@"%@   %@", [account type], [account secureID]];
+    cell.nameLb.text = [NSString stringWithFormat:@"%@   %@", [account type], [account secureID]];
+    cell.account = account;
     
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 95;
+}
 
 /*
 #pragma mark - Navigation
