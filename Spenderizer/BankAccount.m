@@ -11,6 +11,7 @@
 @implementation BankAccount
 @synthesize userID, password, accountID, routingNumber, type;
 @synthesize supportTxDl, supportXferSrc, supportXferDest;
+@synthesize bank;
 
 /** Constructor
  * @param userID

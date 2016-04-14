@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Bank.h"
 
 @interface BankAccount : NSObject {
     
@@ -28,6 +29,6 @@
 @property (nonatomic, retain) NSString *supportTxDl;      // Supports transaction download Y or N
 @property (nonatomic, retain) NSString *supportXferDest;  // Supports incoming wire transfers Y or N;
 @property (nonatomic, retain) NSString *supportXferSrc;   // Supports out going wire transfers Y or N;
-
+@property (nonatomic, retain) Bank *bank;
 
 @end
