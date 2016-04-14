@@ -70,10 +70,7 @@
 //        [ofxGet query:infoQuery server:[userBank url] responceID:PROFILE_KEY];
         OFXSignOnQuery *signOnQry = [[OFXSignOnQuery alloc] initWithBank:userBank user:userAccount];
         [ofxGet query:signOnQry server:[userBank url] responceID:SIGN_ON_KEY];
-//        OFXAccountsRequestQuery *requestAccounts = [[OFXAccountsRequestQuery alloc] initWithBank:userBank user:userAccount];
-//        [ofxGet query:requestAccounts server:[userBank url] responceID:ACCOUNTS_KEY];
-
-        
+       
     }
 }
 
@@ -135,7 +132,9 @@
 }
 
 - (void)parseProfileInfo:(NSString *)result {
-    NSDictionary *dict = [NSDictionary dictionaryWithXMLString:result];
+    SGMLParser *parser = [[SGMLParser alloc] init];
+    NSDictionary *dict = [parser parseXMLString:result];
+
     NSLog(@"dict %@",dict);
 
 }
@@ -212,6 +211,7 @@
         [bankAcct setStatus:status];
         [bankAcct setSupportXferDest:xferDest];
         [bankAcct setSupportXferSrc:xferSrc];
+        [bankAcct setBank:userBank];
         [accounts addObject:bankAcct];
         NSLog(@"%@", [bankAcct description]);
         } @catch (NSException *e) {
@@ -234,10 +234,10 @@
         [bankAcct setStatus:status];
         [bankAcct setSupportXferDest:xferDest];
         [bankAcct setSupportXferSrc:xferSrc];
+        [bankAcct setBank:userBank];
         [accounts addObject:bankAcct];
 
     }
-    
     
     [self performSegueWithIdentifier:@"showBankAccounts" sender:accounts];
 }
@@ -262,6 +262,7 @@
     // Create request for accounts
     OFXAccountsRequestQuery *requestAccounts = [[OFXAccountsRequestQuery alloc] initWithBank:userBank user:userAccount];
     [ofxGet query:requestAccounts server:[userBank url] responceID:ACCOUNTS_KEY];
+    
 }
 
 - (void)didReceiveMemoryWarning {
