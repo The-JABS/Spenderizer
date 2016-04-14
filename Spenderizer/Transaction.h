@@ -10,6 +10,4 @@
 
 @interface Transaction : NSObject
 
-
-
 @end
