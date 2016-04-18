@@ -17,7 +17,6 @@
 		B53592CB1CBBEAD0005CF4D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B53592CA1CBBEAD0005CF4D5 /* AppDelegate.m */; };
 		B53592F91CBCB580005CF4D5 /* OFXHeader in Resources */ = {isa = PBXBuildFile; fileRef = B53592F81CBCB580005CF4D5 /* OFXHeader */; };
 		B53CAD461CBDEF1300C9E482 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = B53CAD451CBDEF1300C9E482 /* Transaction.m */; };
-		B53CAD491CBDF06A00C9E482 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B53CAD481CBDF06A00C9E482 /* KeychainWrapper.m */; };
 		B53CAD4B1CBDF08100C9E482 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53CAD4A1CBDF08100C9E482 /* Security.framework */; };
 		B53CAD561CBDFA5D00C9E482 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B53CAD551CBDFA5D00C9E482 /* Constants.m */; };
 		B53CAD9F1CBEF69200C9E482 /* BankAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B53CAD841CBEF69200C9E482 /* BankAccountCell.xib */; };
@@ -35,6 +34,8 @@
 		B53CADAB1CBEF69200C9E482 /* TransactionTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B53CAD9C1CBEF69200C9E482 /* TransactionTableVC.m */; };
 		B53CADAC1CBEF69200C9E482 /* TransactionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B53CAD9E1CBEF69200C9E482 /* TransactionTableViewCell.m */; };
 		B53CADAF1CBF279E00C9E482 /* OFXTransactionQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B53CADAE1CBF279E00C9E482 /* OFXTransactionQuery.m */; };
+		B53CADB01CC1922B00C9E482 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AC66491CA1E2E00018D7CB /* LaunchScreen.storyboard */; };
+		B53CADBC1CC4B54E00C9E482 /* FXKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = B53CADBB1CC4B54E00C9E482 /* FXKeychain.m */; };
 		B560F00E1CBD7AF3000B3447 /* SGMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B560F00D1CBD7AF3000B3447 /* SGMLParser.m */; };
 		B560F0111CBD81E5000B3447 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = B560F0101CBD81E5000B3447 /* Stack.m */; };
 		B56382121CB8B28E00B9B45A /* OFXSignOnQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B56382111CB8B28E00B9B45A /* OFXSignOnQuery.m */; };
@@ -52,7 +53,6 @@
 		B5AA094F1CB45D0F004EFCA9 /* MetaBankInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA094E1CB45D0F004EFCA9 /* MetaBankInfo.m */; };
 		B5AC663D1CA1E2E00018D7CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AC663C1CA1E2E00018D7CB /* main.m */; };
 		B5AC66481CA1E2E00018D7CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AC66471CA1E2E00018D7CB /* Assets.xcassets */; };
-		B5AC664B1CA1E2E00018D7CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AC66491CA1E2E00018D7CB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,8 +71,6 @@
 		B53592F81CBCB580005CF4D5 /* OFXHeader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFXHeader; sourceTree = "<group>"; };
 		B53CAD441CBDEF1300C9E482 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
 		B53CAD451CBDEF1300C9E482 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
-		B53CAD471CBDF06A00C9E482 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
-		B53CAD481CBDF06A00C9E482 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		B53CAD4A1CBDF08100C9E482 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B53CAD551CBDFA5D00C9E482 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		B53CAD571CBDFA6800C9E482 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -106,6 +104,8 @@
 		B53CAD9E1CBEF69200C9E482 /* TransactionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionTableViewCell.m; sourceTree = "<group>"; };
 		B53CADAD1CBF279E00C9E482 /* OFXTransactionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFXTransactionQuery.h; sourceTree = "<group>"; };
 		B53CADAE1CBF279E00C9E482 /* OFXTransactionQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFXTransactionQuery.m; sourceTree = "<group>"; };
+		B53CADBA1CC4B54E00C9E482 /* FXKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXKeychain.h; sourceTree = "<group>"; };
+		B53CADBB1CC4B54E00C9E482 /* FXKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXKeychain.m; sourceTree = "<group>"; };
 		B560F00C1CBD7AF3000B3447 /* SGMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMLParser.h; sourceTree = "<group>"; };
 		B560F00D1CBD7AF3000B3447 /* SGMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGMLParser.m; sourceTree = "<group>"; };
 		B560F00F1CBD81E5000B3447 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
@@ -287,8 +287,8 @@
 		B5AC663B1CA1E2E00018D7CB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B53CAD471CBDF06A00C9E482 /* KeychainWrapper.h */,
-				B53CAD481CBDF06A00C9E482 /* KeychainWrapper.m */,
+				B53CADBA1CC4B54E00C9E482 /* FXKeychain.h */,
+				B53CADBB1CC4B54E00C9E482 /* FXKeychain.m */,
 				B53592C61CBBE8D4005CF4D5 /* SWRevealViewController.h */,
 				B53592C71CBBE8D4005CF4D5 /* SWRevealViewController.m */,
 				B5AC663C1CA1E2E00018D7CB /* main.m */,
@@ -388,9 +388,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B53CADB01CC1922B00C9E482 /* LaunchScreen.storyboard in Resources */,
 				B50286EA1CBAE88900728973 /* OFXAccountsRequestTemplate in Resources */,
 				210151F91CBD961C0037E6D3 /* MENU BUTTON 40x40.png in Resources */,
-				B5AC664B1CA1E2E00018D7CB /* LaunchScreen.storyboard in Resources */,
 				B56382291CB8D3DF00B9B45A /* OFXTransactionTemplate in Resources */,
 				B53592F91CBCB580005CF4D5 /* OFXHeader in Resources */,
 				B5AC66481CA1E2E00018D7CB /* Assets.xcassets in Resources */,
@@ -458,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B53592CB1CBBEAD0005CF4D5 /* AppDelegate.m in Sources */,
+				B53CADBC1CC4B54E00C9E482 /* FXKeychain.m in Sources */,
 				B563821E1CB8B45A00B9B45A /* OFXget.m in Sources */,
 				B563821B1CB8B3AD00B9B45A /* OFXUtil.m in Sources */,
 				B53CADA71CBEF69200C9E482 /* RegisterLoginVC.m in Sources */,
@@ -467,7 +468,6 @@
 				B53CAD561CBDFA5D00C9E482 /* Constants.m in Sources */,
 				B5AA09481CB45AC9004EFCA9 /* Bank.m in Sources */,
 				B5AA09421CB45609004EFCA9 /* User.m in Sources */,
-				B53CAD491CBDF06A00C9E482 /* KeychainWrapper.m in Sources */,
 				B53CAD461CBDEF1300C9E482 /* Transaction.m in Sources */,
 				B56382321CB972AB00B9B45A /* XMLDictionary.m in Sources */,
 				B53CADAB1CBEF69200C9E482 /* TransactionTableVC.m in Sources */,

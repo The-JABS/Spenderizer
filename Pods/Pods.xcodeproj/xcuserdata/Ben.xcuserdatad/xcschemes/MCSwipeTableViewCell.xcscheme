@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5130EDADBB9E7A2D762343CD'
-               BlueprintName = 'Pods-Spenderizer'
+               BlueprintIdentifier = '4AB7BC613EF3E61D8C5D5F11'
+               BlueprintName = 'MCSwipeTableViewCell'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods_Spenderizer.framework'>
+               BuildableName = 'MCSwipeTableViewCell.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

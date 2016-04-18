@@ -9,6 +9,10 @@
 #import "BankAccountsTableVC.h"
 #import "BankAccountTableViewCell.h"
 
+#define BANK_HEADER_ROW_INDEX 0
+#define HEADER_CELL_ID @"BankHeaderCell"
+#define ACCOUNT_CELL_ID @"BankAccountCell"
+
 @interface BankAccountsTableVC ()
 
 @end
@@ -30,38 +34,79 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return [[[User sharedInstance] uniqueBanks] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [accounts count];
+    User *user = [User sharedInstance];
+    return [[user accountsForBank:[[user uniqueBanks] objectAtIndex:section]] count] + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"BankAccountCell";
     
-    BankAccountTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        NSArray* topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"BankAccountCell" owner:self options:nil];
-        for (id currentObject in topLevelObjects) {
-            if ([currentObject isKindOfClass:[UITableViewCell class]]) {
-                cell = (BankAccountTableViewCell *)currentObject;
-                break;
+    User *user = [User sharedInstance];
+    Bank *bank = [[user uniqueBanks] objectAtIndex:indexPath.section];
+    
+    UITableViewCell *cell = nil;
+
+    if (indexPath.row == BANK_HEADER_ROW_INDEX) {
+        cell = [tableView dequeueReusableCellWithIdentifier:HEADER_CELL_ID];
+        
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:HEADER_CELL_ID];
+        }
+        
+        cell.textLabel.text = bank.name;
+    } else {
+        cell = [tableView dequeueReusableCellWithIdentifier:ACCOUNT_CELL_ID];
+        if (cell == nil) {
+            NSArray* topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"BankAccountCell" owner:self options:nil];
+            for (id currentObject in topLevelObjects) {
+                if ([currentObject isKindOfClass:[UITableViewCell class]]) {
+                    cell = (BankAccountTableViewCell *)currentObject;
+                }
             }
         }
+
+        BankAccountTableViewCell *acctCell = (BankAccountTableViewCell *)cell;
+        BankAccount *account = [[user accountsForBank:bank] objectAtIndex:indexPath.row-1];
+        acctCell.nameLb.text = [NSString stringWithFormat:@"%@   %@", [account type], [account secureID]];
+        acctCell.account = account;
     }
     
-    // Set the data for this cell:
-    BankAccount *account = [accounts objectAtIndex:indexPath.row];
-    cell.nameLb.text = [NSString stringWithFormat:@"%@   %@", [account type], [account secureID]];
-    cell.account = account;
-    
+
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == BANK_HEADER_ROW_INDEX) {
+        return 95;
+    } else {
+        return 65;
+    }
+    
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
+    view.tintColor = tableView.tintColor;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == BANK_HEADER_ROW_INDEX) {
+        return YES;
+    }
+    return NO;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 95;
+    if(editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        User *user = [User sharedInstance];
+        Bank *bank = [[user uniqueBanks] objectAtIndex:indexPath.section];
+        [user removeAccountsForBank:bank];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+    }
 }
 
 /*

@@ -87,9 +87,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Spenderizer/ABPadLockScreen.framework"
   install_framework "Pods-Spenderizer/JVFloatLabeledTextField.framework"
   install_framework "Pods-Spenderizer/MBProgressHUD.framework"
+  install_framework "Pods-Spenderizer/MCSwipeTableViewCell.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Spenderizer/ABPadLockScreen.framework"
   install_framework "Pods-Spenderizer/JVFloatLabeledTextField.framework"
   install_framework "Pods-Spenderizer/MBProgressHUD.framework"
+  install_framework "Pods-Spenderizer/MCSwipeTableViewCell.framework"
 fi

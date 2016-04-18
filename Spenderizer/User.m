@@ -7,44 +7,52 @@
 //
 
 #import "User.h"
+#import "FXKeychain.h"
 
 @implementation User
-@synthesize name, password;
+@synthesize name, password, bankAccounts;
 
-// Singleton pattern for User.
 + (User *)sharedInstance {
     static User *instance;
-    
     @synchronized(self) {
         if (!instance) {
             instance = [[User alloc] init];
         }
     }
-    
     return instance;
 }
 
-
-/**
- * Constructor
- * @param name - Spenderizer username
- * @param password - Spenderizer password
- */
 - (id)init {
     if (self = [super init]) {
         self.name = @"";
         self.password = @"";
         bankAccounts = [[NSMutableArray alloc] init];
+        
+        NSData *encodedSelf = [[FXKeychain defaultKeychain] objectForKey:@"self"];
+        if (encodedSelf) {
+            self = [NSKeyedUnarchiver unarchiveObjectWithData:encodedSelf];
+        }
+        
     }
     return self;
 }
 
-/** Adds a BankAccount object to the usersList of bankAccounts
- * @param Bank Account
- */
 - (void)addBankAccount:(BankAccount *)bankAcct {
-    [bankAccounts addObject:bankAcct];
+    if (![self containsAccount:bankAcct]) {
+        [bankAccounts addObject:bankAcct];
+    }
     NSLog(@"%lu", (unsigned long)[bankAccounts count]);
+    [self save];
+}
+
+- (BOOL)containsAccount:(BankAccount *)bankAcct {
+    BOOL result = false;
+    for (BankAccount *acct in bankAccounts) {
+        if ([acct isEqual:bankAcct]) {
+            result = true;
+        }
+    }
+    return result;
 }
 
 - (void)removeBankAccount:(BankAccount *)bankAcct {
@@ -56,10 +64,57 @@
     }
     [bankAccounts removeObject:toRemove];
     NSLog(@"%lu", (unsigned long)[bankAccounts count]);
+    [self save];
 }
 
-- (void)saveAccounts {
-   
+- (NSArray *)uniqueBanks {
+    NSMutableSet *bankSet = [[NSMutableSet alloc] init];
+    for (BankAccount *account in bankAccounts) {
+        if (account.bank)
+            [bankSet addObject:account.bank];
+    }
+    return [bankSet allObjects];
+}
+
+- (NSArray *)accountsForBank:(Bank *)bank {
+    NSMutableArray *accounts = [NSMutableArray array];
+    for (BankAccount *account in bankAccounts) {
+        if ([account.bank isEqual:bank])
+            [accounts addObject:account];
+    }
+    return accounts;
+}
+
+- (void)removeAccountsForBank:(Bank *)bank {
+    for (BankAccount *account in bankAccounts) {
+        if ([account.bank isEqual:bank])
+            [bankAccounts removeObject:account];
+    }
+    [self save];
+}
+
+- (void)save {
+    NSData *encodedSelf = [NSKeyedArchiver archivedDataWithRootObject:self];
+    [[FXKeychain defaultKeychain] setObject:encodedSelf forKey:@"self"];
+}
+
+// Encode an object for an archive
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+    [coder encodeObject:name forKey:@"name"];
+    [coder encodeObject:password forKey:@"password"];
+    [coder encodeObject:bankAccounts forKey:@"bankAccounts"];
+    
+}
+// Decode an object from an archive
+- (id)initWithCoder:(NSCoder *)coder
+{
+    if (self = [super init]) {
+        name = [coder decodeObjectForKey:@"name"];
+        password = [coder decodeObjectForKey:@"password"];
+        bankAccounts = [coder decodeObjectForKey:@"bankAccounts"];
+    }
+    return self;
 }
 
 @end

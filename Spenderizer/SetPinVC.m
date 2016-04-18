@@ -48,4 +48,12 @@
     
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
+    view.tintColor = tableView.tintColor;
+    
+    //    // if you have index/header text in your tableview change your index text color
+    //    UITableViewHeaderFooterView *headerIndexText = (UITableViewHeaderFooterView *)view;
+    //    [headerIndexText.textLabel setTextColor:[UIColor blackColor]];
+    
+}
 @end
