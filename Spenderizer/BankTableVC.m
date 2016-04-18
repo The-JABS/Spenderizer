@@ -24,9 +24,7 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"MENU BUTTON 40x40.png"] style:UIBarButtonItemStylePlain target:self.revealViewController action:@selector(revealToggle:)];
     
     
-    
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-    
     
     // Search bar
     resultsSearchController = [[UISearchController alloc] initWithSearchResultsController:nil];
@@ -42,19 +40,31 @@
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 
     
-    // Load banks for table.
-    banks = [Loader downloadMetaBankInfo];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [hud setSquare:YES];
+    [hud setOpacity:0.7];
+    [hud setDetailsLabelText:@"Signing In..."];
     
-    // Move bb&t to the top ;)
-    if ([banks count] > 0) {
-        MetaBankInfo *bbt = [self bankWithID:@"475"];
-        [banks removeObject:bbt];
-        [banks insertObject:bbt atIndex:0];
-    }
+    // Load banks for table in background.
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        banks = [Loader downloadMetaBankInfo];
     
-    // create search results for searching
-    searchResults = [[NSMutableArray alloc] initWithArray:banks];
-
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            
+            // Move bb&t to the top ;)
+            if ([banks count] > 0) {
+                MetaBankInfo *bbt = [self bankWithID:@"475"];
+                [banks removeObject:bbt];
+                [banks insertObject:bbt atIndex:0];
+            }
+            
+            // create search results for searching
+            searchResults = [[NSMutableArray alloc] initWithArray:banks];
+            [self.tableView reloadData];
+        });
+    });
+    
 }
 
 - (MetaBankInfo *)bankWithID:(NSString *)ID {

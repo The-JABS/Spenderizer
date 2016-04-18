@@ -25,4 +25,30 @@
     return self;
 }
 
+- (void)encodeWithCoder:(NSCoder *)coder {
+    [coder encodeObject:ID forKey:@"ID"];
+    [coder encodeObject:name forKey:@"name"];
+    [coder encodeObject:fid forKey:@"fid"];
+    [coder encodeObject:org forKey:@"org"];
+    [coder encodeObject:url forKey:@"url"];
+    [coder encodeObject:address forKey:@"address"];
+    [coder encodeObject:city forKey:@"city"];
+    [coder encodeObject:state forKey:@"state"];
+    [coder encodeObject:postalCode forKey:@"postalCode"];
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    if (self = [super init]) {
+        ID      = [coder decodeObjectForKey:@"ID"];
+        name    = [coder decodeObjectForKey:@"name"];
+        fid     = [coder decodeObjectForKey:@"fid"];
+        org     = [coder decodeObjectForKey:@"org"];
+        url     = [coder decodeObjectForKey:@"url"];
+        address = [coder decodeObjectForKey:@"address"];
+        state   = [coder decodeObjectForKey:@"state"];
+        postalCode = [coder decodeObjectForKey:@"postalCode"];
+    }
+    return self;
+}
+
 @end

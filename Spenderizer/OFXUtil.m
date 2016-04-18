@@ -73,6 +73,12 @@
     return val;
 }
 
++ (UIView *)viewWithImageName:(NSString *)imageName {
+    UIImage *image = [UIImage imageNamed:imageName];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    imageView.contentMode = UIViewContentModeCenter;
+    return imageView;
+}
 
 /*! Removes Ampersands from NSData (This solves problem for BB&T ....)
  @param NSData Original data.

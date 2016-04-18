@@ -9,15 +9,10 @@
 #import "BankAccount.h"
 
 @implementation BankAccount
-@synthesize userID, password, accountID, routingNumber, type;
+@synthesize userID, password, accountID, routingNumber, type, status;
 @synthesize supportTxDl, supportXferSrc, supportXferDest;
+@synthesize bank;
 
-/** Constructor
- * @param userID
- * @param password
- * @param accountID
- * @param routingNumber
- */
 - (id)initWithUserID:(NSString *)userid password:(NSString *)pass accountID:(NSString *)acctID routingNumber:(NSString *)routingNum {
     if (self = [super init]) {
         self.userID = userid;
@@ -38,11 +33,42 @@
 }
 
 - (BOOL)isEqual:(BankAccount *)object {
-    return self.accountID == object.accountID && self.routingNumber == object.routingNumber;
+    return [self.accountID isEqualToString:object.accountID] && [self.routingNumber isEqualToString:object.routingNumber];
 }
 
 - (NSString *)description {
     return [NSString stringWithFormat: @"Bank-Account: userID=%@ accountID=%@ routing=%@ type=%@ supportTxDL=%@ supXferSrc=%@ supXferDest=%@", userID, accountID,routingNumber, type, supportTxDl, supportXferSrc, supportXferDest];
+}
+
+// Encode an object for an archive
+- (void)encodeWithCoder:(NSCoder *)coder {
+    [coder encodeObject:userID          forKey:@"userID"];
+    [coder encodeObject:password        forKey:@"password"];
+    [coder encodeObject:accountID       forKey:@"accountID"];
+    [coder encodeObject:routingNumber   forKey:@"routingNumber"];
+    [coder encodeObject:status          forKey:@"status"];
+    [coder encodeObject:type            forKey:@"type"];
+    [coder encodeObject:supportTxDl     forKey:@"supportTxDl"];
+    [coder encodeObject:supportXferDest forKey:@"supportXferDest"];
+    [coder encodeObject:supportXferSrc  forKey:@"supportXferSrc"];
+    [coder encodeObject:bank            forKey:@"bank"];
+    
+}
+// Decode an object from an archive
+- (id)initWithCoder:(NSCoder *)coder {
+    if (self = [self init]) {
+        userID          = [coder decodeObjectForKey:@"userID"];
+        password        = [coder decodeObjectForKey:@"password"];
+        accountID       = [coder decodeObjectForKey:@"accountID"];
+        routingNumber   = [coder decodeObjectForKey:@"routingNumber"];
+        status          = [coder decodeObjectForKey:@"status"];
+        type            = [coder decodeObjectForKey:@"type"];
+        supportTxDl     = [coder decodeObjectForKey:@"supportTxDl"];
+        supportXferDest = [coder decodeObjectForKey:@"supportXferDest"];
+        supportXferSrc  = [coder decodeObjectForKey:@"supportXferSrc"];
+        bank            = [coder decodeObjectForKey:@"bank"];
+    }
+    return self;
 }
 
 @end

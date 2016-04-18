@@ -70,10 +70,7 @@
 //        [ofxGet query:infoQuery server:[userBank url] responceID:PROFILE_KEY];
         OFXSignOnQuery *signOnQry = [[OFXSignOnQuery alloc] initWithBank:userBank user:userAccount];
         [ofxGet query:signOnQry server:[userBank url] responceID:SIGN_ON_KEY];
-//        OFXAccountsRequestQuery *requestAccounts = [[OFXAccountsRequestQuery alloc] initWithBank:userBank user:userAccount];
-//        [ofxGet query:requestAccounts server:[userBank url] responceID:ACCOUNTS_KEY];
-
-        
+       
     }
 }
 
@@ -135,7 +132,9 @@
 }
 
 - (void)parseProfileInfo:(NSString *)result {
-    NSDictionary *dict = [NSDictionary dictionaryWithXMLString:result];
+    SGMLParser *parser = [[SGMLParser alloc] init];
+    NSDictionary *dict = [parser parseXMLString:result];
+
     NSLog(@"dict %@",dict);
 
 }
@@ -198,21 +197,24 @@
     for (NSDictionary *bankAccountInfo in acctInfo) {
         NSLog(@"check this 3 %@", bankAccountInfo);
         @try {
-        NSString *accountID = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.BANKACCTFROM.ACCTID"];
-        NSString *type      = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.BANKACCTFROM.ACCTTYPE"];
-        NSString *bankID    = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.BANKACCTFROM.BANKID"];
-        NSString *supTxDl   = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.SUPTXDL"];
-        NSString *status    = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.SVCSTATUS"];
-        NSString *xferDest  = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.XFERDEST"];
-        NSString *xferSrc   = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.XFERSRC"];
+            NSString *accountID = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.BANKACCTFROM.ACCTID"];
+            NSString *type      = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.BANKACCTFROM.ACCTTYPE"];
+            NSString *bankID    = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.BANKACCTFROM.BANKID"];
+            NSString *supTxDl   = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.SUPTXDL"];
+            NSString *status    = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.SVCSTATUS"];
+            NSString *xferDest  = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.XFERDEST"];
+            NSString *xferSrc   = [bankAccountInfo valueForKeyPath:@"BANKACCTINFO.XFERSRC"];
         
-        BankAccount *bankAcct = [[BankAccount alloc] initWithUserID:[userAccount userID] password:[userAccount password] accountID:accountID routingNumber:bankID];
-        [bankAcct setType:type];
-        [bankAcct setSupportTxDl:supTxDl];
-        [bankAcct setStatus:status];
-        [bankAcct setSupportXferDest:xferDest];
-        [bankAcct setSupportXferSrc:xferSrc];
-        [accounts addObject:bankAcct];
+            BankAccount *bankAcct = [[BankAccount alloc] initWithUserID:[userAccount userID] password:[userAccount password] accountID:accountID routingNumber:bankID];
+            [bankAcct setType:type];
+            [bankAcct setSupportTxDl:supTxDl];
+            [bankAcct setStatus:status];
+            [bankAcct setSupportXferDest:xferDest];
+            [bankAcct setSupportXferSrc:xferSrc];
+            [bankAcct setBank:userBank];
+            [[User sharedInstance] addBankAccount:bankAcct];
+            [accounts addObject:bankAcct];
+            
         NSLog(@"%@", [bankAcct description]);
         } @catch (NSException *e) {
             
@@ -234,10 +236,11 @@
         [bankAcct setStatus:status];
         [bankAcct setSupportXferDest:xferDest];
         [bankAcct setSupportXferSrc:xferSrc];
+        [bankAcct setBank:userBank];
+        [[User sharedInstance] addBankAccount:bankAcct];
         [accounts addObject:bankAcct];
-
+        
     }
-    
     
     [self performSegueWithIdentifier:@"showBankAccounts" sender:accounts];
 }
@@ -262,6 +265,7 @@
     // Create request for accounts
     OFXAccountsRequestQuery *requestAccounts = [[OFXAccountsRequestQuery alloc] initWithBank:userBank user:userAccount];
     [ofxGet query:requestAccounts server:[userBank url] responceID:ACCOUNTS_KEY];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -272,11 +276,11 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"showBankAccounts"]) {
-        NSArray *accounts = (NSArray *)sender;
-        BankAccountsTableVC *accountsView = (BankAccountsTableVC *)segue.destinationViewController;
-        [accountsView setAccounts:accounts];
-    }
+//    if ([[segue identifier] isEqualToString:@"showBankAccounts"]) {
+//        NSArray *accounts = (NSArray *)sender;
+//        BankAccountsTableVC *accountsView = (BankAccountsTableVC *)segue.destinationViewController;
+//        [accountsView setAccounts:accounts];
+//    }
 }
 
 

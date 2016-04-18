@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "XMLDictionary.h"
+#import "OFXUtil.h"
 
 @interface OFXUtil : NSObject
 + (NSString *)getDate;
@@ -15,5 +17,6 @@
 + (NSString *)getOldDate;
 + (NSString *)getClientID;
 + (id)safeValueForPath:(NSString *)path inDictionary:(NSDictionary *)dict;
++ (UIView *)viewWithImageName:(NSString *)imageName;
 + (NSData *)fixAmpersands:(NSData*)data;
 @end

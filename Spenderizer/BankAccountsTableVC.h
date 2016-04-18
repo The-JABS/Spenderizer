@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BankAccount.h"
+#import "OFXUtil.h"
+#import "MCSwipeTableViewCell.h"
 
 @interface BankAccountsTableVC : UITableViewController {
 
