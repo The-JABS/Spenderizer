@@ -36,6 +36,7 @@
 		B53CADAF1CBF279E00C9E482 /* OFXTransactionQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B53CADAE1CBF279E00C9E482 /* OFXTransactionQuery.m */; };
 		B53CADB01CC1922B00C9E482 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AC66491CA1E2E00018D7CB /* LaunchScreen.storyboard */; };
 		B53CADBC1CC4B54E00C9E482 /* FXKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = B53CADBB1CC4B54E00C9E482 /* FXKeychain.m */; };
+		B53CADBE1CC4BBB400C9E482 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = B53CADBD1CC4BBB400C9E482 /* cross.png */; };
 		B560F00E1CBD7AF3000B3447 /* SGMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B560F00D1CBD7AF3000B3447 /* SGMLParser.m */; };
 		B560F0111CBD81E5000B3447 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = B560F0101CBD81E5000B3447 /* Stack.m */; };
 		B56382121CB8B28E00B9B45A /* OFXSignOnQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B56382111CB8B28E00B9B45A /* OFXSignOnQuery.m */; };
@@ -106,6 +107,7 @@
 		B53CADAE1CBF279E00C9E482 /* OFXTransactionQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFXTransactionQuery.m; sourceTree = "<group>"; };
 		B53CADBA1CC4B54E00C9E482 /* FXKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXKeychain.h; sourceTree = "<group>"; };
 		B53CADBB1CC4B54E00C9E482 /* FXKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXKeychain.m; sourceTree = "<group>"; };
+		B53CADBD1CC4BBB400C9E482 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		B560F00C1CBD7AF3000B3447 /* SGMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMLParser.h; sourceTree = "<group>"; };
 		B560F00D1CBD7AF3000B3447 /* SGMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGMLParser.m; sourceTree = "<group>"; };
 		B560F00F1CBD81E5000B3447 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
@@ -199,6 +201,15 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		B53CADBF1CC4BBBB00C9E482 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				B53CADBD1CC4BBB400C9E482 /* cross.png */,
+				210151F81CBD961C0037E6D3 /* MENU BUTTON 40x40.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		B563820A1CB8B1EC00B9B45A /* OFXQueries */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,7 +280,6 @@
 		B5AC663A1CA1E2E00018D7CB /* Spenderizer */ = {
 			isa = PBXGroup;
 			children = (
-				210151F81CBD961C0037E6D3 /* MENU BUTTON 40x40.png */,
 				B5AC663E1CA1E2E00018D7CB /* AppDelegate.h */,
 				B53592CA1CBBEAD0005CF4D5 /* AppDelegate.m */,
 				B5AC66471CA1E2E00018D7CB /* Assets.xcassets */,
@@ -287,6 +297,7 @@
 		B5AC663B1CA1E2E00018D7CB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B53CADBF1CC4BBBB00C9E482 /* images */,
 				B53CADBA1CC4B54E00C9E482 /* FXKeychain.h */,
 				B53CADBB1CC4B54E00C9E482 /* FXKeychain.m */,
 				B53592C61CBBE8D4005CF4D5 /* SWRevealViewController.h */,
@@ -394,6 +405,7 @@
 				B56382291CB8D3DF00B9B45A /* OFXTransactionTemplate in Resources */,
 				B53592F91CBCB580005CF4D5 /* OFXHeader in Resources */,
 				B5AC66481CA1E2E00018D7CB /* Assets.xcassets in Resources */,
+				B53CADBE1CC4BBB400C9E482 /* cross.png in Resources */,
 				B50286E81CBAE62D00728973 /* Main.storyboard in Resources */,
 				B53CADAA1CBEF69200C9E482 /* TransactionCell.xib in Resources */,
 				B56382281CB8D3DF00B9B45A /* OFXSignOnTemplate in Resources */,

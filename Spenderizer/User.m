@@ -86,10 +86,13 @@
 }
 
 - (void)removeAccountsForBank:(Bank *)bank {
+    NSMutableArray *toRemove = [NSMutableArray array];
     for (BankAccount *account in bankAccounts) {
         if ([account.bank isEqual:bank])
-            [bankAccounts removeObject:account];
+            [toRemove addObject:account];
     }
+    [bankAccounts removeObjectsInArray:toRemove];
+    
     [self save];
 }
 

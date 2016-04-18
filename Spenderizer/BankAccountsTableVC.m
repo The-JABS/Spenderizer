@@ -47,18 +47,31 @@
     User *user = [User sharedInstance];
     Bank *bank = [[user uniqueBanks] objectAtIndex:indexPath.section];
     
-    UITableViewCell *cell = nil;
-
     if (indexPath.row == BANK_HEADER_ROW_INDEX) {
-        cell = [tableView dequeueReusableCellWithIdentifier:HEADER_CELL_ID];
+       MCSwipeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:HEADER_CELL_ID];
         
         if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:HEADER_CELL_ID];
+           cell = [[MCSwipeTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:HEADER_CELL_ID];
         }
         
+        UIView *crossView = [OFXUtil viewWithImageName:@"cross"];
+        UIColor *redColor = [UIColor colorWithRed:232.0 / 255.0 green:61.0 / 255.0 blue:14.0 / 255.0 alpha:1.0];
+        
+        [cell.detailTextLabel setText:@"Swipe to delete"];
+        
+        [cell setSwipeGestureWithView:crossView color:redColor mode:MCSwipeTableViewCellModeExit state:MCSwipeTableViewCellState3 completionBlock:^(MCSwipeTableViewCell *cell, MCSwipeTableViewCellState state, MCSwipeTableViewCellMode mode) {
+            NSLog(@"Did swipe \"Cross\" cell");
+            
+            [user removeAccountsForBank:bank];
+            [tableView reloadData];
+        }];
+
+        
         cell.textLabel.text = bank.name;
+        return cell;
+        
     } else {
-        cell = [tableView dequeueReusableCellWithIdentifier:ACCOUNT_CELL_ID];
+         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ACCOUNT_CELL_ID];
         if (cell == nil) {
             NSArray* topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"BankAccountCell" owner:self options:nil];
             for (id currentObject in topLevelObjects) {
@@ -72,10 +85,10 @@
         BankAccount *account = [[user accountsForBank:bank] objectAtIndex:indexPath.row-1];
         acctCell.nameLb.text = [NSString stringWithFormat:@"%@   %@", [account type], [account secureID]];
         acctCell.account = account;
+        return cell;
     }
     
 
-    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -96,17 +109,6 @@
         return YES;
     }
     return NO;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if(editingStyle == UITableViewCellEditingStyleDelete)
-    {
-        User *user = [User sharedInstance];
-        Bank *bank = [[user uniqueBanks] objectAtIndex:indexPath.section];
-        [user removeAccountsForBank:bank];
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
-    }
 }
 
 /*

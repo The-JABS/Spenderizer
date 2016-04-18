@@ -533,7 +533,7 @@
                         <color key="backgroundColor" red="0.35294117650000001" green="0.83921568629999999" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.35294117650000001" green="0.83921568629999999" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BankHeaderCell" textLabel="h5S-VB-fge" rowHeight="95" style="IBUITableViewCellStyleDefault" id="qyJ-Lg-d2H">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BankHeaderCell" textLabel="h5S-VB-fge" rowHeight="95" style="IBUITableViewCellStyleDefault" id="qyJ-Lg-d2H" customClass="MCSwipeTableViewCell">
                                 <rect key="frame" x="0.0" y="50" width="600" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qyJ-Lg-d2H" id="R5O-lc-BQD">
