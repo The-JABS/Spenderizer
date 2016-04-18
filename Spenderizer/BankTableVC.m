@@ -39,7 +39,7 @@
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [hud setSquare:YES];
     [hud setOpacity:0.7];
-    [hud setDetailsLabelText:@"Signing In..."];
+    [hud setDetailsLabelText:@"Loading Banks..."];
     
     // Load banks for table in background.
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
