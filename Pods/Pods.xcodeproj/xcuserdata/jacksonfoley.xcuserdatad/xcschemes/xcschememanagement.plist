@@ -23,6 +23,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>MCSwipeTableViewCell.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>Pods-Spenderizer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -33,6 +38,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0003E8B0DE7EAF0A1E3C9404F7137022</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>729D6EA8004679513B94974498B436D8</key>
 		<dict>
 			<key>primary</key>
@@ -49,6 +59,11 @@
 			<true/>
 		</dict>
 		<key>9F115C12CA3B08405FEB3FD77917FB88</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C3C2C6E10CF1601D894ADDEB19B32EBB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
