@@ -21,14 +21,14 @@
         [self replace:@"{LANGUAGE}" with:@"ENG"];
         [self replace:@"{ORG}" with:[_bank org]];
         [self replace:@"{FID}" with:[_bank fid]];
-        [self replace:@"{APPID}" with:@"QWIN"];
-        [self replace:@"{APPVER}" with:@"2200"];
+        [self replace:@"{APPID}" with:OFX_APP_ID];
+        [self replace:@"{APPVER}" with:OFX_APP_VERSION];
         [self replace:@"{CLIENTUID}" with:[OFXUtil getClientID]];
         
         // Sign up
         // Last time that the client updated (we just say a long time ago so that it will give us new info!)
         [self replace:@"{DTACCTUP}" with:[OFXUtil getOldDate]];
-        [self replace:@"{TRNUID}" with:@"1001"];
+        [self replace:@"{TRNUID}" with:[OFXUtil getTRNUID]];
     }
     return self;
 }
