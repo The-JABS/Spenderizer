@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'AFB484A1B5878102DA3B0EA0'
+               BlueprintIdentifier = 'AE9C90090FC98C11E3944C1D'
                BlueprintName = 'ABPadLockScreen'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'ABPadLockScreen.framework'>

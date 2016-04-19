@@ -10,4 +10,4 @@
 
 NSString * const USER_LOGIN_KEY = @"Spenderizer User Login key";
 NSString * const OFX_APP_ID = @"QWIN";
-NSString * const OFX_APP_VERSION = @"1600";
+NSString * const OFX_APP_VERSION = @"2200";

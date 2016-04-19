@@ -10,6 +10,7 @@
 #import "BankAccount.h"
 #import "OFXUtil.h"
 #import "MCSwipeTableViewCell.h"
+#import "TransactionTableVC.h"
 
 @interface BankAccountsTableVC : UITableViewController {
 

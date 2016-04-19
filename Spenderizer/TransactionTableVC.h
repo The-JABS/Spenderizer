@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OFXget.h"
+#import "SGMLParser.h"
+#import "OFXTransactionQuery.h"
+#import "Transaction.h"
+#import "BankAccount.h"
+#import "TransactionTableViewCell.h"
+#import "MBProgressHUD.h"
 
-@interface TransactionTableVC : UITableViewController
+@interface TransactionTableVC : UITableViewController <OFXGetDelegate> {
+    NSArray *transactions;
+    BankAccount *userAccount;
+}
+
+- (void)setAccount:(BankAccount *)bankAccount;
 
 @end

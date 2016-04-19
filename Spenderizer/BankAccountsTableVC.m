@@ -111,14 +111,24 @@
     return NO;
 }
 
-/*
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    User *user = [User sharedInstance];
+    Bank *bank = [[user uniqueBanks] objectAtIndex:indexPath.section];
+    BankAccount *account = [[user accountsForBank:bank] objectAtIndex:indexPath.row-1];
+    [self performSegueWithIdentifier:@"transaction" sender:account];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"transaction"]) {
+        BankAccount *acct = (BankAccount *)sender;
+        TransactionTableVC *tableVC = (TransactionTableVC *)segue.destinationViewController;
+        [tableVC setAccount:acct];
+    }
 }
-*/
+
 
 @end

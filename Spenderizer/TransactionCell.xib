@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,12 +15,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="423" height="115"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98p-UF-yyS">
-                        <rect key="frame" x="294" y="0.0" width="129" height="115"/>
-                        <color key="backgroundColor" red="0.35294117650000001" green="0.83921568629999999" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ZKo-nh-fJR">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ZKo-nh-fJR">
                         <rect key="frame" x="8" y="8" width="278" height="56"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="56" id="kTm-vG-lJT"/>
+                        </constraints>
                         <attributedString key="attributedText">
                             <fragment content="$0.00">
                                 <attributes>
@@ -31,13 +31,35 @@
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="mNI-fy-ml2">
-                        <rect key="frame" x="8" y="72" width="219" height="35"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="mNI-fy-ml2">
+                        <rect key="frame" x="8" y="72" width="278" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98p-UF-yyS">
+                        <rect key="frame" x="308" y="0.0" width="115" height="115"/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.83921568629999999" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="115" id="Q5o-7R-Gg9"/>
+                            <constraint firstAttribute="height" constant="115" id="cS5-BS-fUo"/>
+                        </constraints>
+                    </view>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="ZKo-nh-fJR" firstAttribute="leading" secondItem="OXZ-PW-8Jc" secondAttribute="leadingMargin" id="4Do-jV-12t"/>
+                    <constraint firstItem="mNI-fy-ml2" firstAttribute="top" secondItem="ZKo-nh-fJR" secondAttribute="bottom" constant="8" id="Fb1-N2-Ygu"/>
+                    <constraint firstItem="98p-UF-yyS" firstAttribute="top" secondItem="OXZ-PW-8Jc" secondAttribute="topMargin" constant="-8" id="K7c-n4-T9a"/>
+                    <constraint firstItem="ZKo-nh-fJR" firstAttribute="leading" secondItem="mNI-fy-ml2" secondAttribute="leading" id="OQW-7Q-34W"/>
+                    <constraint firstItem="mNI-fy-ml2" firstAttribute="top" secondItem="ZKo-nh-fJR" secondAttribute="bottom" constant="8" symbolic="YES" id="TBa-AU-4Lp"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="98p-UF-yyS" secondAttribute="trailing" constant="-8" id="Uxv-z7-ggg"/>
+                    <constraint firstItem="mNI-fy-ml2" firstAttribute="leading" secondItem="OXZ-PW-8Jc" secondAttribute="leadingMargin" id="YhF-JP-M9L"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="98p-UF-yyS" secondAttribute="bottom" constant="-8" id="Zy2-f0-8ld"/>
+                    <constraint firstItem="ZKo-nh-fJR" firstAttribute="top" secondItem="OXZ-PW-8Jc" secondAttribute="topMargin" id="b66-JE-jqF"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="mNI-fy-ml2" secondAttribute="bottom" constant="14" id="jnc-If-ae7"/>
+                    <constraint firstItem="98p-UF-yyS" firstAttribute="leading" secondItem="ZKo-nh-fJR" secondAttribute="trailing" constant="22" id="sNR-ia-day"/>
+                    <constraint firstItem="98p-UF-yyS" firstAttribute="leading" secondItem="mNI-fy-ml2" secondAttribute="trailing" constant="22" id="zdJ-n8-lnb"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="colorView" destination="98p-UF-yyS" id="y02-fp-BvR"/>

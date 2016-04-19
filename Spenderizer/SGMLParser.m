@@ -128,12 +128,12 @@
             } else if (isBuildingData) {
                 [dataSoFar appendFormat:@"%c",[xmlString characterAtIndex:i]];
             } else {
-                NSLog(@"hmm where does this go? %c",[xmlString characterAtIndex:i]);
+                //NSLog(@"hmm where does this go? %c",[xmlString characterAtIndex:i]);
             }
         }
     }
     
-    NSLog(@"parse result = %@", top);
+   // NSLog(@"parse result = %@", top);
     
     return top;
 }
