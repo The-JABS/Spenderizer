@@ -16,7 +16,7 @@
 #import "MBProgressHUD.h"
 
 @interface TransactionTableVC : UITableViewController <OFXGetDelegate> {
-    NSArray *transactions;
+    NSMutableArray *transactions;
     BankAccount *userAccount;
 }
 

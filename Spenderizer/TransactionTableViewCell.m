@@ -9,7 +9,7 @@
 #import "TransactionTableViewCell.h"
 
 @implementation TransactionTableViewCell
-@synthesize priceLb, nameLb, colorView;
+@synthesize priceLb, nameLb, dateLb, colorView;
 
 - (void)awakeFromNib {
     [super awakeFromNib];

@@ -24,4 +24,16 @@
     return [object.FITID isEqualToString:self.FITID];
 }
 
+- (NSString *)formattedDate {
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateStyle:NSDateFormatterMediumStyle];
+    [df setTimeStyle:NSDateFormatterNoStyle];
+    return [df stringFromDate:datePosted];
+}
+
+-(NSComparisonResult) compare:(Transaction *) other {
+    return [other.datePosted compare:self.datePosted];
+}
+
+
 @end
