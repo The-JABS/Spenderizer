@@ -14,5 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLb;
 
+@property (weak, nonatomic) IBOutlet UILabel *dateLb;
+
 @property (weak, nonatomic) IBOutlet UIView *colorView;
 @end

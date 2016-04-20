@@ -561,7 +561,7 @@
                         <color key="backgroundColor" red="0.35294117650000001" green="0.83921568629999999" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.35294117650000001" green="0.83921568629999999" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BankHeaderCell" textLabel="h5S-VB-fge" rowHeight="95" style="IBUITableViewCellStyleDefault" id="qyJ-Lg-d2H" customClass="MCSwipeTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="BankHeaderCell" textLabel="h5S-VB-fge" rowHeight="95" style="IBUITableViewCellStyleDefault" id="qyJ-Lg-d2H" customClass="MCSwipeTableViewCell">
                                 <rect key="frame" x="0.0" y="50" width="600" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qyJ-Lg-d2H" id="R5O-lc-BQD">
@@ -572,7 +572,7 @@
                                             <rect key="frame" x="15" y="0.0" width="570" height="94"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>

@@ -17,4 +17,6 @@
 @property (nonatomic, assign) float amt;
 @property (nonatomic, retain) NSString *type;
 
+- (NSString *)formattedDate;
+
 @end

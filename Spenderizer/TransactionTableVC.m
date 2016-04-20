@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    transactions = [[NSMutableArray alloc] init];
     [self loadTransactions];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -54,7 +54,9 @@
         NSString *TRNTYPE   = [transDictionary valueForKeyPath:@"TRNTYPE"];
     
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyyMMddHHmmss"];
         NSDate *date = [dateFormatter dateFromString:DTPOSTED];
+         NSLog(@"bcheck1 %@", date);
         
         // store
         Transaction *transaction = [[Transaction alloc] init];
@@ -69,6 +71,9 @@
         [self addTransaction:transaction];
         
     }
+    
+    //transactions = [transactions sortedArrayUsingSelector:@selector(compare:)];
+    transactions = [[[transactions reverseObjectEnumerator] allObjects] mutableCopy];
     [self.tableView reloadData];
     
     // main thread
@@ -79,9 +84,10 @@
 }
 
 - (void)addTransaction:(Transaction *)tran {
-    NSMutableSet *set = [[NSMutableSet alloc] initWithArray:transactions];
-    [set addObject:tran];
-    transactions = [set allObjects];
+//    NSMutableSet *set = [[NSMutableSet alloc] initWithArray:transactions];
+//    [set addObject:tran];
+//    transactions = [set allObjects];
+    [transactions addObject:tran];
 }
 
 - (void)setAccount:(BankAccount *)bankAccount {
@@ -120,7 +126,14 @@
     Transaction *transaction = [transactions objectAtIndex:indexPath.row];
     
     cell.nameLb.text = [transaction name];
-    cell.priceLb.text = [NSString stringWithFormat:@"%.2f",[transaction amt]];
+    cell.priceLb.text = [NSString stringWithFormat:@"$%.2f",fabsf([transaction amt])];
+    if ([transaction amt] > 0) {
+        [cell.priceLb setTextColor:[UIColor greenColor]];
+    } else {
+        [cell.priceLb setTextColor:[UIColor redColor]];
+        
+    }
+    cell.dateLb.text = [transaction formattedDate];
     
     return cell;
 }

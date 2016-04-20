@@ -113,10 +113,12 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    User *user = [User sharedInstance];
-    Bank *bank = [[user uniqueBanks] objectAtIndex:indexPath.section];
-    BankAccount *account = [[user accountsForBank:bank] objectAtIndex:indexPath.row-1];
-    [self performSegueWithIdentifier:@"transaction" sender:account];
+    if (indexPath.row > 0) {
+        User *user = [User sharedInstance];
+        Bank *bank = [[user uniqueBanks] objectAtIndex:indexPath.section];
+        BankAccount *account = [[user accountsForBank:bank] objectAtIndex:indexPath.row-1];
+        [self performSegueWithIdentifier:@"transaction" sender:account];
+    }
 }
 
 #pragma mark - Navigation
