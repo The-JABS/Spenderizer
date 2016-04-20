@@ -8,10 +8,12 @@
 
 #import "BankAccountsTableVC.h"
 #import "BankAccountTableViewCell.h"
+#import "SWRevealViewController.h"
 
 #define BANK_HEADER_ROW_INDEX 0
 #define HEADER_CELL_ID @"BankHeaderCell"
 #define ACCOUNT_CELL_ID @"BankAccountCell"
+
 
 @interface BankAccountsTableVC ()
 
@@ -22,6 +24,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // adds the menu button
+       self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"MENU BUTTON 40x40.png"] style:UIBarButtonItemStylePlain target:self.revealViewController action:@selector(revealToggle:)];
+    
+      [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
     // set the title of the nav bar
     self.navigationItem.title = @"Accounts";
