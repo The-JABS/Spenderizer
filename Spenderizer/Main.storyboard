@@ -523,6 +523,34 @@
             </objects>
             <point key="canvasLocation" x="2454" y="173"/>
         </scene>
+        <!--Transaction TableVC-->
+        <scene sceneID="OkX-Tw-qjZ">
+            <objects>
+                <tableViewController id="iUB-Ki-3jL" customClass="TransactionTableVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bDl-gn-MEe">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fPV-tw-rKE">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fPV-tw-rKE" id="qs9-mo-dQ1">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iUB-Ki-3jL" id="jSJ-RA-IKV"/>
+                            <outlet property="delegate" destination="iUB-Ki-3jL" id="5Rx-OO-h03"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PBm-I7-yf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1723" y="-1423"/>
+        </scene>
         <!--Bank Accounts TableVC-->
         <scene sceneID="LsP-E2-Ff1">
             <objects>
@@ -568,6 +596,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="iUB-Ki-3jL" kind="show" identifier="transaction" id="AP5-O9-Qtk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vn1-Vo-cT8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -20,10 +20,10 @@
         [self replace:@"{LANGUAGE}" with:@"ENG"];
         [self replace:@"{ORG}" with:[account.bank org]];
         [self replace:@"{FID}" with:[account.bank fid]];
-        [self replace:@"{APPID}" with:@"QWIN"];
-        [self replace:@"{APPVER}" with:@"2200"];
+        [self replace:@"{APPID}" with:OFX_APP_ID];
+        [self replace:@"{APPVER}" with:OFX_APP_VERSION];
         
-        [self replace:@"{TRNUID}" with:@"1001"];
+        [self replace:@"{TRNUID}" with:[OFXUtil getTRNUID]];
         [self replace:@"{BANKID}" with:[account routingNumber]];
         [self replace:@"{ACCTID}" with:[account accountID]];
         [self replace:@"{ACCTTYPE}" with:[account type]];

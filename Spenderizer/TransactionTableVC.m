@@ -17,11 +17,75 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self loadTransactions];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)loadTransactions {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [hud setSquare:YES];
+    [hud setOpacity:0.7];
+    [hud setDetailsLabelText:@"Loading Transactions..."];
+
+    OFXget *get = [[OFXget alloc] init];
+    [get setDelegate:self];
+    OFXTransactionQuery *qry = [[OFXTransactionQuery alloc] initWithBankAccount:userAccount];
+    
+    [get query:qry server:userAccount.bank.url];
+}
+
+- (void)didFinishDownloading:(NSString *)result withID:(NSString *)responceID {
+    SGMLParser *parser = [[SGMLParser alloc] init];
+    NSDictionary *dictionary = [parser parseXMLString:result];
+    NSLog(@"%@", dictionary);
+    NSArray *transactionList = [dictionary valueForKeyPath:@"OFX.BANKMSGSRSV1.STMTTRNRS.STMTRS.BANKTRANLIST.STMTTRN"];
+    
+    for (NSDictionary *transDictionary in transactionList) {
+        // parse
+        NSString *DTPOSTED  = [transDictionary valueForKeyPath:@"DTPOSTED"];
+        NSString *FITID     = [transDictionary valueForKey:@"FITID"];
+        NSString *MEMO      = [transDictionary valueForKeyPath:@"MEMO"];
+        NSString *NAME      = [transDictionary valueForKeyPath:@"NAME"];
+        NSString *TRNAMT    = [transDictionary valueForKeyPath:@"TRNAMT"];
+        NSString *TRNTYPE   = [transDictionary valueForKeyPath:@"TRNTYPE"];
+    
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        NSDate *date = [dateFormatter dateFromString:DTPOSTED];
+        
+        // store
+        Transaction *transaction = [[Transaction alloc] init];
+        [transaction setDatePosted:date];
+        [transaction setFITID:FITID];
+        [transaction setMemo:MEMO];
+        [transaction setName:NAME];
+        [transaction setAmt:[TRNAMT floatValue]];
+        [transaction setType:TRNTYPE];
+        
+        // Add to list
+        [self addTransaction:transaction];
+        
+    }
+    [self.tableView reloadData];
+    
+    // main thread
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    });
+    
+}
+
+- (void)addTransaction:(Transaction *)tran {
+    NSMutableSet *set = [[NSMutableSet alloc] initWithArray:transactions];
+    [set addObject:tran];
+    transactions = [set allObjects];
+}
+
+- (void)setAccount:(BankAccount *)bankAccount {
+    userAccount = bankAccount;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,24 +96,38 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [transactions count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
     
-    // Configure the cell...
+    TransactionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        NSArray* topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"TransactionCell" owner:self options:nil];
+        for (id currentObject in topLevelObjects) {
+            if ([currentObject isKindOfClass:[UITableViewCell class]]) {
+                cell = (TransactionTableViewCell *)currentObject;
+            }
+        }
+    }
+    
+    // Set the data for this cell:
+    Transaction *transaction = [transactions objectAtIndex:indexPath.row];
+    
+    cell.nameLb.text = [transaction name];
+    cell.priceLb.text = [NSString stringWithFormat:@"%.2f",[transaction amt]];
     
     return cell;
 }
-*/
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 116;
+}
 
 /*
 // Override to support conditional editing of the table view.

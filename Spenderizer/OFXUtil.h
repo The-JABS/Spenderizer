@@ -15,8 +15,10 @@
 + (NSString *)getDate;
 + (NSString *)loadQueryFromFile:(NSString *)fileName;
 + (NSString *)getOldDate;
++ (NSString *)getTRNUID;
 + (NSString *)getClientID;
 + (id)safeValueForPath:(NSString *)path inDictionary:(NSDictionary *)dict;
 + (UIView *)viewWithImageName:(NSString *)imageName;
 + (NSData *)fixAmpersands:(NSData*)data;
+
 @end

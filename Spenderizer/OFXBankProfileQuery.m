@@ -20,8 +20,8 @@
         [self replace:@"{LANGUAGE}" with:@"ENG"];
         [self replace:@"{ORG}" with:[_bank org]];
         [self replace:@"{FID}" with:[_bank fid]];
-        [self replace:@"{APPID}" with:@"QWIN"];
-        [self replace:@"{APPVER}" with:@"2200"];
+        [self replace:@"{APPID}" with:OFX_APP_ID];
+        [self replace:@"{APPVER}" with:OFX_APP_VERSION];
         [self replace:@"{CLIENTUID}" with:[OFXUtil getClientID]];
         
         [self replace:@"{TRNUID}" with:@"1001"];

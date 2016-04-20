@@ -10,4 +10,11 @@
 
 @interface Transaction : NSObject
 
+@property (nonatomic, retain) NSDate *datePosted;
+@property (nonatomic, retain) NSString *FITID;
+@property (nonatomic, retain) NSString *memo;
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, assign) float amt;
+@property (nonatomic, retain) NSString *type;
+
 @end

@@ -8,4 +8,5 @@
 #import <Foundation/Foundation.h>
 
 extern NSString * const USER_LOGIN_KEY;
-
+extern NSString * const OFX_APP_ID;
+extern NSString * const OFX_APP_VERSION;

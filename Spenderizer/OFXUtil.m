@@ -46,10 +46,14 @@
 + (NSString *)getClientID {
     NSString *clientId = [[NSUserDefaults standardUserDefaults] objectForKey:@"clientID"];
     if (!clientId) {
-        clientId = [self randomStringWithLength:60];
+        clientId = [self randomStringWithLength:30];
         [[NSUserDefaults standardUserDefaults] setObject:clientId forKey:@"clientID"];
     }
     return clientId;
+}
+
++ (NSString *)getTRNUID {
+    return [self randomStringWithLength:36];
 }
 
 + (NSString *)randomStringWithLength: (int) len {

@@ -9,5 +9,19 @@
 #import "Transaction.h"
 
 @implementation Transaction
+@synthesize datePosted, FITID, memo, name, type;
+
+- (id)init {
+    
+    if (self = [super init]) {
+        
+    }
+    
+    return self;
+}
+
+- (BOOL)isEqual:(Transaction *)object {
+    return [object.FITID isEqualToString:self.FITID];
+}
 
 @end
