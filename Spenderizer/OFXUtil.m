@@ -106,4 +106,20 @@
     
     return [dataString dataUsingEncoding:NSUTF8StringEncoding];
 }
+
++ (NSDate *)tryParseDateString:(NSString *)dateString {
+    // your date formats may vary, the OP might try "MM/dd/yyyy" and "MM-dd-yyyy", along with combos that include time info
+    NSArray *dateFormatsToTry = @[@"yyyy-MM-dd'T'HH:mmZZZZ", @"yyyy-MM-dd'T'HH:mm:ssZZZ"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    
+    for (NSString * format in dateFormatsToTry) {
+        [dateFormatter setDateFormat:format];
+        NSDate *date = [dateFormatter dateFromString:dateString];
+        if (date) {
+            return date;
+        }
+    }
+    return NULL;
+}
+
 @end
