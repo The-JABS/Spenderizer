@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Category.h"
 
 @interface Transaction : NSObject
 
@@ -16,6 +17,7 @@
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, assign) float amt;
 @property (nonatomic, retain) NSString *type;
+@property (nonatomic, retain) Category *category;
 
 - (NSString *)formattedDate;
 

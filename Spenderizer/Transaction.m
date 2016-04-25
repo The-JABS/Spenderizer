@@ -9,12 +9,12 @@
 #import "Transaction.h"
 
 @implementation Transaction
-@synthesize datePosted, FITID, memo, name, type;
+@synthesize datePosted, FITID, memo, name, type, category;
 
 - (id)init {
     
     if (self = [super init]) {
-        
+        category = MISC_CATEGORY;
     }
     
     return self;

@@ -14,12 +14,15 @@
 #import "BankAccount.h"
 #import "TransactionTableViewCell.h"
 #import "MBProgressHUD.h"
+#import "NSMutableArray+SWUtilityButtons.h"
+#import "SWTableViewCell.h"
 
-@interface TransactionTableVC : UITableViewController <OFXGetDelegate> {
+@interface TransactionTableVC : UITableViewController <OFXGetDelegate, SWTableViewCellDelegate> {
     NSMutableArray *transactions;
     BankAccount *userAccount;
 }
 
 - (void)setAccount:(BankAccount *)bankAccount;
+
 
 @end

@@ -8,6 +8,8 @@
 
 #import "TransactionTableVC.h"
 
+#define TABLE_CELL_HEIGHT 116
+
 @interface TransactionTableVC ()
 
 @end
@@ -67,9 +69,13 @@
         [transaction setAmt:[TRNAMT floatValue]];
         [transaction setType:TRNTYPE];
         
-        // Add to list
-        [self addTransaction:transaction];
+        if (transaction.amt > 0.0f) {
+            transaction.category = EMPTY_CATEGORY;
+        }
         
+        // Add to list
+        [transactions addObject:transaction];
+
     }
     
     //transactions = [transactions sortedArrayUsingSelector:@selector(compare:)];
@@ -83,12 +89,7 @@
     
 }
 
-- (void)addTransaction:(Transaction *)tran {
-//    NSMutableSet *set = [[NSMutableSet alloc] initWithArray:transactions];
-//    [set addObject:tran];
-//    transactions = [set allObjects];
-    [transactions addObject:tran];
-}
+
 
 - (void)setAccount:(BankAccount *)bankAccount {
     userAccount = bankAccount;
@@ -118,6 +119,7 @@
         for (id currentObject in topLevelObjects) {
             if ([currentObject isKindOfClass:[UITableViewCell class]]) {
                 cell = (TransactionTableViewCell *)currentObject;
+                cell.delegate = self;
             }
         }
     }
@@ -134,56 +136,24 @@
         
     }
     cell.dateLb.text = [transaction formattedDate];
+    [cell setTransaction:transaction];
     
     return cell;
 }
 
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 116;
+    return TABLE_CELL_HEIGHT;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+#pragma mark - SWTableVewDelegate
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerLeftUtilityButtonWithIndex:(NSInteger)index {
+    TransactionTableViewCell *tranCell = (TransactionTableViewCell *)cell;
+    Transaction *tran = [tranCell transaction];
+    [tran setCategory:[tranCell categoryForIndex:index]];
+    [tranCell setTransaction:tran];
+    [self.tableView reloadData];
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

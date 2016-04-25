@@ -13,6 +13,11 @@
 		B50286EA1CBAE88900728973 /* OFXAccountsRequestTemplate in Resources */ = {isa = PBXBuildFile; fileRef = B50286E91CBAE88900728973 /* OFXAccountsRequestTemplate */; };
 		B50286EC1CBB385300728973 /* OFXBankProfileTemplate in Resources */ = {isa = PBXBuildFile; fileRef = B50286EB1CBB385300728973 /* OFXBankProfileTemplate */; };
 		B50286EF1CBB5BED00728973 /* OFXBankProfileQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B50286EE1CBB5BED00728973 /* OFXBankProfileQuery.m */; };
+		B50B0FB21CCD87240006AEA0 /* carIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B50B0FB11CCD87240006AEA0 /* carIcon.png */; };
+		B50B0FB51CCD9A3B0006AEA0 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = B50B0FB41CCD9A3B0006AEA0 /* Category.m */; };
+		B50B0FB71CCDA4960006AEA0 /* entertainmentIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B50B0FB61CCDA4960006AEA0 /* entertainmentIcon.png */; };
+		B50B0FB91CCDA5550006AEA0 /* miscIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B50B0FB81CCDA5550006AEA0 /* miscIcon.png */; };
+		B50B0FBB1CCDB05E0006AEA0 /* foodIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B50B0FBA1CCDB05E0006AEA0 /* foodIcon.png */; };
 		B53592C81CBBE8D4005CF4D5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53592C71CBBE8D4005CF4D5 /* SWRevealViewController.m */; };
 		B53592CB1CBBEAD0005CF4D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B53592CA1CBBEAD0005CF4D5 /* AppDelegate.m */; };
 		B53592F91CBCB580005CF4D5 /* OFXHeader in Resources */ = {isa = PBXBuildFile; fileRef = B53592F81CBCB580005CF4D5 /* OFXHeader */; };
@@ -66,6 +71,12 @@
 		B50286EB1CBB385300728973 /* OFXBankProfileTemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFXBankProfileTemplate; sourceTree = "<group>"; };
 		B50286ED1CBB5BED00728973 /* OFXBankProfileQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFXBankProfileQuery.h; sourceTree = "<group>"; };
 		B50286EE1CBB5BED00728973 /* OFXBankProfileQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFXBankProfileQuery.m; sourceTree = "<group>"; };
+		B50B0FB11CCD87240006AEA0 /* carIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carIcon.png; sourceTree = "<group>"; };
+		B50B0FB31CCD9A3B0006AEA0 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		B50B0FB41CCD9A3B0006AEA0 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		B50B0FB61CCDA4960006AEA0 /* entertainmentIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = entertainmentIcon.png; sourceTree = "<group>"; };
+		B50B0FB81CCDA5550006AEA0 /* miscIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = miscIcon.png; sourceTree = "<group>"; };
+		B50B0FBA1CCDB05E0006AEA0 /* foodIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foodIcon.png; sourceTree = "<group>"; };
 		B53592C61CBBE8D4005CF4D5 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		B53592C71CBBE8D4005CF4D5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		B53592CA1CBBEAD0005CF4D5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -204,6 +215,10 @@
 		B53CADBF1CC4BBBB00C9E482 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				B50B0FBA1CCDB05E0006AEA0 /* foodIcon.png */,
+				B50B0FB81CCDA5550006AEA0 /* miscIcon.png */,
+				B50B0FB61CCDA4960006AEA0 /* entertainmentIcon.png */,
+				B50B0FB11CCD87240006AEA0 /* carIcon.png */,
 				B53CADBD1CC4BBB400C9E482 /* cross.png */,
 				210151F81CBD961C0037E6D3 /* MENU BUTTON 40x40.png */,
 			);
@@ -325,6 +340,8 @@
 				B5AA094E1CB45D0F004EFCA9 /* MetaBankInfo.m */,
 				B53CAD441CBDEF1300C9E482 /* Transaction.h */,
 				B53CAD451CBDEF1300C9E482 /* Transaction.m */,
+				B50B0FB31CCD9A3B0006AEA0 /* Category.h */,
+				B50B0FB41CCD9A3B0006AEA0 /* Category.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -399,8 +416,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B50B0FBB1CCDB05E0006AEA0 /* foodIcon.png in Resources */,
+				B50B0FB91CCDA5550006AEA0 /* miscIcon.png in Resources */,
+				B50B0FB21CCD87240006AEA0 /* carIcon.png in Resources */,
 				B53CADB01CC1922B00C9E482 /* LaunchScreen.storyboard in Resources */,
 				B50286EA1CBAE88900728973 /* OFXAccountsRequestTemplate in Resources */,
+				B50B0FB71CCDA4960006AEA0 /* entertainmentIcon.png in Resources */,
 				210151F91CBD961C0037E6D3 /* MENU BUTTON 40x40.png in Resources */,
 				B56382291CB8D3DF00B9B45A /* OFXTransactionTemplate in Resources */,
 				B53592F91CBCB580005CF4D5 /* OFXHeader in Resources */,
@@ -474,6 +495,7 @@
 				B563821E1CB8B45A00B9B45A /* OFXget.m in Sources */,
 				B563821B1CB8B3AD00B9B45A /* OFXUtil.m in Sources */,
 				B53CADA71CBEF69200C9E482 /* RegisterLoginVC.m in Sources */,
+				B50B0FB51CCD9A3B0006AEA0 /* Category.m in Sources */,
 				B53CADA01CBEF69200C9E482 /* BankAccountsTableVC.m in Sources */,
 				B53CADA51CBEF69200C9E482 /* MainMenuVC.m in Sources */,
 				B56382151CB8B2A100B9B45A /* OFXQuery.m in Sources */,
