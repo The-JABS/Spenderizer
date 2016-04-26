@@ -52,6 +52,7 @@
 		B56382291CB8D3DF00B9B45A /* OFXTransactionTemplate in Resources */ = {isa = PBXBuildFile; fileRef = B56382271CB8D3DF00B9B45A /* OFXTransactionTemplate */; };
 		B563822C1CB8D41400B9B45A /* OFXAccountsRequestQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B563822B1CB8D41400B9B45A /* OFXAccountsRequestQuery.m */; };
 		B56382321CB972AB00B9B45A /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = B56382311CB972AB00B9B45A /* XMLDictionary.m */; };
+		B57956AB1CCED65E00CDC8BE /* TransactionHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = B57956AA1CCED65E00CDC8BE /* TransactionHistory.m */; };
 		B5AA09421CB45609004EFCA9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09411CB45609004EFCA9 /* User.m */; };
 		B5AA09451CB4570D004EFCA9 /* BankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09441CB4570D004EFCA9 /* BankAccount.m */; };
 		B5AA09481CB45AC9004EFCA9 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09471CB45AC9004EFCA9 /* Bank.m */; };
@@ -138,6 +139,8 @@
 		B563822B1CB8D41400B9B45A /* OFXAccountsRequestQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFXAccountsRequestQuery.m; sourceTree = "<group>"; };
 		B56382301CB972AB00B9B45A /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
 		B56382311CB972AB00B9B45A /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
+		B57956A91CCED65E00CDC8BE /* TransactionHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionHistory.h; sourceTree = "<group>"; };
+		B57956AA1CCED65E00CDC8BE /* TransactionHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionHistory.m; sourceTree = "<group>"; };
 		B5AA09401CB45609004EFCA9 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B5AA09411CB45609004EFCA9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B5AA09431CB4570D004EFCA9 /* BankAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccount.h; sourceTree = "<group>"; };
@@ -340,6 +343,8 @@
 				B5AA094E1CB45D0F004EFCA9 /* MetaBankInfo.m */,
 				B53CAD441CBDEF1300C9E482 /* Transaction.h */,
 				B53CAD451CBDEF1300C9E482 /* Transaction.m */,
+				B57956A91CCED65E00CDC8BE /* TransactionHistory.h */,
+				B57956AA1CCED65E00CDC8BE /* TransactionHistory.m */,
 				B50B0FB31CCD9A3B0006AEA0 /* Category.h */,
 				B50B0FB41CCD9A3B0006AEA0 /* Category.m */,
 			);
@@ -492,6 +497,7 @@
 			files = (
 				B53592CB1CBBEAD0005CF4D5 /* AppDelegate.m in Sources */,
 				B53CADBC1CC4B54E00C9E482 /* FXKeychain.m in Sources */,
+				B57956AB1CCED65E00CDC8BE /* TransactionHistory.m in Sources */,
 				B563821E1CB8B45A00B9B45A /* OFXget.m in Sources */,
 				B563821B1CB8B3AD00B9B45A /* OFXUtil.m in Sources */,
 				B53CADA71CBEF69200C9E482 /* RegisterLoginVC.m in Sources */,

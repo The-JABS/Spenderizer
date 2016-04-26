@@ -31,4 +31,5 @@
 @property (nonatomic, retain) NSString *supportXferSrc;   // Supports out going wire transfers Y or N;
 @property (nonatomic, retain) Bank *bank;
 
+
 @end

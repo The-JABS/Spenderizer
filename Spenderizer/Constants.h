@@ -19,3 +19,5 @@ extern NSString * const OFX_APP_VERSION;
 #define ENTERTAINMENT_CATEGORY [[Category alloc] initWithName:@"Entertainment" type:ENTERTAINMENT color:[UIColor redColor] icon:[UIImage imageNamed:@"entertainmentIcon.png"]];
 
 #define FOOD_CATEGORY [[Category alloc] initWithName:@"Food" type:ENTERTAINMENT color:[UIColor greenColor] icon:[UIImage imageNamed:@"foodIcon.png"]];
+
+#define TRANSACTION_HISTORY_KEY @"tHistory"

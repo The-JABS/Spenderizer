@@ -40,15 +40,17 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98p-UF-yyS">
                         <rect key="frame" x="308" y="0.0" width="115" height="115"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xb1-GA-0fK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xb1-GA-0fK">
                                 <rect key="frame" x="27" y="28" width="60" height="60"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xb1-GA-0fK" firstAttribute="top" secondItem="98p-UF-yyS" secondAttribute="top" constant="28" id="9Yz-Xk-aY1"/>
                             <constraint firstItem="xb1-GA-0fK" firstAttribute="centerY" secondItem="98p-UF-yyS" secondAttribute="centerY" id="SVQ-zQ-79U"/>
                             <constraint firstAttribute="width" constant="115" id="WFX-Jh-xeC"/>
                             <constraint firstItem="xb1-GA-0fK" firstAttribute="centerX" secondItem="98p-UF-yyS" secondAttribute="centerX" id="og6-8t-WmY"/>
+                            <constraint firstItem="xb1-GA-0fK" firstAttribute="leading" secondItem="98p-UF-yyS" secondAttribute="leading" constant="27" id="xQZ-ca-L58"/>
                             <constraint firstAttribute="height" constant="115" id="yii-TV-szk"/>
                         </constraints>
                     </view>
