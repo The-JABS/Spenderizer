@@ -24,12 +24,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PNChart.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Spenderizer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>SWTableViewCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UICountingLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,7 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>59099F67C2077EEBD7E8FEB82596B5CB</key>
+		<key>4F86E903923D9744D60CA37DF4213E55</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,12 +62,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>93164A711CE3C029F8360A1E0ADD152B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9F115C12CA3B08405FEB3FD77917FB88</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BDAF3089B8ADF6D44A5E2751F21ABEDA</key>
+		<key>A16CA61AC1E81E616F25614E9622F73D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D9201F2D1144A668DB7B9B24880163CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

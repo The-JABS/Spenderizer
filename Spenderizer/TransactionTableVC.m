@@ -21,12 +21,21 @@
     
     [userAccount loadAllTransactions];
     [self loadTransactions];
+    self.navigationItem.title = @"Transactions";
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        [userAccount saveTransactions];
+    });
 }
 
 - (void)loadTransactions {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [hud setSquare:YES];
     [hud setOpacity:0.7];
+    [hud setDimBackground:YES];
     [hud setDetailsLabelText:@"Loading Transactions..."];
 
     OFXget *get = [[OFXget alloc] init];
@@ -77,6 +86,7 @@
     // main thread
     dispatch_async(dispatch_get_main_queue(), ^{
         [userAccount addTransactions:newTransactions];
+        [[userAccount transactions] sortUsingSelector:@selector(compare:)];
         [self.tableView reloadData];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     });
@@ -150,8 +160,11 @@
     [tran setCategory:[tranCell categoryForIndex:index]];
     [tranCell setTransaction:tran];
     
-    [userAccount saveTransactions];
+    //[userAccount saveTransactions];
     [self.tableView reloadData];
 }
+
+
+
 
 @end

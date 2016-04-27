@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '81E9871D522AB8D067668691'
+               BlueprintIdentifier = 'FA88C64EBFCCEF09F5B2F786'
                BlueprintName = 'Pods-Spenderizer'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_Spenderizer.framework'>

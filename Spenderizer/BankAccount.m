@@ -120,6 +120,7 @@
         [transactionObject setValue:t.type forKey:@"type"];
         //NSData *catData = [NSKeyedArchiver archivedDataWithRootObject:t.category];
         [transactionObject setValue:t.category forKey:@"category"];
+        [transactionObject setValue:[self accountKey] forKey:@"account"];
         
         
         // Save!
@@ -165,15 +166,18 @@
     NSArray *fetchedObjects = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     // Convert managed objects to Transaction objects
     for (NSManagedObject *mo in fetchedObjects) {
-        Transaction *t = [[Transaction alloc] init];
-        [t setAmt:[[mo valueForKey:@"amt"] floatValue]];
-        [t setDatePosted:[mo valueForKey:@"datePosted"]];
-        [t setFITID:[mo valueForKey:@"fitID"]];
-        [t setMemo:[mo valueForKey:@"memo"]];
-        [t setName:[mo valueForKey:@"name"]];
-        [t setType:[mo valueForKey:@"type"]];
-        [t setCategory:[mo valueForKey:@"category"]];
-        [transactions addObject:t];
+        if ([[mo valueForKey:@"account"] isEqualToString:[self accountKey]]) {
+            Transaction *t = [[Transaction alloc] init];
+            [t setAmt:[[mo valueForKey:@"amt"] floatValue]];
+            [t setDatePosted:[mo valueForKey:@"datePosted"]];
+            [t setFITID:[mo valueForKey:@"fitID"]];
+            [t setMemo:[mo valueForKey:@"memo"]];
+            [t setName:[mo valueForKey:@"name"]];
+            [t setType:[mo valueForKey:@"type"]];
+            [t setCategory:[mo valueForKey:@"category"]];
+        
+            [transactions addObject:t];
+        }
         
     }
 }

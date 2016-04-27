@@ -11,6 +11,6 @@ pod 'MBProgressHUD', '~> 0.9.2'
 pod 'JVFloatLabeledTextField'
 pod 'MCSwipeTableViewCell', '~> 2.1.4'
 pod 'SWTableViewCell', '~> 0.3.7'
-
+pod 'PNChart'
 end
 

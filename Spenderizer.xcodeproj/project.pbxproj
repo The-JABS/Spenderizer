@@ -53,6 +53,8 @@
 		B57956F41CCFFAF700CDC8BE /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = B57956F31CCFFAF700CDC8BE /* Category.m */; };
 		B57956F71CCFFB0300CDC8BE /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = B57956F61CCFFB0300CDC8BE /* Transaction.m */; };
 		B57957551CD044A600CDC8BE /* TransactionModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B57957531CD044A600CDC8BE /* TransactionModel.xcdatamodeld */; };
+		B57957571CD0817B00CDC8BE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B57957561CD0817B00CDC8BE /* QuartzCore.framework */; };
+		B57957591CD0818100CDC8BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B57957581CD0818100CDC8BE /* CoreGraphics.framework */; };
 		B5AA09421CB45609004EFCA9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09411CB45609004EFCA9 /* User.m */; };
 		B5AA09451CB4570D004EFCA9 /* BankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09441CB4570D004EFCA9 /* BankAccount.m */; };
 		B5AA09481CB45AC9004EFCA9 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09471CB45AC9004EFCA9 /* Bank.m */; };
@@ -140,6 +142,8 @@
 		B57956F51CCFFB0300CDC8BE /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
 		B57956F61CCFFB0300CDC8BE /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
 		B57957541CD044A600CDC8BE /* TransactionModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TransactionModel.xcdatamodel; sourceTree = "<group>"; };
+		B57957561CD0817B00CDC8BE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B57957581CD0818100CDC8BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B5AA09401CB45609004EFCA9 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B5AA09411CB45609004EFCA9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B5AA09431CB4570D004EFCA9 /* BankAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccount.h; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57957591CD0818100CDC8BE /* CoreGraphics.framework in Frameworks */,
+				B57957571CD0817B00CDC8BE /* QuartzCore.framework in Frameworks */,
 				B53CAD4B1CBDF08100C9E482 /* Security.framework in Frameworks */,
 				0013D711A67472DB8B9FAC13 /* Pods_Spenderizer.framework in Frameworks */,
 			);
@@ -360,6 +366,8 @@
 		E558874928F74C9ACC39B766 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B57957581CD0818100CDC8BE /* CoreGraphics.framework */,
+				B57957561CD0817B00CDC8BE /* QuartzCore.framework */,
 				B53CAD4A1CBDF08100C9E482 /* Security.framework */,
 				A382A6974C5D5C1DDB4C334D /* Pods_Spenderizer.framework */,
 			);

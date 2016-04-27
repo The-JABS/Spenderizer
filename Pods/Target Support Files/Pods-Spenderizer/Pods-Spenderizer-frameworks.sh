@@ -88,12 +88,16 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Spenderizer/JVFloatLabeledTextField.framework"
   install_framework "Pods-Spenderizer/MBProgressHUD.framework"
   install_framework "Pods-Spenderizer/MCSwipeTableViewCell.framework"
+  install_framework "Pods-Spenderizer/PNChart.framework"
   install_framework "Pods-Spenderizer/SWTableViewCell.framework"
+  install_framework "Pods-Spenderizer/UICountingLabel.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Spenderizer/ABPadLockScreen.framework"
   install_framework "Pods-Spenderizer/JVFloatLabeledTextField.framework"
   install_framework "Pods-Spenderizer/MBProgressHUD.framework"
   install_framework "Pods-Spenderizer/MCSwipeTableViewCell.framework"
+  install_framework "Pods-Spenderizer/PNChart.framework"
   install_framework "Pods-Spenderizer/SWTableViewCell.framework"
+  install_framework "Pods-Spenderizer/UICountingLabel.framework"
 fi

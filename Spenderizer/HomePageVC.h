@@ -7,9 +7,11 @@
 //
 
 #import <UIKIT/UIKIT.h>
+#import "PNChart.h"
 
 @interface HomePageVC : UIViewController
 
 @property(weak, nonatomic) IBOutlet UIBarButtonItem *barButton;
+@property (retain, nonatomic) IBOutlet PNPieChart *pieChart;
 
 @end

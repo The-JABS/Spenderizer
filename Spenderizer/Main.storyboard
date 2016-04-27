@@ -55,7 +55,32 @@
                     <view key="view" contentMode="scaleToFill" id="Q71-a0-naY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PIR-OB-CIH" customClass="PNPieChart">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="7MV-Us-tlg"/>
+                                    <constraint firstAttribute="width" constant="300" id="b0R-Qn-oPY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PIR-OB-CIH" firstAttribute="centerY" secondItem="Q71-a0-naY" secondAttribute="centerY" id="Qlt-OQ-gGw"/>
+                            <constraint firstItem="PIR-OB-CIH" firstAttribute="top" relation="lessThanOrEqual" secondItem="n3x-pJ-msk" secondAttribute="bottom" constant="86" id="XGl-kT-3W8"/>
+                            <constraint firstItem="PIR-OB-CIH" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Q71-a0-naY" secondAttribute="leadingMargin" constant="130" id="XLM-Lh-b0R"/>
+                            <constraint firstItem="PIR-OB-CIH" firstAttribute="centerY" secondItem="Q71-a0-naY" secondAttribute="centerY" id="YlX-yU-L7o"/>
+                            <constraint firstItem="PIR-OB-CIH" firstAttribute="centerX" secondItem="Q71-a0-naY" secondAttribute="centerX" id="dud-XU-6I2"/>
+                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="PIR-OB-CIH" secondAttribute="trailing" constant="130" id="mfp-PN-95P"/>
+                            <constraint firstItem="PIR-OB-CIH" firstAttribute="height" secondItem="Q71-a0-naY" secondAttribute="height" id="oeZ-Sj-nPA"/>
+                            <constraint firstItem="PIR-OB-CIH" firstAttribute="width" secondItem="Q71-a0-naY" secondAttribute="width" id="sgD-ux-S5w"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="oeZ-Sj-nPA"/>
+                                <exclude reference="sgD-ux-S5w"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="9oA-EA-TdR">
                         <barButtonItem key="leftBarButtonItem" image="MENU BUTTON 40x40.png" width="4" id="pKB-54-2a8">
@@ -64,11 +89,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="barButton" destination="pKB-54-2a8" id="b14-sK-Y3V"/>
+                        <outlet property="pieChart" destination="PIR-OB-CIH" id="sqi-rB-bav"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tt0-jZ-Fm1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="209" y="173"/>
+            <point key="canvasLocation" x="227" y="119"/>
         </scene>
         <!--NavigationTVC-->
         <scene sceneID="es1-YR-CPY">
