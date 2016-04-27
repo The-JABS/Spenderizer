@@ -59,6 +59,8 @@
 		B57957611CD09B6900CDC8BE /* RoundedLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = B57957601CD09B6900CDC8BE /* RoundedLogo.png */; };
 		B57957691CD1054000CDC8BE /* CategoriesTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B57957681CD1054000CDC8BE /* CategoriesTableVC.m */; };
 		B579576C1CD10A5700CDC8BE /* BudgetTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B579576B1CD10A5700CDC8BE /* BudgetTableVC.m */; };
+		B579576E1CD10B8300CDC8BE /* jabs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B579576D1CD10B8300CDC8BE /* jabs.jpg */; };
+		B57957701CD117D100CDC8BE /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B579576F1CD117D100CDC8BE /* Logo.png */; };
 		B5AA09421CB45609004EFCA9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09411CB45609004EFCA9 /* User.m */; };
 		B5AA09451CB4570D004EFCA9 /* BankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09441CB4570D004EFCA9 /* BankAccount.m */; };
 		B5AA09481CB45AC9004EFCA9 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09471CB45AC9004EFCA9 /* Bank.m */; };
@@ -148,12 +150,14 @@
 		B57957541CD044A600CDC8BE /* TransactionModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TransactionModel.xcdatamodel; sourceTree = "<group>"; };
 		B57957561CD0817B00CDC8BE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B57957581CD0818100CDC8BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B579575A1CD09AC000CDC8BE /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
-		B57957601CD09B6900CDC8BE /* RoundedLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RoundedLogo.png; sourceTree = "<group>"; };
+		B579575A1CD09AC000CDC8BE /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "../Icon-60@2x.png"; sourceTree = "<group>"; };
+		B57957601CD09B6900CDC8BE /* RoundedLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RoundedLogo.png; path = ../RoundedLogo.png; sourceTree = "<group>"; };
 		B57957671CD1054000CDC8BE /* CategoriesTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesTableVC.h; sourceTree = "<group>"; };
 		B57957681CD1054000CDC8BE /* CategoriesTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesTableVC.m; sourceTree = "<group>"; };
 		B579576A1CD10A5700CDC8BE /* BudgetTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BudgetTableVC.h; sourceTree = "<group>"; };
 		B579576B1CD10A5700CDC8BE /* BudgetTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BudgetTableVC.m; sourceTree = "<group>"; };
+		B579576D1CD10B8300CDC8BE /* jabs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jabs.jpg; path = ../jabs.jpg; sourceTree = "<group>"; };
+		B579576F1CD117D100CDC8BE /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = ../Logo.png; sourceTree = "<group>"; };
 		B5AA09401CB45609004EFCA9 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B5AA09411CB45609004EFCA9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B5AA09431CB4570D004EFCA9 /* BankAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccount.h; sourceTree = "<group>"; };
@@ -229,6 +233,10 @@
 		B53CADBF1CC4BBBB00C9E482 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				B579576F1CD117D100CDC8BE /* Logo.png */,
+				B579576D1CD10B8300CDC8BE /* jabs.jpg */,
+				B579575A1CD09AC000CDC8BE /* Icon-60@2x.png */,
+				B57957601CD09B6900CDC8BE /* RoundedLogo.png */,
 				B50B0FBA1CCDB05E0006AEA0 /* foodIcon.png */,
 				B50B0FB81CCDA5550006AEA0 /* miscIcon.png */,
 				B50B0FB61CCDA4960006AEA0 /* entertainmentIcon.png */,
@@ -323,8 +331,6 @@
 		B5AC662F1CA1E2E00018D7CB = {
 			isa = PBXGroup;
 			children = (
-				B579575A1CD09AC000CDC8BE /* Icon-60@2x.png */,
-				B57957601CD09B6900CDC8BE /* RoundedLogo.png */,
 				B5AC663A1CA1E2E00018D7CB /* Spenderizer */,
 				B5AC66391CA1E2E00018D7CB /* Products */,
 				B03BD5BD977A0514363DB1D0 /* Pods */,
@@ -474,10 +480,12 @@
 				B53CADB01CC1922B00C9E482 /* LaunchScreen.storyboard in Resources */,
 				B50286EA1CBAE88900728973 /* OFXAccountsRequestTemplate in Resources */,
 				B50B0FB71CCDA4960006AEA0 /* entertainmentIcon.png in Resources */,
+				B579576E1CD10B8300CDC8BE /* jabs.jpg in Resources */,
 				210151F91CBD961C0037E6D3 /* MENU BUTTON 40x40.png in Resources */,
 				B56382291CB8D3DF00B9B45A /* OFXTransactionTemplate in Resources */,
 				B53592F91CBCB580005CF4D5 /* OFXHeader in Resources */,
 				B579575B1CD09AC000CDC8BE /* Icon-60@2x.png in Resources */,
+				B57957701CD117D100CDC8BE /* Logo.png in Resources */,
 				B5AC66481CA1E2E00018D7CB /* Assets.xcassets in Resources */,
 				B53CADBE1CC4BBB400C9E482 /* cross.png in Resources */,
 				B50286E81CBAE62D00728973 /* Main.storyboard in Resources */,
@@ -633,7 +641,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -671,7 +679,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -689,6 +697,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Spenderizer/spenderizer-prefix.pch";
 				INFOPLIST_FILE = Spenderizer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thejabs.Spenderizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -706,6 +715,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Spenderizer/spenderizer-prefix.pch";
 				INFOPLIST_FILE = Spenderizer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thejabs.Spenderizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
