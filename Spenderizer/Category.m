@@ -7,7 +7,7 @@
 //
 
 /**
- EMPTY,
+ DEPOSIT,
  MISC,
  FOOD,
  TRAVEL,
@@ -48,7 +48,7 @@
 }
 
 /*
- EMPTY           = 0,
+ DEPOSIT           = 0,
  MISC            = 1,
  FOOD            = 2, light orange
  TRAVEL          = 3, dark red
@@ -57,7 +57,7 @@
  */
 + (NSArray *)categories {
     
-    return @[EMPTY_CATEGORY, MISC_CATEGORY, FOOD_CATEGORY, TRAVEL_CATEGORY, ENTERTAINMENT_CATEGORY];
+    return @[DEPOSIT_CATEGORY, MISC_CATEGORY, FOOD_CATEGORY, TRAVEL_CATEGORY, ENTERTAINMENT_CATEGORY];
 }
 
 @end

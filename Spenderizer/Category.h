@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 typedef enum {
-    EMPTY           = 0,
+    DEPOSIT           = 0,
     MISC            = 1,
     FOOD            = 2,
     TRAVEL          = 3,

@@ -35,7 +35,7 @@
     NSMutableArray *leftButtons = [[NSMutableArray alloc] init];
     [categoryArray removeAllObjects];
     for (Category *c in [Category categories]) {
-        if (c.type != EMPTY && c.type != self.transaction.category.type) {
+        if (c.type != DEPOSIT && c.type != self.transaction.category.type) {
             [leftButtons sw_addUtilityButtonWithColor:c.color icon:c.icon];
             [categoryArray addObject:c];
         }

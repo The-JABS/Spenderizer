@@ -57,6 +57,8 @@
 		B57957591CD0818100CDC8BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B57957581CD0818100CDC8BE /* CoreGraphics.framework */; };
 		B579575B1CD09AC000CDC8BE /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B579575A1CD09AC000CDC8BE /* Icon-60@2x.png */; };
 		B57957611CD09B6900CDC8BE /* RoundedLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = B57957601CD09B6900CDC8BE /* RoundedLogo.png */; };
+		B57957691CD1054000CDC8BE /* CategoriesTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B57957681CD1054000CDC8BE /* CategoriesTableVC.m */; };
+		B579576C1CD10A5700CDC8BE /* BudgetTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B579576B1CD10A5700CDC8BE /* BudgetTableVC.m */; };
 		B5AA09421CB45609004EFCA9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09411CB45609004EFCA9 /* User.m */; };
 		B5AA09451CB4570D004EFCA9 /* BankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09441CB4570D004EFCA9 /* BankAccount.m */; };
 		B5AA09481CB45AC9004EFCA9 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09471CB45AC9004EFCA9 /* Bank.m */; };
@@ -148,6 +150,10 @@
 		B57957581CD0818100CDC8BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B579575A1CD09AC000CDC8BE /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		B57957601CD09B6900CDC8BE /* RoundedLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RoundedLogo.png; sourceTree = "<group>"; };
+		B57957671CD1054000CDC8BE /* CategoriesTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesTableVC.h; sourceTree = "<group>"; };
+		B57957681CD1054000CDC8BE /* CategoriesTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesTableVC.m; sourceTree = "<group>"; };
+		B579576A1CD10A5700CDC8BE /* BudgetTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BudgetTableVC.h; sourceTree = "<group>"; };
+		B579576B1CD10A5700CDC8BE /* BudgetTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BudgetTableVC.m; sourceTree = "<group>"; };
 		B5AA09401CB45609004EFCA9 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B5AA09411CB45609004EFCA9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B5AA09431CB4570D004EFCA9 /* BankAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccount.h; sourceTree = "<group>"; };
@@ -199,6 +205,10 @@
 				B53CAD8A1CBEF69200C9E482 /* BankSignInFormVC.m */,
 				B53CAD8B1CBEF69200C9E482 /* BankTableVC.h */,
 				B53CAD8C1CBEF69200C9E482 /* BankTableVC.m */,
+				B579576A1CD10A5700CDC8BE /* BudgetTableVC.h */,
+				B579576B1CD10A5700CDC8BE /* BudgetTableVC.m */,
+				B57957671CD1054000CDC8BE /* CategoriesTableVC.h */,
+				B57957681CD1054000CDC8BE /* CategoriesTableVC.m */,
 				B53CAD8D1CBEF69200C9E482 /* HomePageVC.h */,
 				B53CAD8E1CBEF69200C9E482 /* HomePageVC.m */,
 				B53CAD8F1CBEF69200C9E482 /* MainMenuVC.h */,
@@ -534,6 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B53592CB1CBBEAD0005CF4D5 /* AppDelegate.m in Sources */,
+				B57957691CD1054000CDC8BE /* CategoriesTableVC.m in Sources */,
 				B53CADBC1CC4B54E00C9E482 /* FXKeychain.m in Sources */,
 				B563821E1CB8B45A00B9B45A /* OFXget.m in Sources */,
 				B563821B1CB8B3AD00B9B45A /* OFXUtil.m in Sources */,
@@ -554,6 +565,7 @@
 				B5AA09451CB4570D004EFCA9 /* BankAccount.m in Sources */,
 				B560F00E1CBD7AF3000B3447 /* SGMLParser.m in Sources */,
 				B53CADA31CBEF69200C9E482 /* BankTableVC.m in Sources */,
+				B579576C1CD10A5700CDC8BE /* BudgetTableVC.m in Sources */,
 				B53CADAC1CBEF69200C9E482 /* TransactionTableViewCell.m in Sources */,
 				B5AA094F1CB45D0F004EFCA9 /* MetaBankInfo.m in Sources */,
 				B57956F71CCFFB0300CDC8BE /* Transaction.m in Sources */,

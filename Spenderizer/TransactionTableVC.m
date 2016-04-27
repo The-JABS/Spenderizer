@@ -75,7 +75,7 @@
         [transaction setType:TRNTYPE];
         
         if (transaction.amt > 0.0f) {
-            transaction.category = EMPTY_CATEGORY;
+            transaction.category = DEPOSIT_CATEGORY;
         }
         
         // Add to list

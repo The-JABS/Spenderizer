@@ -14,7 +14,7 @@ extern NSString * const OFX_APP_VERSION;
 
 
 /*
- EMPTY           = 0,
+ DEPOSIT           = 0,
  MISC            = 1,
  FOOD            = 2,
  TRAVEL          = 3,
@@ -25,7 +25,7 @@ extern NSString * const OFX_APP_VERSION;
 #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
 
 // white
-#define EMPTY_CATEGORY [[Category alloc] initWithName:@"Empty" type:EMPTY color:[UIColor whiteColor] icon:nil]
+#define DEPOSIT_CATEGORY [[Category alloc] initWithName:@"Deposit" type:DEPOSIT color:[UIColor whiteColor] icon:nil]
 
 // light blue
 #define MISC_CATEGORY [[Category alloc] initWithName:@"Miscellaneous" type:MISC color:[[UIColor alloc] initWithRed:76.0/255.0 green:186.0/255.0 blue:247.0/255.0 alpha:1.0] icon:[UIImage imageNamed:@"miscIcon.png"]]
