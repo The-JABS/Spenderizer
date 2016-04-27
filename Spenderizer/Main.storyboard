@@ -286,7 +286,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User ID" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="cDT-lF-w7B" customClass="JVFloatLabeledTextField">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User ID" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="cDT-lF-w7B" customClass="JVFloatLabeledTextField">
                                 <rect key="frame" x="20" y="171" width="560" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="c1c-Bf-GBG"/>
@@ -311,7 +311,7 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="cFN-jK-XUP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="cFN-jK-XUP">
                                 <rect key="frame" x="20" y="63" width="560" height="98"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="750" constant="50" id="fhq-xv-fg0"/>
@@ -327,7 +327,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="tIQ-Em-SlJ" customClass="JVFloatLabeledTextField">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="tIQ-Em-SlJ" customClass="JVFloatLabeledTextField">
                                 <rect key="frame" x="20" y="229" width="560" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="sfO-Sc-ukz"/>
@@ -343,7 +343,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAF-zO-D1o">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAF-zO-D1o">
                                 <rect key="frame" x="20" y="528" width="560" height="52"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>

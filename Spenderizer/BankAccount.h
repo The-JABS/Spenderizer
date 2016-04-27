@@ -8,17 +8,22 @@
 
 #import <Foundation/Foundation.h>
 #import "Bank.h"
+#import <CoreData/CoreData.h>
+#import "Transaction.h"
+
 
 @interface BankAccount : NSObject {
     
 }
 
-// Constructor
+
 - (id)initWithUserID:(NSString *)userid password:(NSString *)pass accountID:(NSString *)acctID routingNumber:(NSString *)routingNum;
-// ******XXXX
+- (void)addTransactionObject:(Transaction *)value;
+- (void)addTransactions:(NSArray *)values;
+- (void)saveTransactions;
 - (NSString *)secureID;
-// to string
 - (NSString *)description;
+- (void)loadAllTransactions;
 
 @property (nonatomic, retain) NSString *userID;           // Bank account username
 @property (nonatomic, retain) NSString *password;         // Bank account password
@@ -30,6 +35,7 @@
 @property (nonatomic, retain) NSString *supportXferDest;  // Supports incoming wire transfers Y or N;
 @property (nonatomic, retain) NSString *supportXferSrc;   // Supports out going wire transfers Y or N;
 @property (nonatomic, retain) Bank *bank;
+@property (nonatomic, retain) NSMutableArray<Transaction *> *transactions;
 
 
 @end

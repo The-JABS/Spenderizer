@@ -18,7 +18,6 @@
 #import "SWTableViewCell.h"
 
 @interface TransactionTableVC : UITableViewController <OFXGetDelegate, SWTableViewCellDelegate> {
-    NSMutableArray *transactions;
     BankAccount *userAccount;
 }
 

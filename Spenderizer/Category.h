@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 
 typedef enum {
-    EMPTY,
-    MISC,
-    FOOD,
-    TRAVEL,
-    ENTERTAINMENT,
-    CUSTOM
+    EMPTY           = 0,
+    MISC            = 1,
+    FOOD            = 2,
+    TRAVEL          = 3,
+    ENTERTAINMENT   = 4,
+    CUSTOM          = 5
     
 } CategoryType;
 
@@ -23,10 +23,11 @@ typedef enum {
 }
 
 - (id)initWithName:(NSString *)_name type:(CategoryType)_type color:(UIColor *)_color icon:(UIImage *)_icon;
++ (NSArray *)categories;
 
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, assign) CategoryType type;
-@property (nonatomic, assign) UIColor *color;
+@property (nonatomic, retain) UIColor *color;
 @property (nonatomic, retain) UIImage *icon;
 
 @end

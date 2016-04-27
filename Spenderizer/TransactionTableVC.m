@@ -18,13 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    transactions = [[NSMutableArray alloc] init];
-    [self loadTransactions];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [userAccount loadAllTransactions];
+    [self loadTransactions];
 }
 
 - (void)loadTransactions {
@@ -41,6 +37,7 @@
 }
 
 - (void)didFinishDownloading:(NSString *)result withID:(NSString *)responceID {
+    NSMutableArray *newTransactions = [NSMutableArray new];
     SGMLParser *parser = [[SGMLParser alloc] init];
     NSDictionary *dictionary = [parser parseXMLString:result];
     NSLog(@"%@", dictionary);
@@ -58,7 +55,6 @@
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyyyMMddHHmmss"];
         NSDate *date = [dateFormatter dateFromString:DTPOSTED];
-         NSLog(@"bcheck1 %@", date);
         
         // store
         Transaction *transaction = [[Transaction alloc] init];
@@ -74,22 +70,18 @@
         }
         
         // Add to list
-        [transactions addObject:transaction];
+        [newTransactions addObject:transaction];
 
     }
     
-    //transactions = [transactions sortedArrayUsingSelector:@selector(compare:)];
-    transactions = [[[transactions reverseObjectEnumerator] allObjects] mutableCopy];
-    [self.tableView reloadData];
-    
     // main thread
     dispatch_async(dispatch_get_main_queue(), ^{
+        [userAccount addTransactions:newTransactions];
+        [self.tableView reloadData];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     });
     
 }
-
-
 
 - (void)setAccount:(BankAccount *)bankAccount {
     userAccount = bankAccount;
@@ -107,11 +99,12 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [transactions count];
+    return [userAccount.transactions count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
+    Transaction *transaction = nil;
     
     TransactionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -122,10 +115,13 @@
                 cell.delegate = self;
             }
         }
+        transaction = [userAccount.transactions objectAtIndex:indexPath.row];
+    } else {
+        transaction = cell.transaction;
     }
     
     // Set the data for this cell:
-    Transaction *transaction = [transactions objectAtIndex:indexPath.row];
+    [cell setTransaction:transaction];
     
     cell.nameLb.text = [transaction name];
     cell.priceLb.text = [NSString stringWithFormat:@"$%.2f",fabsf([transaction amt])];
@@ -136,7 +132,7 @@
         
     }
     cell.dateLb.text = [transaction formattedDate];
-    [cell setTransaction:transaction];
+    
     
     return cell;
 }
@@ -153,6 +149,8 @@
     Transaction *tran = [tranCell transaction];
     [tran setCategory:[tranCell categoryForIndex:index]];
     [tranCell setTransaction:tran];
+    
+    [userAccount saveTransactions];
     [self.tableView reloadData];
 }
 

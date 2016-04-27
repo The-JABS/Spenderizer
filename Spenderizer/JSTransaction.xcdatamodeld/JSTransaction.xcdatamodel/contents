@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
+    <entity name="Category" representedClassName="Category" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="icon" optional="YES" attributeType="Transformable" allowsExternalBinaryDataStorage="YES" storedInTruthFile="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Transaction" representedClassName="Transaction" syncable="YES">
+        <attribute name="amt" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="datePosted" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="fitID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="memo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" syncable="YES"/>
+    </entity>
+    <entity name="TransactionHistory" representedClassName="TransactionHistory" syncable="YES">
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Transaction" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="TransactionHistory" positionX="-2" positionY="-153" width="128" height="58"/>
+        <element name="Transaction" positionX="45" positionY="-144" width="128" height="150"/>
+        <element name="Category" positionX="72" positionY="-63" width="128" height="90"/>
+    </elements>
+</model>

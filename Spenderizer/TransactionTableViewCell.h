@@ -28,5 +28,6 @@
 
 - (void)setTransaction:(Transaction *)_transaction;
 - (Category *)categoryForIndex:(NSInteger)index;
+- (void)update;
 
 @end

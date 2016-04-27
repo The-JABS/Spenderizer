@@ -24,29 +24,33 @@
 
 - (void)setTransaction:(Transaction *)_transaction {
     transaction = _transaction;
+    
     [self.colorView setBackgroundColor:[_transaction.category color]];
     [self.icon setImage:[_transaction.category icon]];
+    [self update];
+
 }
 
 - (NSArray *)leftButtons {
     NSMutableArray *leftButtons = [[NSMutableArray alloc] init];
-    Category *category = MISC_CATEGORY;
-    [leftButtons sw_addUtilityButtonWithColor:category.color icon:category.icon];
-    [categoryArray addObject:category];
-    
-    category = ENTERTAINMENT_CATEGORY;
-    [leftButtons sw_addUtilityButtonWithColor:category.color icon:category.icon];
-    [categoryArray addObject:category];
-    
-    category = FOOD_CATEGORY;
-    [leftButtons sw_addUtilityButtonWithColor:category.color icon:category.icon];
-    [categoryArray addObject:category];
-    
+    [categoryArray removeAllObjects];
+    for (Category *c in [Category categories]) {
+        if (c.type != EMPTY && c.type != self.transaction.category.type) {
+            [leftButtons sw_addUtilityButtonWithColor:c.color icon:c.icon];
+            [categoryArray addObject:c];
+        }
+    }
+        
     return leftButtons;
+}
+
+- (void)update {
+    self.leftUtilityButtons = [self leftButtons];
 }
 
 - (Category *)categoryForIndex:(NSInteger)index {
     return [categoryArray objectAtIndex:index];
 }
+
 
 @end
