@@ -29,7 +29,7 @@
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
     [self addPieChart];
-    
+    self.navigationItem.title = @"Spenderizer";
 }
 
 - (void)addPieChart {

@@ -55,6 +55,8 @@
 		B57957551CD044A600CDC8BE /* TransactionModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B57957531CD044A600CDC8BE /* TransactionModel.xcdatamodeld */; };
 		B57957571CD0817B00CDC8BE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B57957561CD0817B00CDC8BE /* QuartzCore.framework */; };
 		B57957591CD0818100CDC8BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B57957581CD0818100CDC8BE /* CoreGraphics.framework */; };
+		B579575B1CD09AC000CDC8BE /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B579575A1CD09AC000CDC8BE /* Icon-60@2x.png */; };
+		B57957611CD09B6900CDC8BE /* RoundedLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = B57957601CD09B6900CDC8BE /* RoundedLogo.png */; };
 		B5AA09421CB45609004EFCA9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09411CB45609004EFCA9 /* User.m */; };
 		B5AA09451CB4570D004EFCA9 /* BankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09441CB4570D004EFCA9 /* BankAccount.m */; };
 		B5AA09481CB45AC9004EFCA9 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AA09471CB45AC9004EFCA9 /* Bank.m */; };
@@ -144,6 +146,8 @@
 		B57957541CD044A600CDC8BE /* TransactionModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TransactionModel.xcdatamodel; sourceTree = "<group>"; };
 		B57957561CD0817B00CDC8BE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B57957581CD0818100CDC8BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B579575A1CD09AC000CDC8BE /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		B57957601CD09B6900CDC8BE /* RoundedLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RoundedLogo.png; sourceTree = "<group>"; };
 		B5AA09401CB45609004EFCA9 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B5AA09411CB45609004EFCA9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B5AA09431CB4570D004EFCA9 /* BankAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccount.h; sourceTree = "<group>"; };
@@ -293,6 +297,8 @@
 		B5AC662F1CA1E2E00018D7CB = {
 			isa = PBXGroup;
 			children = (
+				B579575A1CD09AC000CDC8BE /* Icon-60@2x.png */,
+				B57957601CD09B6900CDC8BE /* RoundedLogo.png */,
 				B5AC663A1CA1E2E00018D7CB /* Spenderizer */,
 				B5AC66391CA1E2E00018D7CB /* Products */,
 				B03BD5BD977A0514363DB1D0 /* Pods */,
@@ -435,6 +441,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57957611CD09B6900CDC8BE /* RoundedLogo.png in Resources */,
 				B50B0FBB1CCDB05E0006AEA0 /* foodIcon.png in Resources */,
 				B50B0FB91CCDA5550006AEA0 /* miscIcon.png in Resources */,
 				B50B0FB21CCD87240006AEA0 /* carIcon.png in Resources */,
@@ -444,6 +451,7 @@
 				210151F91CBD961C0037E6D3 /* MENU BUTTON 40x40.png in Resources */,
 				B56382291CB8D3DF00B9B45A /* OFXTransactionTemplate in Resources */,
 				B53592F91CBCB580005CF4D5 /* OFXHeader in Resources */,
+				B579575B1CD09AC000CDC8BE /* Icon-60@2x.png in Resources */,
 				B5AC66481CA1E2E00018D7CB /* Assets.xcassets in Resources */,
 				B53CADBE1CC4BBB400C9E482 /* cross.png in Resources */,
 				B50286E81CBAE62D00728973 /* Main.storyboard in Resources */,
