@@ -193,11 +193,8 @@
 		B53CAD831CBEF68600C9E482 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B53CAD841CBEF69200C9E482 /* BankAccountCell.xib */,
-				B53CAD851CBEF69200C9E482 /* BankAccountsTableVC.h */,
-				B53CAD861CBEF69200C9E482 /* BankAccountsTableVC.m */,
-				B53CAD871CBEF69200C9E482 /* BankAccountTableViewCell.h */,
-				B53CAD881CBEF69200C9E482 /* BankAccountTableViewCell.m */,
+				B57957621CD1048600CDC8BE /* transactions */,
+				B57957631CD1049E00CDC8BE /* accountView */,
 				B53CAD891CBEF69200C9E482 /* BankSignInFormVC.h */,
 				B53CAD8A1CBEF69200C9E482 /* BankSignInFormVC.m */,
 				B53CAD8B1CBEF69200C9E482 /* BankTableVC.h */,
@@ -215,11 +212,6 @@
 				B53CAD971CBEF69200C9E482 /* SetPinVC.m */,
 				B53CAD981CBEF69200C9E482 /* SettingsVC.h */,
 				B53CAD991CBEF69200C9E482 /* SettingsVC.m */,
-				B53CAD9A1CBEF69200C9E482 /* TransactionCell.xib */,
-				B53CAD9B1CBEF69200C9E482 /* TransactionTableVC.h */,
-				B53CAD9C1CBEF69200C9E482 /* TransactionTableVC.m */,
-				B53CAD9D1CBEF69200C9E482 /* TransactionTableViewCell.h */,
-				B53CAD9E1CBEF69200C9E482 /* TransactionTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -273,6 +265,30 @@
 				B57957531CD044A600CDC8BE /* TransactionModel.xcdatamodeld */,
 			);
 			name = coreData;
+			sourceTree = "<group>";
+		};
+		B57957621CD1048600CDC8BE /* transactions */ = {
+			isa = PBXGroup;
+			children = (
+				B53CAD9A1CBEF69200C9E482 /* TransactionCell.xib */,
+				B53CAD9B1CBEF69200C9E482 /* TransactionTableVC.h */,
+				B53CAD9C1CBEF69200C9E482 /* TransactionTableVC.m */,
+				B53CAD9D1CBEF69200C9E482 /* TransactionTableViewCell.h */,
+				B53CAD9E1CBEF69200C9E482 /* TransactionTableViewCell.m */,
+			);
+			name = transactions;
+			sourceTree = "<group>";
+		};
+		B57957631CD1049E00CDC8BE /* accountView */ = {
+			isa = PBXGroup;
+			children = (
+				B53CAD841CBEF69200C9E482 /* BankAccountCell.xib */,
+				B53CAD851CBEF69200C9E482 /* BankAccountsTableVC.h */,
+				B53CAD861CBEF69200C9E482 /* BankAccountsTableVC.m */,
+				B53CAD871CBEF69200C9E482 /* BankAccountTableViewCell.h */,
+				B53CAD881CBEF69200C9E482 /* BankAccountTableViewCell.m */,
+			);
+			name = accountView;
 			sourceTree = "<group>";
 		};
 		B5AA09491CB45C9A004EFCA9 /* Tools */ = {
